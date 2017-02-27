@@ -342,11 +342,6 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
     font-stretch: normal;
     font-weight: 300;
 }
-.collection-overview a, .collections .collection .inner h3, .collections .collection a.next, .collections .collection a.previous, .font-dinweb-bold, .footer-kontakt small, .fourohfour .headline, .global-map .dot .hover, .headline, .homepage-10 .subtext, .imprint_footer .bold, .menu nav, .menu-trigger, .popup-close, .tutorial-overlay .tutorial-text, a.arrow, b, h1, h2, h3, h4, h5, h6, strong, ul.showrooms li a {
-    font-family: "FuturaStd-Bold";
-    font-stretch: normal;
-    font-weight: 700;
-}
 .fa, [class*=" icon-"], [class^="icon-"] {
     font-family: FontAwesome;
     font-style: normal;
@@ -4299,8 +4294,8 @@ body.open, html.open {
 body {
     background: #313131 none repeat scroll 0 0;
     color: #fff;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 18px;
+    line-height: 25px; letter-spacing:0.5px;
 }
 body.press-collection, body.search {
     background: #fff none repeat scroll 0 0;
@@ -4751,7 +4746,7 @@ ul.bottomMenu li:first-child {
 .viewport {
     float: left;
     height: 100%;
-    min-width: 600px;
+    min-width: 500px;
 }
 .viewport.w100 {
     min-width: 100vw;
@@ -4818,9 +4813,6 @@ ul.bottomMenu li:first-child {
 }
 .white {
     color: #fff;
-}
-.bg-cardboard, .homepage .footer-kontakt {
-    background: rgba(0, 0, 0, 0) url("./img/bg-cardboard.jpg") repeat scroll 0 0;
 }
 .bg-white {
     background-color: #fff;
@@ -5001,9 +4993,7 @@ ul.bottomMenu li:first-child {
 }
 .dead-centered::before {
     content: "";
-    display: inline-block;
-    height: 100%;
-    margin-right: -0.25em;
+    display: inline-block; margin-right: -0.25em;
 }
 .dead-centered > div {
     display: inline-block;
@@ -5035,10 +5025,9 @@ a.arrow i {
     z-index: 200;
 }
 .viewport.vertical-slider .carousel-control {
-    background: rgba(0, 0, 0, 0.8) none repeat scroll 0 0;
+    background:#0e1b28 !important; opacity:1!important;
     display: block;
-    height: 50px;
-    opacity: 0;
+    height:33px;
     position: absolute;
     text-align: center;
     text-decoration: none;
@@ -5050,11 +5039,11 @@ a.arrow i {
     height: 100%;
 }
 .viewport.vertical-slider .carousel-control i {
-    font-size: 70px;
-    line-height: 50px;
+    font-size: 48px;
+    line-height: 33px;
 }
 .viewport.vertical-slider .carousel-control.prev {
-    bottom: 0;
+    bottom: 0; top:auto;
 }
 .viewport.vertical-slider .carousel-control:hover {
     opacity: 0.9 !important;
@@ -5068,7 +5057,7 @@ a.arrow i {
     cursor: pointer;
     position: relative;
     transition: all 0.3s ease 0s;
-    width: 100%;
+    width: 100%; height:247px;
 }
 .viewport.vertical-slider .carousel .item h3 {
     line-height: 1.1em;
@@ -5110,13 +5099,12 @@ a.arrow i {
 }
 .homepage-2 .topline {
     font-family: futurastd-bold;
-    font-size: 41.33px;
-    line-height: 47px;
-    margin-top: -123px;
+    font-size: 33px;
+    line-height: 40px;
     position: absolute;
     right: 29%;
     top: 50%;
-    width: 53%;
+    width: 53%; transform:translate(0,-50%);
 }
 .homepage-2 .collection-link {
     right: 17%;
@@ -5251,9 +5239,6 @@ a.arrow i {
     top: -35%;
     transform: scale(0.4, 0.4);
 }
-.homepage-7, .homepage-9 {
-    margin-left: -200px;
-}
 @media screen and (min-width: 1234px) and (max-height: 799px) {
 .viewport.homepage-6 .last, .viewport.homepage-8 .last, .viewport.homepage-9 .last {
     padding-left: 100px;
@@ -5291,8 +5276,8 @@ a.arrow i {
     font-size: 20px;
     position: absolute;
 }
-p {
-    margin: 10px;
+p{
+    margin:0 0 24px;
 }
 .infotext {
     display: table;
@@ -5411,11 +5396,7 @@ ul.showrooms li a {
 .footer-kontakt {
     background-color: #313131;
     float: left;
-    height: 100%;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 550px;
+    height: 100%; width: 550px;
 }
 .footer-kontakt.bg-white a {
     color: #313131;
@@ -5866,7 +5847,7 @@ li.noLineTop a {
     z-index: 9000;
 }
 .tutorial-overlay {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(14, 27, 41, 0.95);
     border-radius: 400px;
     cursor: pointer;
     height: 400px;
@@ -6036,3 +6017,103 @@ li.noLineTop a {
 .frmEnquiry input{}
 
 
+/*New CSS Add here*/
+.section_3 .section_des .btn a,
+.item_title,
+.section_4 .item_des{
+transition:0.4s ease-in-out;
+transition:0.4s ease-in-out;
+transition:0.4s ease-in-out;
+transition:0.4s ease-in-out;
+transition:0.4s ease-in-out;
+}
+
+h3.subheading{font-family: FuturaStd-Book;}
+.section_3{ width:570px; padding:130px 55px 65px 10px; background:#0e1b28;}
+h3.subheading{ font-size:33px; line-height:40px; color:#fff; padding:25px 0 25px;text-transform:inherit;}
+.section_3 p{ font-size:18px; line-height:22px;}
+.section_3 .section_des .btn a{ width:184px; height:44px; border:1px solid #d36229; line-height:44px; font-size:20px; text-align:center; float:left; text-transform:initial;}
+.section_3 .section_des .btn a:hover{ background:#d36229;}
+.section_3 .section_des .btn a:first-child{ margin-right:25px;}
+.section_3 .section_des .btn{ padding-left:0; padding-top:25px;}
+
+
+/*.section_4{ padding:30px 0;}
+.section_4.viewport.vertical-slider .carousel .item{ border-bottom:5px solid rgba(14,27,40,1);border-top:5px solid rgba(14,27,40,1);}*/
+.section_4 .item_des{ height:100%; display:flex; position:relative;}
+.section_4 .item_des:hover{background: rgba(14,27,40,0);background: rgba(14,27,40,0.8);}
+.item_title{ text-align:center;
+	 display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    width: 100%;
+	}
+.item_title h3{ font-size:16px;}
+.section_4 .item_des .item_title{ opacity:0; visibility:hidden;}
+.section_4 .item_des:hover .item_title{ opacity:1; visibility: visible;}
+
+.section_5{display:flex;padding-right:0.6%;}
+.slider_caption_area{display: flex;flex-direction: column;justify-content:flex-end;align-items:flex-end;width:100%;padding-bottom: 20px;min-height: 1px;}
+.slider_caption{ width:458px; height:65px; background:url(img/slider_caption.png) no-repeat top left; color:#fff; font-size:18px; line-height:21px; padding:15px 135px 15px 40px; float:right;}
+.section_6{ margin-left:-1.5%; position:relative; z-index:999;display:flex;padding-right:0.6%;}
+.section_blank{ width:220px; position:absolute; right:0; top:0; min-width:220px; z-index:999; background-size:100% 100% !important;}
+.zoo_logo{ position:absolute; left:7%; bottom:35px;}
+
+.section_7{ vertical-align:middle; display:table; background:#fff; color:#0e1b28;}
+.tab_content{ width:100%; padding-left:185px; position:relative;}
+.tab_content h2{ font-size:70px; font-family:"futurastd-bold"; line-height:75px; padding-bottom:50px; margin-left:-185px;}
+ul.tab_button_set{ position:absolute; left:0;top: 100px; padding:16px 0 0 0; margin:0; border-top:5px solid #d36229; list-style:none;}
+ul.tab_button_set li a{color:#0e1b28;}
+ul.tab_button_set li.ui-tabs-active a{ color:#d36229;font-family:"futurastd-bold";}
+.associations_gallery{ list-style:none; padding:0; margin:0 -4px;}
+.associations_gallery li{ padding:4px; float:left; line-height:0;}
+.accreditations_img_list{ list-style:none; padding:0; margin:0 -30px;}
+.accreditations_img_list li{ padding:30px; float:left; line-height:0;}
+
+.section_8{ background:#fff;}
+.slideing-img{ height:100%;}
+
+.section_9{ background:#fff; color:#0e1b28; padding-top:130px; padding-right:80px;}
+.section_9 h2{ font-size:70px; font-family:"futurastd-bold"; line-height:75px;}
+.section_9 h4{ clear:both; line-height:22px; font-size:18px; color:#d36229; padding:22px 0 22px;}
+.section_9 .section9_col1{ width:55%; float:left; padding-right:45px;}
+.section_9 .section9_col2{ width:45%; float:left;padding-left:45px;}
+.separator{ width:120px; height:5px; float:left; background:#d36229; margin-top:30px;}
+
+.testmonial_slider{ width:100%; padding-top:82px;}
+.testmonial_slider h3{ font-size:28px; line-height:30px; color:#0e1b28; padding-bottom:15px;}
+.testmonial_slider .project_name{ text-transform:uppercase; padding-bottom:7px;}
+.testmonial_slider .project_name span{ font-family:"futurastd-bold"; display:block;}
+.testmonial_slider .client_name{color:#d36229;}
+.testmonial_slider .designation{color:#bebebe;display:block; padding-bottom:20px;}
+.testmonial_slider .owl-nav{ text-align:right;}
+.testmonial_slider .owl-prev{ width:65px; height:32px; line-height:32px; font-size:14px; color:#bebebe;border:1px solid #bebebe; text-align:center; text-transform:uppercase; display:inline-block;}
+.testmonial_slider .owl-next{ width:65px; height:32px; line-height:32px; font-size:14px; color:#0e1b28; border:1px solid #0e1b28;text-align:center; text-transform:uppercase;display:inline-block; margin-left:10px;}
+
+
+.section_10{display:flex;}
+.slider_caption_area{display: flex;flex-direction: column;justify-content:flex-end;align-items:flex-end;width:100%;padding-bottom: 20px;min-height: 1px;}
+.slider_caption{ width:358px; height:65px; background:url(img/caption_bg.png) no-repeat top left; color:#fff; font-size:18px; line-height:21px; padding:15px 35px 15px 40px; float:right; line-height:42px;}
+
+.footer{ width:540px; float:left; padding:130px 186px 0 70px; background:#0e1b28; height:100%; font-size:16px; line-height:20px;}
+.footer h4{color:#d36229;font-family:"futurastd-bold"; font-size:16px; padding-bottom:10px;}
+.footer_social{ list-style:none; padding:0 0 15px; margin:0 -10px;display: inline-block;}
+.footer_social li{ padding:0 10px; float:left;}
+.footer_social li:first-child{ padding-right:20px;}
+
+.footer_email,
+.footer_phone{ width:100%; float:left;}
+.footer_email label,
+.footer_phone label{ width:108px; display:inline-block;}
+.footer .address_area{ width:100%; float:left;padding-top:12px;}
+.footer .address_area span{ padding-top:12px;display:inline-block;}
+
+.contact_form .frmHeading{ color:#d36229; font-size:20px; padding:20px 0 0; margin:0;}
+.contact_form{ clear:both; width:100%; float:left;}
+.footer input[type="text"], .footer input[type="email"], .footer input[type="password"],.footer input[type="tel"],.footer select,.footer input[type="number"]{ width:168px;}
+.contact_form ul{ margin:0; padding:0; list-style:none;}
+.contact_form ul li{ padding-bottom:10px;}
