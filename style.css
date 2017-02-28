@@ -1336,6 +1336,8 @@ h4 {
     content: "";
 }
 .fa-meh-o::before {
+
+
     content: "";
 }
 .fa-gamepad::before {
@@ -2649,6 +2651,7 @@ a .icon-spin, a .icon-stack {
 .icon-gamepad::before {
     content: "";
 }
+
 .icon-keyboard::before {
     content: "";
 }
@@ -4580,44 +4583,40 @@ ul.bottomMenu li:first-child {
 .menu nav {
     float: left;
     height: 100%;
-    padding: 0 50px 0 40px;
+    padding: 50px 50px 0 40px !important;
     width: 40%;
 }
+.menu_logo{ width:100%;float:right; padding-bottom:35px; position:relative; margin-bottom:15px}
+.menu_logo:after{ width:120px; height:5px; background:#d36229; content:""; left:0; bottom:0;position: absolute;}
+.menu_area_logo{ float:right;}
 .menu nav ul {
     border-top: 1px solid rgba(0, 0, 0, 0.3);
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+    list-style-type: none; clear:both;
+    margin:0;
+    padding:0;
 }
 .menu nav ul li {
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-    line-height: 40px;
-    min-height: 40px;
-}
-.menu nav ul li.home {
-    background: rgba(0, 0, 0, 0) url("./img/icon-house.png") no-repeat scroll left 13px;
-    padding-left: 20px;
-}
-.mobile .menu nav ul li.home {
-    background-position: left 20px;
+    line-height: 30px;
+    min-height: 30px;
 }
 .menu nav ul li.activateSearch {
     border-bottom: medium none;
     margin-top: 30px;
 }
-.menu nav ul li h3, .menu nav ul li > a {
+.menu nav ul li h3, .menu nav ul li a {
     display: block;
     font-size: 14px;
-    line-height: 40px;
-    text-transform: uppercase;
-    width: 100%;
+    text-transform: uppercase; color:#0e1b28;
+    width: 100%; font-family:"FuturaStd-Book";
 }
+.menu nav ul > li > h3, .menu nav > ul > li > a{line-height: 30px;}
 .menu nav ul li a:hover {
-    color: #fff;
+    color: #d36229;
     padding: 0;
 }
 .menu nav ul li .accordion {
-    color: #fff !important;
+    color:#0e1b28!important;
     font-size: 16px;
     line-height: 1.5;
 }
@@ -4628,8 +4627,8 @@ ul.bottomMenu li:first-child {
     padding-bottom: 30px;
 }
 .menu-trigger {
-    background: #0e1b28 none repeat scroll 0 0;
-    color: #fff;
+    background: #fff url(img/menu_bg.png) no-repeat bottom right;
+    color: #0e1b28;
     display: block;
     font-size: 25px;
     height: 0;
@@ -4709,7 +4708,7 @@ ul.bottomMenu li:first-child {
     left: 10px;
     position: absolute;
     top: -29px;
-    z-index: 10040;
+    z-index: 10040; background:url(img/close.jpg) no-repeat top left; width:31px; height:26px;
 }
 .mobile .menu-trigger-close {
     font-size: 40px;
@@ -4738,7 +4737,7 @@ ul.bottomMenu li:first-child {
     position: absolute;
 }
 .wrapper.main {
-    background: #313131 none repeat scroll 0 0;
+    background: #0e1b28 none repeat scroll 0 0;
     height: 100vh;
     min-height: 100%;
     width: 1e+7px;
@@ -4831,7 +4830,7 @@ ul.bottomMenu li:first-child {
 .top {
     top: 0;
 }
-.menu-trigger-close, .rotate45 {
+.rotate45 {
     display: inline-block;
     transform: rotate3d(0, 0, 1, 45deg);
 }
@@ -4970,7 +4969,7 @@ ul.bottomMenu li:first-child {
     cursor: pointer;
 }
 .accordion > h3.ui-state-active {
-    background: rgba(0, 0, 0, 0) url("./img/accordion-open.png") no-repeat scroll right center;
+    background: rgba(0, 0, 0, 0) url("./img/accordion-open.png") no-repeat scroll right center; color:#d36229;
 }
 .wm2000 {
     max-width: 2000px;
@@ -5025,7 +5024,7 @@ a.arrow i {
     z-index: 200;
 }
 .viewport.vertical-slider .carousel-control {
-    background:#0e1b28 !important; opacity:1!important;
+    background:#0e1b28 !important; opacity:0.9!important;
     display: block;
     height:33px;
     position: absolute;
@@ -5059,6 +5058,7 @@ a.arrow i {
     transition: all 0.3s ease 0s;
     width: 100%; height:247px;
 }
+.viewport.vertical-slider .carousel .item:after{ position:absolute; width:100%; height:10px; content:""; background:#0e1b28; left:0; top:-5px;}
 .viewport.vertical-slider .carousel .item h3 {
     line-height: 1.1em;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
@@ -6018,6 +6018,9 @@ li.noLineTop a {
 
 
 /*New CSS Add here*/
+.testmonial_slider .owl-prev,
+.testmonial_slider .owl-next,
+.contact_form ul li input[type="submit"],
 .section_3 .section_des .btn a,
 .item_title,
 .section_4 .item_des{
@@ -6063,7 +6066,7 @@ h3.subheading{ font-size:33px; line-height:40px; color:#fff; padding:25px 0 25px
 .section_blank{ width:220px; position:absolute; right:0; top:0; min-width:220px; z-index:999; background-size:100% 100% !important;}
 .zoo_logo{ position:absolute; left:7%; bottom:35px;}
 
-.section_7{ vertical-align:middle; display:table; background:#fff; color:#0e1b28;}
+.section_7{ padding-top:130px;background:#fff; color:#0e1b28;}
 .tab_content{ width:100%; padding-left:185px; position:relative;}
 .tab_content h2{ font-size:70px; font-family:"futurastd-bold"; line-height:75px; padding-bottom:50px; margin-left:-185px;}
 ul.tab_button_set{ position:absolute; left:0;top: 100px; padding:16px 0 0 0; margin:0; border-top:5px solid #d36229; list-style:none;}
@@ -6093,11 +6096,12 @@ ul.tab_button_set li.ui-tabs-active a{ color:#d36229;font-family:"futurastd-bold
 .testmonial_slider .owl-nav{ text-align:right;}
 .testmonial_slider .owl-prev{ width:65px; height:32px; line-height:32px; font-size:14px; color:#bebebe;border:1px solid #bebebe; text-align:center; text-transform:uppercase; display:inline-block;}
 .testmonial_slider .owl-next{ width:65px; height:32px; line-height:32px; font-size:14px; color:#0e1b28; border:1px solid #0e1b28;text-align:center; text-transform:uppercase;display:inline-block; margin-left:10px;}
-
+.testmonial_slider .owl-prev:hover,
+.testmonial_slider .owl-next:hover{ background:#d36229; border:1px solid #d36229; color:#fff;}
 
 .section_10{display:flex;}
-.slider_caption_area{display: flex;flex-direction: column;justify-content:flex-end;align-items:flex-end;width:100%;padding-bottom: 20px;min-height: 1px;}
-.slider_caption{ width:358px; height:65px; background:url(img/caption_bg.png) no-repeat top left; color:#fff; font-size:18px; line-height:21px; padding:15px 35px 15px 40px; float:right; line-height:42px;}
+.section_10 .slider_caption_area{display: flex;flex-direction: column;justify-content:flex-end;align-items:flex-end;width:100%;padding-bottom: 20px;min-height: 1px;}
+.section_10 .slider_caption{ width:358px; height:65px; background:url(img/caption_bg.png) no-repeat top left; color:#fff; font-size:18px; line-height:21px; padding:15px 35px 15px 40px; float:right; line-height:42px;}
 
 .footer{ width:540px; float:left; padding:130px 186px 0 70px; background:#0e1b28; height:100%; font-size:16px; line-height:20px;}
 .footer h4{color:#d36229;font-family:"futurastd-bold"; font-size:16px; padding-bottom:10px;}
@@ -6112,8 +6116,29 @@ ul.tab_button_set li.ui-tabs-active a{ color:#d36229;font-family:"futurastd-bold
 .footer .address_area{ width:100%; float:left;padding-top:12px;}
 .footer .address_area span{ padding-top:12px;display:inline-block;}
 
+
 .contact_form .frmHeading{ color:#d36229; font-size:20px; padding:20px 0 0; margin:0;}
-.contact_form{ clear:both; width:100%; float:left;}
-.footer input[type="text"], .footer input[type="email"], .footer input[type="password"],.footer input[type="tel"],.footer select,.footer input[type="number"]{ width:168px;}
+.contact_form{ clear:both; width:100%; float:left; font-size:14px; line-height:20ppx;}
+.footer input[type="text"], .footer input[type="email"], .footer input[type="password"],.footer input[type="tel"],.footer select,.footer input[type="number"]{ width:168px; height:20px; margin:0; border:0;
+-moz-border-radius:3px;
+-webkit-border-radius:3px;
+-ms-border-radius:3px;
+-o-border-radius:3px;
+border-radius:3px;
+}
+.contact_form ul li textarea{ margin-top:8px; width:272px; height:92px;
+-moz-border-radius:3px;
+-webkit-border-radius:3px;
+-ms-border-radius:3px;
+-o-border-radius:3px;
+border-radius:3px;
+}
+.footer input.txtPostcode{ width:68px;}
 .contact_form ul{ margin:0; padding:0; list-style:none;}
-.contact_form ul li{ padding-bottom:10px;}
+.contact_form ul li{ padding-top:10px;}
+.contact_form ul li span:first-child{ width:105px;color:#d36229;display: inline-block;}
+.contact_form ul li span.lblRequired{ color:#9d9e9e;}
+.contact_form ul li input[type="submit"]{ margin-right:13px;float:right;width:132px;height:32px;line-height:32px;border:1px solid #c75e29; color:#fff; font-size:14px;background:none;}
+.contact_form ul li input[type="submit"]:hover{ background:#c75e29; color:#fff;}
+
+

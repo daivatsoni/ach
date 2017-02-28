@@ -43,13 +43,17 @@ get_header();
 <div class="menu-trigger"> <a href="#" class="menu-trigger-link"><span class="icon-reorder">&nbsp;</span></a> </div>
 <div class="menu">
   <div class="inner">
-    <div class="content"> <a href="#" class="menu-trigger-close"><span class="rotate45 icon-plus">&nbsp;</span></a>
+    <div class="content"> <a href="#" class="menu-trigger-close"></a>
       <div class="collections keep-ratio__11">
         <div class="inner">
           <div id="ajax-menu"></div>
         </div>
       </div>
-      <nav>
+      
+<nav class="nav_area">
+<div class="menu_logo">
+<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/menu_area_logo.png" class="menu_area_logo" alt="" />
+</div>
         <ul>
           <li class="home"><a href="/">Home</a></li>
           <li>
@@ -94,11 +98,7 @@ get_header();
             </form>
           </li>
         </ul>
-        <ul class="bottomMenu">
-          <li><a href="https://www.facebook.com/pages/Jan-Kath-Contemporary-rug-art/201727976205" target="_blank">FOLLOW US ON FACEBOOK</a></li>
-          <li><a href="https://itunes.apple.com/de/app/jan-kath/id1060974872" target="_blank">VIRTUAL EXPERIENCE</a></li>
-          <li> <a class="app-store" title="Jan Kath in AppStore" target="_blank" href="https://itunes.apple.com/tm/app/jan-kath-iphone/id1060974872"> <img style="width: 100px;" alt="Download in App-Store" src="http://cdn.jan-kath.com/dist/img/app-store-logo-transparent.png" /> </a> <a class="app-store" style="position: absolute; top: 81px; left: 110px;" href="https://play.google.com/store/apps/details?id=com.IvyMobi.IC"> <img alt="Download on the Play Store" src="http://cdn.jan-kath.com/img/play.png"> </a> </li>
-        </ul>
+        
       </nav>
     </div>
   </div>
@@ -175,40 +175,40 @@ get_header();
 <div class="viewport vertical-slider section_4"> <a href="#" class="carousel-control next"><i class="icon-angle-up"></i></a> <a href="#" class="carousel-control prev"><i class="icon-angle-down"></i></a>
   <div class="carousel">
   
-    <div class="item " style="background-image:url(http://cdn.jan-kath.com/dist/img/collection/menu_erased_heritage.jpg)"> 
-    <a href="/collection/erased_heritage/">
+    <div class="item " style="background-image:url(<?php echo esc_url( get_template_directory_uri() ); ?>/img/carousel_slider_img1.jpg)"> 
+    <a href="#">
       <div class="item_des">
         <div class="item_title">
-          <h3>Erased Heritage</h3>
+          <h3>RYDE HIGH SCHOOL</h3>
         </div>
       </div>
       </a>
        </div>
-    <div class="item " style="background-image:url(http://cdn.jan-kath.com/dist/img/collection/menu_jungle.jpg)"> <a href="/collection/jungle/">
+    <div class="item " style="background-image:url(<?php echo esc_url( get_template_directory_uri() ); ?>/img/carousel_slider_img2.jpg)"> <a href="#">
       <div class="item_des">
         <div class="item_title">
-          <h3>Jungle</h3>
+          <h3>RYDE HIGH SCHOOL</h3>
         </div>
       </div>
       </a> </div>
-	<div class="item " style="background-image:url(http://cdn.jan-kath.com/dist/img/collection/menu_spacecrafted.jpg)"> <a href="/collection/spacecrafted/">
+	<div class="item " style="background-image:url(<?php echo esc_url( get_template_directory_uri() ); ?>/img/carousel_slider_img3.jpg)"> <a href="#">
       <div class="item_des">
         <div class="item_title">
-          <h3>Spacecrafted</h3>
+          <h3>RYDE HIGH SCHOOL</h3>
         </div>
       </div>
       </a> </div>
-    <div class="item " style="background-image:url(http://cdn.jan-kath.com/dist/img/collection/menu_jiangxi.jpg)"> <a href="/collection/jiangxi/">
+    <div class="item " style="background-image:url(<?php echo esc_url( get_template_directory_uri() ); ?>/img/carousel_slider_img2.jpg)"> <a href="#">
       <div class="item_des">
         <div class="item_title">
-          <h3>Jiangxi</h3>
+          <h3>RYDE HIGH SCHOOL</h3>
         </div>
       </div>
       </a> </div>
-    <div class="item " style="background-image:url(http://cdn.jan-kath.com/dist/img/collection/menu_from_russia_with_love.jpg)"> <a href="/collection/from_russia_with_love/">
+    <div class="item " style="background-image:url(<?php echo esc_url( get_template_directory_uri() ); ?>/img/carousel_slider_img3.jpg)"> <a href="#">
       <div class="item_des">
         <div class="item_title">
-          <h3>From Russia With Love</h3>
+          <h3>RYDE HIGH SCHOOL</h3>
         </div>
       </div>
       </a> </div>
@@ -249,7 +249,6 @@ TREE KANGAROO EXHIBIT</span>
 
 
 <div class="viewport w50 section_7">
-  <div class="slidein cell">
   <div id="tabs" class="tab_content">
         <ul class="tab_button_set">
           <li><a href="#aboutus">About Us</a></li>
@@ -308,10 +307,6 @@ TREE KANGAROO EXHIBIT</span>
 </div>        
         
       </div>
-      
-    
-    
-  </div>
 </div>
 
 
@@ -391,40 +386,40 @@ TREE KANGAROO EXHIBIT</span>
 <div class="viewport vertical-slider section_4"> <a href="#" class="carousel-control next"><i class="icon-angle-up"></i></a> <a href="#" class="carousel-control prev"><i class="icon-angle-down"></i></a>
   <div class="carousel">
   
-    <div class="item " style="background-image:url(http://cdn.jan-kath.com/dist/img/collection/menu_erased_heritage.jpg)"> 
-    <a href="/collection/erased_heritage/">
+    <div class="item " style="background-image:url(<?php echo esc_url( get_template_directory_uri() ); ?>/img/carousel_slider_img1.jpg)"> 
+    <a href="#">
       <div class="item_des">
         <div class="item_title">
-          <h3>Erased Heritage</h3>
+          <h3>RYDE HIGH SCHOOL</h3>
         </div>
       </div>
       </a>
        </div>
-    <div class="item " style="background-image:url(http://cdn.jan-kath.com/dist/img/collection/menu_jungle.jpg)"> <a href="/collection/jungle/">
+    <div class="item " style="background-image:url(<?php echo esc_url( get_template_directory_uri() ); ?>/img/carousel_slider_img2.jpg)"> <a href="#">
       <div class="item_des">
         <div class="item_title">
-          <h3>Jungle</h3>
+          <h3>RYDE HIGH SCHOOL</h3>
         </div>
       </div>
       </a> </div>
-	<div class="item " style="background-image:url(http://cdn.jan-kath.com/dist/img/collection/menu_spacecrafted.jpg)"> <a href="/collection/spacecrafted/">
+	<div class="item " style="background-image:url(<?php echo esc_url( get_template_directory_uri() ); ?>/img/carousel_slider_img3.jpg)"> <a href="#">
       <div class="item_des">
         <div class="item_title">
-          <h3>Spacecrafted</h3>
+          <h3>RYDE HIGH SCHOOL</h3>
         </div>
       </div>
       </a> </div>
-    <div class="item " style="background-image:url(http://cdn.jan-kath.com/dist/img/collection/menu_jiangxi.jpg)"> <a href="/collection/jiangxi/">
+    <div class="item " style="background-image:url(<?php echo esc_url( get_template_directory_uri() ); ?>/img/carousel_slider_img2.jpg)"> <a href="#">
       <div class="item_des">
         <div class="item_title">
-          <h3>Jiangxi</h3>
+          <h3>RYDE HIGH SCHOOL</h3>
         </div>
       </div>
       </a> </div>
-    <div class="item " style="background-image:url(http://cdn.jan-kath.com/dist/img/collection/menu_from_russia_with_love.jpg)"> <a href="/collection/from_russia_with_love/">
+    <div class="item " style="background-image:url(<?php echo esc_url( get_template_directory_uri() ); ?>/img/carousel_slider_img3.jpg)"> <a href="#">
       <div class="item_des">
         <div class="item_title">
-          <h3>From Russia With Love</h3>
+          <h3>RYDE HIGH SCHOOL</h3>
         </div>
       </div>
       </a> </div>
