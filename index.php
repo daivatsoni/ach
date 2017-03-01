@@ -55,50 +55,87 @@ get_header();
 <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/menu_area_logo.png" class="menu_area_logo" alt="" />
 </div>
         <ul>
-          <li class="home"><a href="/">Home</a></li>
+          <li class="home"><a href="#">Home</a></li>
           <li>
             <div class="accordion">
-              <h3>About Us</h3>
+              <h3>WHO WE ARE</h3>
               <div>
-                <div class="inner"> <a href="/company/designer-and-company/">&rsaquo; Designer &amp; Company</a><br>
-                  <a href="/company/quality-and-manufacturing/">&rsaquo; Quality &amp; Manufacturing</a><br>
-                  <a href="/company/sustainability-and-fairtrade/">&rsaquo; Sustainability &amp; Fairtrade</a><br>
+                <div class="inner">
+                <a href="#">ABOUT US</a>
+                <a href="#">HISTORY</a>
+                <a href="#">POLICIES</a>
+                <a href="#">ACCREDITATION</a>
+                <a href="#">ASSOCIATIONS</a>
                 </div>
               </div>
             </div>
           </li>
           <li>
             <div class="accordion">
-              <h3>Showrooms &amp; Stores</h3>
+              <h3>THE ACH DIFFERENCE</h3>
               <div>
-                <div class="inner"> <a href="/showrooms/bochum/">&rsaquo; Bochum Headquarters</a><br>
-                  <a href="/showrooms/berlin/">&rsaquo; Berlin</a><br>
-                  <a href="/showrooms/cologne/">&rsaquo; Cologne</a><br>
-                  <a href="/showrooms/stuttgart/">&rsaquo; Stuttgart</a><br>
-                  <a href="/showrooms/new-york/">&rsaquo; New York</a><br>
-                  <a href="/showrooms/hamburg/">&rsaquo; Hamburg</a><br>
-                  <a href="/showrooms/miami/">&rsaquo; Miami</a><br>
-                  <a href="/showrooms/munich/">&rsaquo; Munich</a><br>
-                  <a href="/showrooms/vancouver/">&rsaquo; Vancouver</a><br>
-                  <br>
-                  <a href="/global-distribution/">&rsaquo; Global Distribution</a><br>
+                <div class="inner">
+                <a href="#">ABOUT US</a>
+                <a href="#">HISTORY</a>
                 </div>
               </div>
             </div>
           </li>
-          <li><a href="/press-and-media/overview/">Press &amp; Media &nbsp; EN | DE | FR | CN</a></li>
-          <li><a href="/imprint/">Imprint</a></li>
-          <li class="activateSearch">
-            <form enctype="multipart/form-data" method="post" action=".">
-              <div class="searchfield menu-search cf">
-                <input type="text" autocomplete="off" name="query" class="query" value="" placeholder="Rug Name" />
-                <input type="submit" class="searchSubmit" value="Search A Rug" />
+          
+          <li>
+            <div class="accordion">
+              <h3>OUR WORK</h3>
+              <div>
+                <div class="inner">
+                <a href="#">ABOUT US</a>
+                <a href="#">HISTORY</a>
+                </div>
               </div>
-              <div class="cf searchKompleter"></div>
-            </form>
+            </div>
           </li>
+          
+          <li>
+            <div class="accordion">
+              <h3>WORK WITH ACH</h3>
+              <div>
+                <div class="inner">
+                <a href="#">ABOUT US</a>
+                <a href="#">HISTORY</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          
+          <li>
+            <div class="accordion">
+              <h3>NEWS</h3>
+              <div>
+                <div class="inner">
+                <a href="#">ABOUT US</a>
+                <a href="#">HISTORY</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="accordion">
+              <h3>CONTACT US</h3>
+              <div>
+                <div class="inner">
+                <a href="#">ABOUT US</a>
+                <a href="#">HISTORY</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          
         </ul>
-        
+        <ul class="social_icons">
+        <li><a href="#"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/facebook1.png" /></a></li>
+        <li><a href="#"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/instagram1.png" /></a></li>
+        <li><a href="#"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/twitter1.png" /></a></li>
+        <li><a href="#"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/linkedin1.png" /></a></li>
+        </ul>
       </nav>
     </div>
   </div>

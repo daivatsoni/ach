@@ -27,53 +27,74 @@ function getMenuItems() {
     
     $html = ob_start();
     ?><div id="menu">
-        <div class="collection ">
-            <a href="/collection/erased_heritage/">
-                <div class="inner" style="background-image:url(http://cdn.jan-kath.com/dist/img/collection/menu_erased_heritage.jpg)">
-                    <h3>Erased Heritage</h3>
+        <div class="collection">
+            <a href="#">
+                <div class="inner" style="background-image:url(<?php echo esc_url( get_template_directory_uri() ); ?>/img/carousel_slider_img3.jpg)">
+                    <h3>EDUCATION</h3>
                 </div>
             </a>
         </div>
-        <div class="collection ">
-            <a href="/collection/from_russia_with_love/">
-                <div class="inner" style="background-image:url(http://cdn.jan-kath.com/dist/img/collection/menu_from_russia_with_love.jpg)">
-                    <h3>From Russia<br>With Love</h3>
+        <div class="collection">
+            <a href="#">
+                <div class="inner" style="background-image:url(<?php echo esc_url( get_template_directory_uri() ); ?>/img/carousel_slider_img3.jpg)">
+                    <h3>AGED/DISABILITY CARE</h3>
                 </div>
             </a>
         </div>
-        <div class="collection ">
-            <a href="/collection/spacecrafted/">
-                <div class="inner" style="background-image:url(http://cdn.jan-kath.com/dist/img/collection/menu_spacecrafted.jpg)">
-                    <h3>Space&shy;crafted</h3>
+        <div class="collection">
+            <a href="#">
+                <div class="inner" style="background-image:url(<?php echo esc_url( get_template_directory_uri() ); ?>/img/carousel_slider_img3.jpg)">
+                    <h3>COMMUNITY</h3>
                 </div>
             </a>
         </div>
-        <div class="collection ">
-            <a href="/collection/artwork/">
-                <div class="inner" style="background-image:url(http://cdn.jan-kath.com/dist/img/collection/menu_artwork.jpg)">
-                    <h3>Artwork</h3>
+        <div class="collection">
+            <a href="#">
+                <div class="inner" style="background-image:url(<?php echo esc_url( get_template_directory_uri() ); ?>/img/carousel_slider_img3.jpg)">
+                    <h3>REFURB / FITOUT</h3>
                 </div>
             </a>
         </div>
-        <div class="collection ">
-            <a href="/collection/heiter_bis_wolkig/">
-                <div class="inner" style="background-image:url(http://cdn.jan-kath.com/dist/img/collection/menu_heiter_bis_wolkig.jpg)">
-                    <h3>Heiter bis Wolkig</h3>
+        <div class="collection">
+            <a href="#">
+                <div class="inner" style="background-image:url(<?php echo esc_url( get_template_directory_uri() ); ?>/img/carousel_slider_img3.jpg)">
+                    <h3>HERITAGE</h3>
                 </div>
             </a>
         </div>
-        <div class="collection ">
-            <a href="/collection/lost_weave/">
-                <div class="inner" style="background-image:url(http://cdn.jan-kath.com/dist/img/collection/menu_lost_weave.jpg)">
-                    <h3>Lost Weave</h3>
+        <div class="collection">
+            <a href="#">
+                <div class="inner" style="background-image:url(<?php echo esc_url( get_template_directory_uri() ); ?>/img/carousel_slider_img3.jpg)">
+                    <h3>HEALTH</h3>
                 </div>
             </a>
         </div>
-        <div class="collection next">
-            <div data-page="2" class="inner page next">
-                <a href="#" class="page next">further<br>collections</a>
-            </div>
+        
+        <div class="collection withoutimg">
+            <a href="#">
+                <div class="inner">
+                    <h3>NEWS</h3>
+                </div>
+            </a>
         </div>
+        
+        
+        <div class="collection withoutimg">
+            <a href="#">
+                <div class="inner">
+                    <h3>CAREERS</h3>
+                </div>
+            </a>
+        </div>
+        <div class="collection withoutimg">
+            <a href="#">
+                <div class="inner">
+                    <h3>CONTACT US</h3>
+                </div>
+            </a>
+        </div>
+        
+        
     </div><?php
     $html = ob_get_clean();
     echo $html;

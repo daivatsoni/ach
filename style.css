@@ -4361,9 +4361,9 @@ a {
 }
 .menu > .inner > .content {
     height: 100%;
-    margin-top: -60px;
+    margin-top: -50px;
     opacity: 0;
-    padding-left: 40px;
+    padding-left: 50px;
 }
 .app-store:focus, .app-store:hover, .collections .collection.visible {
     opacity: 1;
@@ -4497,57 +4497,47 @@ a {
     padding: 0;
 }
 .collections .collection .inner {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(14, 27, 40, 0.8);
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    -moz-background-size: cover;
+	-webkit-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
     height: 0;
     overflow: hidden;
     padding-top: 100%;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    transition: all 0.3s ease 0s;
     width: 100%;
 }
+.collections .collection .inner h3,
+.collections .collection .inner,
+.collections .collection .inner:after{
+-moz-transition:0.4s ease-in-out;
+-webkit-transition:0.4s ease-in-out;
+-ms-transition:0.4s ease-in-out;
+-o-transition:0.4s ease-in-out;
+transition:0.4s ease-in-out;
+}
+.collections .collection .inner:after{ content:""; height:100%; width:100%; top:0; left:0; position:absolute;background-color: rgba(14, 27, 40, 0.8);}
+
+.collections .collection .inner:hover:after{background-color: rgba(14, 27, 40, 0.0);}
+
+.collections .collection.withoutimg .inner:after{background-color: rgba(14, 27, 40, 1);}
+.collections .collection.withoutimg .inner:hover:after{background-color:#cf622a;}
+.collections .collection.withoutimg .inner:hover h3{ opacity:1;}
+.collections .collection .inner:hover h3{ opacity:0;}
 .collections .collection .inner h3 {
-    letter-spacing: 0;
-    transition: all 0.3s ease 0s;
+    position: absolute; text-align:center; letter-spacing:0px; z-index:6; font-size:20px; line-height:25px; padding:0 10px;
+    top: 50%;left: 0;
+    width:100%;
+	-moz-transform:translate(0,-50%);
+	-webkit-transform:translate(0,-50%);
+	-ms-transform:translate(0,-50%);
+	-o-transform:translate(0,-50%);
+	transform:translate(0,-50%);
 }
-.collections .collection .inner:hover {
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.8) inset;
-}
-.collections .collection .inner:hover h3 {
-    letter-spacing: 1px;
-    transform-origin: 0 0 0;
-}
-.collections .collection .inner::before {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    margin-right: -0.25em;
-    vertical-align: middle;
-}
-.collections .collection .inner h3 {
-    bottom: 0;
-    left: 0;
-    line-height: 1em;
-    margin: -15px auto auto;
-    padding-right: 0.25em;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    width: 70%;
-}
-.collections .collection .inner h3 i {
-    color: #0e1b28;
-    font-size: 90px;
-}
-.collections .collection .inner h3 span {
-    margin-top: 35px;
-}
-.collections .collection .inner h3 {
-    font-size: 20px;
-    text-align: center;
-}
+
 @media only screen and (max-width: 1024px) {
 .collections .collection .inner h3 {
     font-size: 16px;
@@ -4583,7 +4573,7 @@ ul.bottomMenu li:first-child {
 .menu nav {
     float: left;
     height: 100%;
-    padding: 50px 50px 0 40px !important;
+    padding: 50px 50px 0 0px !important;
     width: 40%;
 }
 .menu_logo{ width:100%;float:right; padding-bottom:35px; position:relative; margin-bottom:15px}
@@ -4608,7 +4598,7 @@ ul.bottomMenu li:first-child {
     display: block;
     font-size: 14px;
     text-transform: uppercase; color:#0e1b28;
-    width: 100%; font-family:"FuturaStd-Book";
+    width: 100%; font-family:"FuturaStd-Book"; font-weight:normal;
 }
 .menu nav ul > li > h3, .menu nav > ul > li > a{line-height: 30px;}
 .menu nav ul li a:hover {
@@ -4623,9 +4613,8 @@ ul.bottomMenu li:first-child {
 .menu nav ul li .accordion > div {
     color: rgba(0, 0, 0, 0.3);
 }
-.menu nav ul li .accordion > div > .inner {
-    padding-bottom: 30px;
-}
+.menu nav ul li .inner a{ padding-left:18px; padding-bottom:7px; position:relative;}
+.menu nav ul li .inner a:after{ content:""; width:10px; height:10px; background:url(img/left_arrow.jpg) no-repeat top center; position:absolute; left:0; top:5px; opacity:0.5;}
 .menu-trigger {
     background: #fff url(img/menu_bg.png) no-repeat bottom right;
     color: #0e1b28;
@@ -6141,4 +6130,6 @@ border-radius:3px;
 .contact_form ul li input[type="submit"]{ margin-right:13px;float:right;width:132px;height:32px;line-height:32px;border:1px solid #c75e29; color:#fff; font-size:14px;background:none;}
 .contact_form ul li input[type="submit"]:hover{ background:#c75e29; color:#fff;}
 
-
+.menu nav ul.social_icons{ border:0; padding-top:20px;}
+.menu nav ul.social_icons li{ border:0; float:left; margin-right:20px;}
+.menu nav ul.social_icons li a{ width:100%; float:left;}
