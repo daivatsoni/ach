@@ -5093,7 +5093,12 @@ a.arrow i {
     position: absolute;
     right: 29%;
     top: 50%;
-    width: 53%; transform:translate(0,-50%);
+    width: 53%; 
+	-moz-transform:translate(0,-50%);
+	-webkit-transform:translate(0,-50%);
+	-ms-transform:translate(0,-50%);
+	-o-transform:translate(0,-50%);
+	transform:translate(0,-50%);
 }
 .homepage-2 .collection-link {
     right: 17%;
@@ -6133,3 +6138,19 @@ border-radius:3px;
 .menu nav ul.social_icons{ border:0; padding-top:20px;}
 .menu nav ul.social_icons li{ border:0; float:left; margin-right:20px;}
 .menu nav ul.social_icons li a{ width:100%; float:left;}
+
+
+/*Inner Page CSS Start*/
+.rydehighsecholl_title{font-family: futurastd-bold;
+    position: absolute;
+    left:15%;
+    top: 50%;
+	-moz-transform:translate(0,-50%);
+	-webkit-transform:translate(0,-50%);
+	-ms-transform:translate(0,-50%);
+	-o-transform:translate(0,-50%);
+	transform:translate(0,-50%);
+	}
+.rydehighsecholl_title h2{line-height:42px; font-size:48px; color:#fff; padding-bottom:15px;}
+.rydehighsecholl_title h3{ line-height:36px; font-size:28px;color:#d36229; padding-bottom:25px; position:relative;}
+.rydehighsecholl_title h3:after{ width:120px; height:5px; background:#d36229; content:""; left:0; bottom:0;position: absolute;}

@@ -185,7 +185,7 @@ get_header();
 <div class="viewport w30 bg-cover" style="background-color:#fff;">
   <div class="logo"><img src="<?php echo get_template_directory_uri()."/img/logo.png" ?>" alt="ACH Clifford" /></div>
 </div>
-<div class="viewport w70 bg-cover homepage-2" style="background-image:url(<?php echo get_template_directory_uri() . "/img/slides/hpslide2.jpg" ?>); background-color: #0e1b28; background-position: center right;">
+<div class="viewport w70 bg-cover homepage-2" style="background-image:url(<?php echo get_template_directory_uri() . "/img/slides/hpslide2.jpg" ?>); background-color: #0e1b28; background-position: center left;">
   <?php /* <div class="topline slidein"><img src="http://cdn.jan-kath.com/dist/img/homepage/slide_02-text.png" alt="slide" /></div> */ ?>
   <div class="topline slidein">Realising an architectural vision<br/>
     takes passion, commitment,<br/>
