@@ -52,10 +52,10 @@ get_header();
       
 <nav class="nav_area">
 <div class="menu_logo">
-<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/menu_area_logo.png" class="menu_area_logo" alt="" />
+<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/menu_area_logo.png" class="menu_area_logo" alt="" /></a>
 </div>
         <ul>
-          <li class="home"><a href="#">Home</a></li>
+          <li class="home"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Home</a></li>
           <li>
             <div class="accordion">
               <h3>WHO WE ARE</h3>
@@ -183,7 +183,7 @@ get_header();
                                                                                                                     });
                                                                                                                 </script>
 <div class="viewport w30 bg-cover" style="background-color:#fff;">
-  <div class="logo"><img src="<?php echo get_template_directory_uri()."/img/logo.png" ?>" alt="ACH Clifford" /></div>
+  <div class="logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri()."/img/logo.png" ?>" alt="ACH Clifford" /></a></div>
 </div>
 <div class="viewport w70 bg-cover homepage-2" style="background-image:url(<?php echo get_template_directory_uri() . "/img/slides/hpslide2.jpg" ?>); background-color: #0e1b28; background-position: center left;">
   <?php /* <div class="topline slidein"><img src="http://cdn.jan-kath.com/dist/img/homepage/slide_02-text.png" alt="slide" /></div> */ ?>

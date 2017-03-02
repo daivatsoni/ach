@@ -1,5 +1,5 @@
 <?php
-/*Template Name: RYDE HIGH SCHOOL*/
+/*Template Name: WORKING WITH ACH*/
 get_header();
 ?>
 
@@ -53,10 +53,10 @@ get_header();
       
 <nav class="nav_area">
 <div class="menu_logo">
-<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/menu_area_logo.png" class="menu_area_logo" alt="" />
+<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/menu_area_logo.png" class="menu_area_logo" alt="" /></a>
 </div>
         <ul>
-          <li class="home"><a href="#">Home</a></li>
+          <li class="home"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Home</a></li>
           <li>
             <div class="accordion">
               <h3>WHO WE ARE</h3>
@@ -184,91 +184,69 @@ if ($(window).width() <= 1024) {
 });
 </script>
 <div class="viewport w30 bg-cover" style="background-color:#fff;">
-  <div class="logo"><img src="<?php echo get_template_directory_uri()."/img/logo.png" ?>" alt="ACH Clifford" /></div>
+  <div class="logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri()."/img/logo.png" ?>" alt="ACH Clifford" /></a></div>
 </div>
-<div class="viewport w60 bg-cover homepage-2" style="background-image:url(<?php echo get_template_directory_uri() . "/img/rydehighsecholl_img1.jpg" ?>); background-color: #0e1b28; background-position: center left;">
+<div class="viewport w60 bg-cover workingwithach_section2" style="background-image:url(<?php echo get_template_directory_uri() . "/img/workingwithach_img1.jpg" ?>); background-color: #0e1b28; background-position: center left;">
 
-  <div class="rydehighsecholl_title slidein">
-  <h2>RYDE HIGH SCHOOL</h2>
-  <h3>EDUCATION</h3>
+  <div class="workingwithach_title slidein">
+  <h2>WORKING WITH ACH</h2>
   </div>
 </div>
 
 
-<div class="viewport w80 section_5 bg-cover" style="background-image: url(<?php echo esc_url( get_template_directory_uri() )."/img/rydehighsecholl_img2.jpg"?>);background-position: center right;">
+<div class="viewport w50 workingwithach_section3 section_9" style="background-color:#fff;">
+
+<div class="section9_col1">
+  <h2>Subcontractors & Consultants</h2>
+  <h4>Whether we're working with hospitality clients, schools, retirement providers</h4>
+  <p>Whether we're working with hospitality clients, schools, retirement providers, multi-site operators, architects or investors, our approach enhances every project and makes it an impressive experience – for everyone.</p>
+
+<p>We are specialists in commercial construction and refurbishment in Sydney, Brisbane, Melbourne and surrounding regions, bringing deeper understanding to projects ranging from tens of thousands of dollars to tens of millions of dollars to billions of dollars.</p>
+<a href="#" class="register_button">REGISTER YOUR INTEREST</a>
+</div>
+<div class="section9_col2">
+
+
+<div class="owl-carousel owl-theme testmonial_slider">
+            <div class="item">
+            <h3>TESTIMONIALS</h3>
+<span class="client_name">Firstname Lastname</span>
+<span class="designation">Position here</span>
+
+<p>Whether we're working with hospitality clients, schools, retirement providers, multi-site operators, architects or investors, our approach enhances every project and makes it an impressive experience – for everyone.</p>
+
+<p>We are specialists in commercial construction and refurbishment in Sydney, Brisbane, Melbourne and surrounding regions, bringing deeper understanding to projects ranging from tens of thousands of dollars to tens of millions of dollars.</p>
+            </div>
+            <div class="item">
+            <h3>TESTIMONIALS</h3>
+<span class="client_name">Firstname Lastname</span>
+<span class="designation">Position here</span>
+
+<p>Whether we're working with hospitality clients, schools, retirement providers, multi-site operators, architects or investors, our approach enhances every project and makes it an impressive experience – for everyone.</p>
+
+<p>We are specialists in commercial construction and refurbishment in Sydney, Brisbane, Melbourne and surrounding regions, bringing deeper understanding to projects ranging from tens of thousands of dollars to tens of millions of dollars.</p>
+            </div>
+            <div class="item">
+            <h3>TESTIMONIALS</h3>
+<span class="client_name">Firstname Lastname</span>
+<span class="designation">Position here</span>
+
+<p>Whether we're working with hospitality clients, schools, retirement providers, multi-site operators, architects or investors, our approach enhances every project and makes it an impressive experience – for everyone.</p>
+
+<p>We are specialists in commercial construction and refurbishment in Sydney, Brisbane, Melbourne and surrounding regions, bringing deeper understanding to projects ranging from tens of thousands of dollars to tens of millions of dollars.</p>
+            </div>
+          </div>  
+
 
 </div>
-<div class="viewport w80 section_5 bg-cover" style="background-image: url(<?php echo esc_url( get_template_directory_uri() )."/img/rydehighsecholl_img3.jpg"?>);background-position: center right;">
 
 </div>
-<div class="viewport w80 section_5 bg-cover" style="background-image: url(<?php echo esc_url( get_template_directory_uri() )."/img/rydehighsecholl_img4.jpg"?>);background-position: center right;">
+<div class="viewport w50 workingwithach_section4 bg-cover" style="background-image: url(<?php echo esc_url( get_template_directory_uri() )."/img/workingwithach_img2.png"?>);background-position: center right;">
 
 </div>
-<div class="viewport w80 section_5 bg-cover" style="background-image: url(<?php echo esc_url( get_template_directory_uri() )."/img/rydehighsecholl_img5.jpg"?>);background-position: center right;">
+<div class="viewport w100 workingwithach_section5 bg-cover" style="background-image: url(<?php echo esc_url( get_template_directory_uri() )."/img/workingwithach_img3.jpg"?>);background-position: center right;">
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="viewport vertical-slider section_4"> <a href="#" class="carousel-control next"><i class="icon-angle-up"></i></a> <a href="#" class="carousel-control prev"><i class="icon-angle-down"></i></a>
-  <div class="carousel">
-  
-    <div class="item " style="background-image:url(<?php echo esc_url( get_template_directory_uri() ); ?>/img/carousel_slider_img1.jpg)"> 
-    <a href="#">
-      <div class="item_des">
-        <div class="item_title">
-          <h3>RYDE HIGH SCHOOL</h3>
-        </div>
-      </div>
-      </a>
-       </div>
-    <div class="item " style="background-image:url(<?php echo esc_url( get_template_directory_uri() ); ?>/img/carousel_slider_img2.jpg)"> <a href="#">
-      <div class="item_des">
-        <div class="item_title">
-          <h3>RYDE HIGH SCHOOL</h3>
-        </div>
-      </div>
-      </a> </div>
-	<div class="item " style="background-image:url(<?php echo esc_url( get_template_directory_uri() ); ?>/img/carousel_slider_img3.jpg)"> <a href="#">
-      <div class="item_des">
-        <div class="item_title">
-          <h3>RYDE HIGH SCHOOL</h3>
-        </div>
-      </div>
-      </a> </div>
-    <div class="item " style="background-image:url(<?php echo esc_url( get_template_directory_uri() ); ?>/img/carousel_slider_img2.jpg)"> <a href="#">
-      <div class="item_des">
-        <div class="item_title">
-          <h3>RYDE HIGH SCHOOL</h3>
-        </div>
-      </div>
-      </a> </div>
-    <div class="item " style="background-image:url(<?php echo esc_url( get_template_directory_uri() ); ?>/img/carousel_slider_img3.jpg)"> <a href="#">
-      <div class="item_des">
-        <div class="item_title">
-          <h3>RYDE HIGH SCHOOL</h3>
-        </div>
-      </div>
-      </a> </div>
-      
-      
-  </div>
-</div>
-
 
 <?php get_footer();
                                                                                                                                                                                         

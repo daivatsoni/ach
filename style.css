@@ -6012,6 +6012,10 @@ li.noLineTop a {
 
 
 /*New CSS Add here*/
+a.register_button,
+.previous_project,
+.all_project,
+.next_project,
 .testmonial_slider .owl-prev,
 .testmonial_slider .owl-next,
 .contact_form ul li input[type="submit"],
@@ -6101,7 +6105,7 @@ ul.tab_button_set li.ui-tabs-active a{ color:#d36229;font-family:"futurastd-bold
 .footer h4{color:#d36229;font-family:"futurastd-bold"; font-size:16px; padding-bottom:10px;}
 .footer_social{ list-style:none; padding:0 0 15px; margin:0 -10px;display: inline-block;}
 .footer_social li{ padding:0 10px; float:left;}
-.footer_social li:first-child{ padding-right:20px;}
+.footer_social li:first-child{ padding-right:20px; font-size:20px;}
 
 .footer_email,
 .footer_phone{ width:100%; float:left;}
@@ -6120,7 +6124,7 @@ ul.tab_button_set li.ui-tabs-active a{ color:#d36229;font-family:"futurastd-bold
 -o-border-radius:3px;
 border-radius:3px;
 }
-.contact_form ul li textarea{ margin-top:8px; width:272px; height:92px;
+.contact_form ul li textarea{ margin-top:8px; width:272px; height:92px; border:0;
 -moz-border-radius:3px;
 -webkit-border-radius:3px;
 -ms-border-radius:3px;
@@ -6141,16 +6145,71 @@ border-radius:3px;
 
 
 /*Inner Page CSS Start*/
-.rydehighsecholl_title{font-family: futurastd-bold;
-    position: absolute;
-    left:15%;
-    top: 50%;
-	-moz-transform:translate(0,-50%);
-	-webkit-transform:translate(0,-50%);
-	-ms-transform:translate(0,-50%);
-	-o-transform:translate(0,-50%);
-	transform:translate(0,-50%);
-	}
-.rydehighsecholl_title h2{line-height:42px; font-size:48px; color:#fff; padding-bottom:15px;}
+.workingwithach_section2,
+.rydehighsecholl_section2{ display:flex;}
+.workingwithach_title,
+.rydehighsecholl_title{font-family: futurastd-bold;padding-left:15%;display: flex;flex-direction: column;justify-content: center;min-height: 1px;}
+.workingwithach_section2 .workingwithach_title{ padding-left:20%;}
+.workingwithach_section2 .workingwithach_title h2{ padding-bottom:45px;}
+.workingwithach_title h2,
+.rydehighsecholl_title h2{line-height:42px; font-size:48px; color:#fff; padding-bottom:15px;position:relative;}
 .rydehighsecholl_title h3{ line-height:36px; font-size:28px;color:#d36229; padding-bottom:25px; position:relative;}
+.workingwithach_title h2:after,
 .rydehighsecholl_title h3:after{ width:120px; height:5px; background:#d36229; content:""; left:0; bottom:0;position: absolute;}
+.footer.rydehighschool_footer{ padding:105px 160px 0 70px;}
+.footer.rydehighschool_footer h4{ line-height:20px;}
+.footer.rydehighschool_footer h4 span{ color:#fff;}
+.project_buttons{ width:100%; float:left; padding-top:30px;}
+.previous_project,
+.all_project,
+.next_project{width:132px;height:32px;line-height:32px;border:1px solid #c75e29; color:#fff; font-size:14px; text-align:center;float:left; margin:0 10px 18px 0; letter-spacing:0.5px;}
+.previous_project:hover,
+.all_project:hover,
+.next_project:hover{ background:#c75e29;}
+.previous_project{ width:164px; margin-right:0;}
+.rydehighschool_footer_bottom{ position:absolute; bottom:90px;}
+
+.workingwithach_section3.section_9 h2{ font-size:42px; font-family:"futurastd-bold"; line-height:43px; color:#d36229;text-transform: none;}
+.workingwithach_section3 .testmonial_slider{ padding-top:0;}
+.workingwithach_section3 .testmonial_slider h3{ padding-bottom:67px;}
+.workingwithach_section3 .testmonial_slider .client_name{ color:#0e1b28;}
+.workingwithach_section4{ position:relative; z-index:999;}
+.workingwithach_section5{ margin-left:-4.5%;}
+a.register_button{width:208px;height:32px;line-height:32px;border:1px solid #0e1b28; color:#fff; font-size:14px; text-align:center;float: right; letter-spacing:0.5px;color:#0e1b28; margin-top:8px;}
+a.register_button:hover{ background:#c75e29;border:1px solid #c75e29; color:#fff;}
+
+
+.workingwithach_section3 .contact_form .frmHeading{ color:#0e1b28; font-size:20px; padding:20px 0 0; margin:0;}
+.workingwithach_section3 .contact_form{ clear:both; width:100%; float:left; font-size:14px; line-height:20ppx;}
+.workingwithach_section3 input[type="text"], .workingwithach_section3 input[type="email"], .workingwithach_section3 input[type="password"],.workingwithach_section3 input[type="tel"],.workingwithach_section3 select,.workingwithach_section3 input[type="number"]{ width:168px; height:23px; margin:0; border:1px solid #bebebe;
+-moz-border-radius:3px;
+-webkit-border-radius:3px;
+-ms-border-radius:3px;
+-o-border-radius:3px;
+border-radius:3px;
+}
+.workingwithach_section3 .contact_form ul li textarea{ margin-top:8px; width:272px; height:92px;border:1px solid #bebebe;
+-moz-border-radius:3px;
+-webkit-border-radius:3px;
+-ms-border-radius:3px;
+-o-border-radius:3px;
+border-radius:3px;
+}
+.workingwithach_section3 input.txtPostcode{ width:68px;}
+.workingwithach_section3 .contact_form ul{ margin:0; padding:0; list-style:none;}
+.workingwithach_section3 .contact_form ul li{ padding-top:10px;}
+.workingwithach_section3 .contact_form ul li span:first-child{ width:105px;color:#0e1b28;display: inline-block;}
+.workingwithach_section3 .contact_form ul li span.lblRequired{ color:#9d9e9e;}
+.workingwithach_section3 .contact_form ul li input[type="submit"]{ margin-right:13px;float: left;width:132px;height:32px;line-height:32px;border:1px solid #0e1b28; color:#0e1b28; font-size:14px;background:none; margin-left:140px; margin-top:-25px;}
+.workingwithach_section3 .contact_form ul li input[type="submit"]:hover{border:1px solid #c75e29;background:#c75e29; color:#fff;}
+
+.workingwithach_section3 div.wpcf7 .file-upload{ overflow:hidden;display: inline-block;width:146px;border:1px solid #0e1b28;}
+.workingwithach_section3 div.wpcf7 input[type="file"]{ width:223px;border: none; margin-left:-80px;}
+.file_maximum{ clear:both;color:#9d9e9e; font-size:10px; line-height:12px;float:left; width:100%; padding-left:105px; padding-top:5px;} 
+.workingwithach_section3 .contact_form ul li.file_upload span:first-child{ line-height:14px;}
+.workingwithach_section3 .contact_form ul li.project_experience span:first-child{ width:100%;}
+
+
+
+
+
