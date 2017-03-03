@@ -1,5 +1,5 @@
 <?php
-/*Template Name: WORKING WITH ACH*/
+/*Template Name: WORKING AT ACH CURRENT POSITIONS*/
 get_header();
 ?>
 
@@ -189,53 +189,32 @@ if ($(window).width() <= 1024) {
 <div class="viewport w60 bg-cover workingwithach_section2" style="background-image:url(<?php echo get_template_directory_uri() . "/img/workingwithach_img1.jpg" ?>); background-color: #0e1b28; background-position: center left;">
 
   <div class="workingwithach_title slidein">
-  <h2>WORKING WITH ACH</h2>
+  <h2>WORKING AT ACH </h2>
   </div>
 </div>
 
 
-<div class="viewport w50 workingwithach_section3 section_9" style="background-color:#fff;">
+<div class="viewport w50 workingwithach_section3 positions_section1 section_9" style="background-color:#fff;">
+<h2>CURRENT POSITIONS <a href="#" class="current_positions_close">CLOSE</a></h2>
+<ul class="current_positions_list">
+<li>
+<h5>Project Manager</h5>
+<div class="positions_list_content"><a href="#" class="apply_button">APPLY</a>We are seeking a talented and experienced Project Manager. If you would like information on this role, please contact us here. <a href="#">View full job description</a></div>
+</li>
+<li>
+<h5>Site Manager</h5>
+<div class="positions_list_content"><a href="#" class="apply_button">APPLY</a>We are seeking a talented and experienced Project Manager. If you would like information on this role, please contact us here. <a href="#">View full job description</a></div>
+</li>
+<li>
+<h5>Estimator</h5>
+<div class="positions_list_content"><a href="#" class="apply_button">APPLY</a>We are seeking a talented and experienced Project Manager. If you would like information on this role, please contact us here. <a href="#">View full job description</a></div>
+</li>
+<li>
+<h5>Send us your CV</h5>
+<div class="positions_list_content"><a href="#" class="apply_button">APPLY</a>We welcome experienced and graduate applications. Please apply here to send us your CV.</div>
+</li>
+</ul>
 
-<div class="section9_col1">
-  <h2>Subcontractors & Consultants</h2>
-  <h4>Whether we're working with hospitality clients, schools, retirement providers</h4>
-  <p>Whether we're working with hospitality clients, schools, retirement providers, multi-site operators, architects or investors, our approach enhances every project and makes it an impressive experience – for everyone.</p>
-
-<p>We are specialists in commercial construction and refurbishment in Sydney, Brisbane, Melbourne and surrounding regions, bringing deeper understanding to projects ranging from tens of thousands of dollars to tens of millions of dollars to billions of dollars.</p>
-<a href="#" class="register_button">REGISTER YOUR INTEREST</a>
-</div>
-<div class="section9_col2 testmonial_slider_area">
-
-<h3>TESTIMONIALS</h3>
-<div class="owl-carousel owl-theme testmonial_slider">
-            <div class="item">
-<span class="client_name">Firstname Lastname</span>
-<span class="designation">Position here</span>
-
-<p>Whether we're working with hospitality clients, schools, retirement providers, multi-site operators, architects or investors, our approach enhances every project and makes it an impressive experience – for everyone.</p>
-
-<p>We are specialists in commercial construction and refurbishment in Sydney, Brisbane, Melbourne and surrounding regions, bringing deeper understanding to projects ranging from tens of thousands of dollars to tens of millions of dollars.</p>
-            </div>
-            <div class="item">
-<span class="client_name">Firstname Lastname</span>
-<span class="designation">Position here</span>
-
-<p>Whether we're working with hospitality clients, schools, retirement providers, multi-site operators, architects or investors, our approach enhances every project and makes it an impressive experience – for everyone.</p>
-
-<p>We are specialists in commercial construction and refurbishment in Sydney, Brisbane, Melbourne and surrounding regions, bringing deeper understanding to projects ranging from tens of thousands of dollars to tens of millions of dollars.</p>
-            </div>
-            <div class="item">
-<span class="client_name">Firstname Lastname</span>
-<span class="designation">Position here</span>
-
-<p>Whether we're working with hospitality clients, schools, retirement providers, multi-site operators, architects or investors, our approach enhances every project and makes it an impressive experience – for everyone.</p>
-
-<p>We are specialists in commercial construction and refurbishment in Sydney, Brisbane, Melbourne and surrounding regions, bringing deeper understanding to projects ranging from tens of thousands of dollars to tens of millions of dollars.</p>
-            </div>
-          </div>  
-
-
-</div>
 
 </div>
 <div class="viewport w50 workingwithach_section4 bg-cover" style="background-image: url(<?php echo esc_url( get_template_directory_uri() )."/img/workingwithach_img2.png"?>);background-position: center right;">

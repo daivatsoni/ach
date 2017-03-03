@@ -141,50 +141,51 @@ get_header();
   </div>
 </div>
 <div id="container" class="wrapper main">
-<script>
-
-                                                                                                                    $(document).ready(function () {
-
-                                                                                                                        // when headline is clicked video will start
-                                                                                                                        $('#playvid, playvid a').click(function (e) {
-                                                                                                                            e.preventDefault();
-                                                                                                                            var myVideo = document.getElementById("video-background");
-
-                                                                                                                            if (myVideo.paused) {
-                                                                                                                                myVideo.play();
-                                                                                                                            } else {
-                                                                                                                                myVideo.pause();
-                                                                                                                            }
-
-                                                                                                                            $(this).fadeOut(1000);
-
-                                                                                                                            $('#play, #pause').fadeIn();
-                                                                                                                        });
-
-                                                                                                                        // trigger for play and pause
-                                                                                                                        $('#play').click(function () {
-                                                                                                                            var myVideo = document.getElementById("video-background");
-                                                                                                                            myVideo.play();
-                                                                                                                        });
-
-                                                                                                                        $('#pause').click(function () {
-                                                                                                                            var myVideo = document.getElementById("video-background");
-                                                                                                                            myVideo.pause();
-                                                                                                                        });
-                                                                                                                    });
-
-                                                                                                                    $(window).on("load, resize", function () {
-                                                                                                                        // hide video for mobile version
-                                                                                                                        if ($(window).width() <= 1024) {
-                                                                                                                            $('#embedVideo').hide();
-                                                                                                                        } else {
-                                                                                                                            $('#embedVideo').show();
-                                                                                                                        }
-                                                                                                                    });
-                                                                                                                </script>
+	<script>
+    
+    $(document).ready(function () {
+    
+    // when headline is clicked video will start
+    $('#playvid, playvid a').click(function (e) {
+    e.preventDefault();
+    var myVideo = document.getElementById("video-background");
+    
+    if (myVideo.paused) {
+    myVideo.play();
+    } else {
+    myVideo.pause();
+    }
+    
+    $(this).fadeOut(1000);
+    
+    $('#play, #pause').fadeIn();
+    });
+    
+    // trigger for play and pause
+    $('#play').click(function () {
+    var myVideo = document.getElementById("video-background");
+    myVideo.play();
+    });
+    
+    $('#pause').click(function () {
+    var myVideo = document.getElementById("video-background");
+    myVideo.pause();
+    });
+    });
+    
+    $(window).on("load, resize", function () {
+    // hide video for mobile version
+    if ($(window).width() <= 1024) {
+    $('#embedVideo').hide();
+    } else {
+    $('#embedVideo').show();
+    }
+    });
+    </script>
 <div class="viewport w30 bg-cover" style="background-color:#fff;">
   <div class="logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri()."/img/logo.png" ?>" alt="ACH Clifford" /></a></div>
 </div>
+
 <div class="viewport w70 bg-cover homepage-2" style="background-image:url(<?php echo get_template_directory_uri() . "/img/slides/hpslide2.jpg" ?>); background-color: #0e1b28; background-position: center left;">
   <?php /* <div class="topline slidein"><img src="http://cdn.jan-kath.com/dist/img/homepage/slide_02-text.png" alt="slide" /></div> */ ?>
   <div class="topline slidein">Realising an architectural vision<br/>
@@ -193,6 +194,7 @@ get_header();
     to detail.</div>
   <?php /* <div class="collection-link slidein"><a class="arrow" href="/collection/erased_heritage/">View Collection</a></div> */ ?>
 </div>
+
 <div class="viewport w30 bg-cover section_3">
   <div class="top25">
   
@@ -209,6 +211,7 @@ get_header();
     
   </div>
 </div>
+
 <div class="viewport vertical-slider section_4"> <a href="#" class="carousel-control next"><i class="icon-angle-up"></i></a> <a href="#" class="carousel-control prev"><i class="icon-angle-down"></i></a>
   <div class="carousel">
   
@@ -253,6 +256,9 @@ get_header();
       
   </div>
 </div>
+<!--test -->
+
+
 
 <div class="viewport w80 section_5 bg-cover" style="background-image: url(<?php echo esc_url( get_template_directory_uri() ); ?>/img/slide-1.png);background-position: center right;">
 <div class="slider_caption_area">
@@ -271,20 +277,16 @@ TREE KANGAROO EXHIBIT</span>
  
 </div>
 
+<div class="viewport w100 bg-cover section_6 slide-blank" style="background-image: url(<?php echo esc_url( get_template_directory_uri() ); ?>/img/slide-3.png);background-position: center left;">
 
-<div class="viewport w100 bg-cover section_6" style="background-image: url(<?php echo esc_url( get_template_directory_uri() ); ?>/img/slide-3.png);background-position: center left;">
-
-<div class="viewport section_blank" style="background-image: url(<?php echo esc_url( get_template_directory_uri() ); ?>/img/slide-blank.png);background-position: center left;"></div>
-
-  <div class="slider_caption_area">
+<div class="slider_caption_area">
 <span class="slider_caption slidein" style=" line-height:42px;">STANMORE PUBLIC SCHOOL</span>
 </div>
 
 </div>
 
 
-
-
+<!--test -->
 <div class="viewport w50 section_7">
   <div id="tabs" class="tab_content">
         <ul class="tab_button_set">
@@ -346,8 +348,6 @@ TREE KANGAROO EXHIBIT</span>
       </div>
 </div>
 
-
-
 <div class="viewport section_8"> 
 <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/slideing-img.jpg"  alt="slideing-img" class="slidein slideing-img" />  </div>
 
@@ -361,12 +361,11 @@ TREE KANGAROO EXHIBIT</span>
 <p>We are specialists in commercial construction and refurbishment in Sydney, Brisbane, Melbourne and surrounding regions, bringing deeper understanding to projects ranging from tens of thousands of dollars to tens of millions of dollars to billions of dollars.</p>
 <span class="separator"></span>
 </div>
-<div class="section9_col2">
+<div class="section9_col2 testmonial_slider_area">
 
-
+<h3>TESTIMONIALS</h3>
 <div class="owl-carousel owl-theme testmonial_slider">
             <div class="item">
-            <h3>TESTIMONIALS</h3>
               <div class="project_name">PROJECT:
 <span>RYDE HIGH SCHOOL</span></div>
 <span class="client_name">Firstname Lastname</span>
@@ -377,7 +376,6 @@ TREE KANGAROO EXHIBIT</span>
 <p>We are specialists in commercial construction and refurbishment in Sydney, Brisbane, Melbourne and surrounding regions, bringing deeper understanding to projects ranging from tens of thousands of dollars to tens of millions of dollars.</p>
             </div>
             <div class="item">
-            <h3>TESTIMONIALS</h3>
               <div class="project_name">PROJECT:
 <span>RYDE HIGH SCHOOL</span></div>
 <span class="client_name">Firstname Lastname</span>
@@ -388,7 +386,6 @@ TREE KANGAROO EXHIBIT</span>
 <p>We are specialists in commercial construction and refurbishment in Sydney, Brisbane, Melbourne and surrounding regions, bringing deeper understanding to projects ranging from tens of thousands of dollars to tens of millions of dollars.</p>
             </div>
             <div class="item">
-            <h3>TESTIMONIALS</h3>
               <div class="project_name">PROJECT:
 <span>RYDE HIGH SCHOOL</span></div>
 <span class="client_name">Firstname Lastname</span>
@@ -409,11 +406,13 @@ TREE KANGAROO EXHIBIT</span>
 <span class="slider_caption slidein">RYDE HIGH SCHOOL</span>
 </div>
 </div>
+
 <div class="viewport w80 section_10 bg-cover" style="background-image: url(<?php echo esc_url( get_template_directory_uri() ); ?>/img/school_img2.jpg);background-position: center right;">
 <div class="slider_caption_area">
 <span class="slider_caption slidein">MAROUBRA HIGH SCHOOL</span>
 </div>
 </div>
+
 <div class="viewport w80 section_10 bg-cover" style="background-image: url(<?php echo esc_url( get_template_directory_uri() ); ?>/img/school_img3.jpg);background-position: center right;">
 <div class="slider_caption_area">
 <span class="slider_caption slidein">WOY WOY HIGH SCHOOL</span>

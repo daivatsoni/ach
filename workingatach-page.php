@@ -1,5 +1,5 @@
 <?php
-/*Template Name: WORKING WITH ACH*/
+/*Template Name: WORKING AT ACH*/
 get_header();
 ?>
 
@@ -189,26 +189,28 @@ if ($(window).width() <= 1024) {
 <div class="viewport w60 bg-cover workingwithach_section2" style="background-image:url(<?php echo get_template_directory_uri() . "/img/workingwithach_img1.jpg" ?>); background-color: #0e1b28; background-position: center left;">
 
   <div class="workingwithach_title slidein">
-  <h2>WORKING WITH ACH</h2>
+  <h2>WORKING AT ACH </h2>
   </div>
 </div>
 
 
-<div class="viewport w50 workingwithach_section3 section_9" style="background-color:#fff;">
+<div class="viewport w50 workingwithach_section3 workingatach_section1 section_9" style="background-color:#fff;">
 
 <div class="section9_col1">
-  <h2>Subcontractors & Consultants</h2>
+  <h2>OUR PHILOSOPHY</h2>
   <h4>Whether we're working with hospitality clients, schools, retirement providers</h4>
   <p>Whether we're working with hospitality clients, schools, retirement providers, multi-site operators, architects or investors, our approach enhances every project and makes it an impressive experience – for everyone.</p>
 
 <p>We are specialists in commercial construction and refurbishment in Sydney, Brisbane, Melbourne and surrounding regions, bringing deeper understanding to projects ranging from tens of thousands of dollars to tens of millions of dollars to billions of dollars.</p>
-<a href="#" class="register_button">REGISTER YOUR INTEREST</a>
+<a href="#" class="register_button">VIEW CURRENT POSITIONS</a>
 </div>
 <div class="section9_col2 testmonial_slider_area">
 
-<h3>TESTIMONIALS</h3>
 <div class="owl-carousel owl-theme testmonial_slider">
-            <div class="item">
+<div class="item">
+<h3>CAREER <br />
+PROFILES</h3>
+<img src="<?php echo get_template_directory_uri()."/img/career_profile_img.jpg" ?>" class="career_profile_img" />
 <span class="client_name">Firstname Lastname</span>
 <span class="designation">Position here</span>
 
@@ -217,6 +219,9 @@ if ($(window).width() <= 1024) {
 <p>We are specialists in commercial construction and refurbishment in Sydney, Brisbane, Melbourne and surrounding regions, bringing deeper understanding to projects ranging from tens of thousands of dollars to tens of millions of dollars.</p>
             </div>
             <div class="item">
+<h3>CAREER <br />
+PROFILES</h3>
+<img src="<?php echo get_template_directory_uri()."/img/career_profile_img.jpg" ?>" class="career_profile_img" />
 <span class="client_name">Firstname Lastname</span>
 <span class="designation">Position here</span>
 
@@ -225,6 +230,9 @@ if ($(window).width() <= 1024) {
 <p>We are specialists in commercial construction and refurbishment in Sydney, Brisbane, Melbourne and surrounding regions, bringing deeper understanding to projects ranging from tens of thousands of dollars to tens of millions of dollars.</p>
             </div>
             <div class="item">
+<h3>CAREER <br />
+PROFILES</h3>
+<img src="<?php echo get_template_directory_uri()."/img/career_profile_img.jpg" ?>" class="career_profile_img" />
 <span class="client_name">Firstname Lastname</span>
 <span class="designation">Position here</span>
 

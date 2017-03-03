@@ -6012,6 +6012,7 @@ li.noLineTop a {
 
 
 /*New CSS Add here*/
+.current_positions_close,
 a.register_button,
 .previous_project,
 .all_project,
@@ -6061,7 +6062,13 @@ h3.subheading{ font-size:33px; line-height:40px; color:#fff; padding:25px 0 25px
 .slider_caption_area{display: flex;flex-direction: column;justify-content:flex-end;align-items:flex-end;width:100%;padding-bottom: 20px;min-height: 1px;}
 .slider_caption{ width:458px; height:65px; background:url(img/slider_caption.png) no-repeat top left; color:#fff; font-size:18px; line-height:21px; padding:15px 135px 15px 40px; float:right;}
 .section_6{ margin-left:-1.5%; position:relative; z-index:999;display:flex;padding-right:0.6%;}
-.section_blank{ width:220px; position:absolute; right:0; top:0; min-width:220px; z-index:999; background-size:100% 100% !important;}
+.section_6.slide-blank:after{ content:"";width:220px; position:absolute; right:0; top:0; min-width:220px; height:100%; z-index:999;background-image:url(img/slide-blank.png);background-position: center left;-moz-background-size:100% 100% !important;
+-webkit-background-size:100% 100% !important;
+-o-background-size:100% 100% !important;
+-ms-background-size:100% 100% !important;
+background-size:100% 100% !important;
+}
+
 .zoo_logo{ position:absolute; left:7%; bottom:35px;}
 
 .section_7{ padding-top:130px;background:#fff; color:#0e1b28;}
@@ -6086,7 +6093,7 @@ ul.tab_button_set li.ui-tabs-active a{ color:#d36229;font-family:"futurastd-bold
 .separator{ width:120px; height:5px; float:left; background:#d36229; margin-top:30px;}
 
 .testmonial_slider{ width:100%; padding-top:82px;}
-.testmonial_slider h3{ font-size:28px; line-height:30px; color:#0e1b28; padding-bottom:15px;}
+.testmonial_slider_area h3{ font-size:28px; line-height:30px; color:#0e1b28; padding-bottom:15px;}
 .testmonial_slider .project_name{ text-transform:uppercase; padding-bottom:7px;}
 .testmonial_slider .project_name span{ font-family:"futurastd-bold"; display:block;}
 .testmonial_slider .client_name{color:#d36229;}
@@ -6171,7 +6178,7 @@ border-radius:3px;
 
 .workingwithach_section3.section_9 h2{ font-size:42px; font-family:"futurastd-bold"; line-height:43px; color:#d36229;text-transform: none;}
 .workingwithach_section3 .testmonial_slider{ padding-top:0;}
-.workingwithach_section3 .testmonial_slider h3{ padding-bottom:67px;}
+.workingwithach_section3 .testmonial_slider_area h3{ padding-bottom:67px;}
 .workingwithach_section3 .testmonial_slider .client_name{ color:#0e1b28;}
 .workingwithach_section4{ position:relative; z-index:999;}
 .workingwithach_section5{ margin-left:-4.5%;}
@@ -6209,7 +6216,19 @@ border-radius:3px;
 .workingwithach_section3 .contact_form ul li.file_upload span:first-child{ line-height:14px;}
 .workingwithach_section3 .contact_form ul li.project_experience span:first-child{ width:100%;}
 
+.workingatach_section1.workingwithach_section3.section_9 h2{ padding-bottom:30px;}
+.workingatach_section1.section_9 .section9_col1{ padding-right:20px;}
+.workingatach_section1 a.register_button{ margin-top:45px;}
+.owl-carousel .owl-item img.career_profile_img{ position:absolute; top:0; right:0; width: auto;}
+.workingatach_section1.workingwithach_section3 .testmonial_slider_area h3{ padding-bottom:30px;}
 
+.current_positions_close{ width:65px; height:32px; line-height:32px; font-size:14px; color:#0e1b28; border:1px solid #0e1b28;text-align:center; text-transform:uppercase;float:right;margin-top:5px; font-family:"FuturaStd-Book"; font-weight:normal;}
+.current_positions_close:hover{ background:#d36229; border:1px solid #d36229; color:#fff;}
 
-
-
+ul.current_positions_list{ list-style:none; padding:35px 0 0 0; margin:0;}
+ul.current_positions_list li{ width:100%; float:left; border-top:1px solid #0e1b28; padding:23px 0 28px;}
+ul.current_positions_list li h5{ padding:0 0 12px 0; font-size:16px; color:#000;}
+ul.current_positions_list li .positions_list_content{ width:100%; float:left; padding-left:166px; position:relative; font-size:14px; line-height:16px;}
+ul.current_positions_list li a.apply_button{ width:104px; height:26px; color:#fff; font-size:14px; line-height:25px;background:#d36229; border:1px solid #d36229; float:left; position:absolute; left:0; top:0; text-align:center; font-weight:bold;}
+ul.current_positions_list li a.apply_button:hover{ background:none; color:#d36229;}
+ul.current_positions_list li a{ color:#d36229;}
