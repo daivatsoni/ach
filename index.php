@@ -131,10 +131,10 @@ get_header();
           
         </ul>
         <ul class="social_icons">
-        <li><a href="#"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/facebook1.png" /></a></li>
-        <li><a href="#"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/instagram1.png" /></a></li>
-        <li><a href="#"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/twitter1.png" /></a></li>
-        <li><a href="#"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/linkedin1.png" /></a></li>
+        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
         </ul>
       </nav>
     </div>
@@ -262,8 +262,8 @@ get_header();
 
 <div class="viewport w80 section_5 bg-cover" style="background-image: url(<?php echo esc_url( get_template_directory_uri() ); ?>/img/slide-1.png);background-position: center right;">
 <div class="slider_caption_area">
-<span class="slider_caption slidein">NGALLU WAL - DOONSIDE<br />
-ABORIGINAL MEDICAL CENTER</span>
+<a href="#" class="slider_caption slidein">NGALLU WAL - DOONSIDE<br />
+ABORIGINAL MEDICAL CENTER</a>
 </div>
 
 </div>
@@ -271,8 +271,8 @@ ABORIGINAL MEDICAL CENTER</span>
 <div class="viewport w80 bg-cover section_6" style="background-image: url(<?php echo esc_url( get_template_directory_uri() ); ?>/img/slide-2.png); background-position: center left;">
  
  <div class="slider_caption_area">
-<span class="slider_caption slidein">TARONGA ZOO<br />
-TREE KANGAROO EXHIBIT</span>
+<a href="#" class="slider_caption slidein">TARONGA ZOO<br />
+TREE KANGAROO EXHIBIT</a>
 <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/zoo_logo.png" width="236" height="100" alt="zoo_logo" class="zoo_logo" /> </div> 
  
 </div>
@@ -280,7 +280,7 @@ TREE KANGAROO EXHIBIT</span>
 <div class="viewport w100 bg-cover section_6 slide-blank" style="background-image: url(<?php echo esc_url( get_template_directory_uri() ); ?>/img/slide-3.png);background-position: center left;">
 
 <div class="slider_caption_area">
-<span class="slider_caption slidein" style=" line-height:42px;">STANMORE PUBLIC SCHOOL</span>
+<a href="#" class="slider_caption slidein" style=" line-height:42px;">STANMORE PUBLIC SCHOOL</a>
 </div>
 
 </div>
@@ -403,19 +403,19 @@ TREE KANGAROO EXHIBIT</span>
 
 <div class="viewport w80 section_10 bg-cover" style="background-image: url(<?php echo esc_url( get_template_directory_uri() ); ?>/img/school_img1.jpg);background-position: center right;">
 <div class="slider_caption_area">
-<span class="slider_caption slidein">RYDE HIGH SCHOOL</span>
+<a href="#" class="slider_caption slidein">RYDE HIGH SCHOOL</a>
 </div>
 </div>
 
 <div class="viewport w80 section_10 bg-cover" style="background-image: url(<?php echo esc_url( get_template_directory_uri() ); ?>/img/school_img2.jpg);background-position: center right;">
 <div class="slider_caption_area">
-<span class="slider_caption slidein">MAROUBRA HIGH SCHOOL</span>
+<a href="#" class="slider_caption slidein">MAROUBRA HIGH SCHOOL</a>
 </div>
 </div>
 
 <div class="viewport w80 section_10 bg-cover" style="background-image: url(<?php echo esc_url( get_template_directory_uri() ); ?>/img/school_img3.jpg);background-position: center right;">
 <div class="slider_caption_area">
-<span class="slider_caption slidein">WOY WOY HIGH SCHOOL</span>
+<a href="#" class="slider_caption slidein">WOY WOY HIGH SCHOOL</a>
 </div>
 </div>
 

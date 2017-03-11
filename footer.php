@@ -33,10 +33,10 @@
     <h4>ACH CLIFFORD CONSTRUCTIONS</h4>
     <ul class="footer_social">
       <li>Contact Us</li>
-      <li><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/facebook.jpg"/></li>
-      <li><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/instagram.jpg"/></li>
-      <li><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/twitter.jpg"/></li>
-      <li><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/linkedin.jpg"/></li>
+      <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
     </ul>
     <span class="footer_phone">
     <label>Telephone</label>
