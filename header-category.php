@@ -4,13 +4,11 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="publisher" content="Daivat Soni <info@daivat.com>">
-
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <meta name="viewport" content="width=device-width" />
+        <meta id="viewport" name="viewport">
 
         <title>ACH Clifford</title>
 
-        
+        <?php wp_head(); ?>
         <link property="stylesheet" rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
         <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/owl.carousel.css">
 
@@ -48,7 +46,7 @@
         <!--[if IE]>
           <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
-  
+
         <script>
             (function (doc) {
                 var viewport = doc.getElementById('viewport');
@@ -61,8 +59,6 @@
 
             var ajaxurl = "<?php echo admin_url('admin-ajax.php'); ?>";
         </script>
-		
-		<?php wp_head(); ?>
     </head>
     <body class="collection homepage">
         <?php
@@ -116,7 +112,7 @@
                 <div class="content"> <a href="#" class="menu-trigger-close"></a>
                     <div class="collections keep-ratio__11">
                         <div class="inner">
-                            <div id="ajax-menu" data='category'></div>
+                            <div id="ajax-menu" data='project' data-id='<?php echo get_queried_object()->term_id; ?>'></div>
                         </div>
                     </div>
 
