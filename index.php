@@ -44,7 +44,7 @@ get_header();
         });
     </script>
     <div class="viewport w30 bg-cover" style="background-color:#fff;">
-        <?php $arrLogo = get_field("hp_logo"); ?>
+        <?php $arrLogo = get_field("logo","options"); ?>
         <div class="logo"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><img src="<?php echo $arrLogo['url'] ?>" alt="<?php echo $arrLogo['alt'] ?>" /></a></div>
     </div>
 

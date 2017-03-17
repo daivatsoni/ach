@@ -50,11 +50,20 @@ function getMenuItems() {
             $arrProjects = get_posts($args);
             if (!empty($arrProjects) && $arrProjects != NULL) {
                 $html = ob_start();
-                ?><div id="menu">
+                ?><div id="menu"><div class="project-tiles">
                 <?php
                 foreach ($arrProjects as $project) {
                     $project_link = get_permalink($project->ID);
-                    ?>
+                    $thumbImg = get_field("proj_thumb_image", $project->ID);
+                    if($thumbImg) { ?>
+                        <div class="collection">
+                            <a href="<?php echo $project_link ?>">
+                                <div class="inner" style="background-image:url(<?php echo esc_url($thumbImg['url']); ?>)">
+                                    <h3><?php echo strtoupper($project->post_title); ?></h3>
+                                </div>
+                            </a>
+                        </div>
+                    <?php }else { ?>
                         <div class="collection withoutimg">
                             <a href="<?php echo $project_link ?>">
                                 <div class="inner">
@@ -62,7 +71,18 @@ function getMenuItems() {
                                 </div>
                             </a>
                         </div>
+                    <?php } ?>
                 <?php } ?>
+                </div>
+                <div class="category-desc">
+                    <?php 
+                    $termObj = get_term($termId, "project-category"); 
+                    $heading = $termObj->name;
+                    $desc = $termObj->description;
+                    ?>
+                    <h3><?php echo $heading; ?></h3>
+                    <p class="desc"><?php echo $desc; ?></p>
+                </div>
                 </div><?php
                 $html = ob_get_clean();
                 echo $html;
@@ -96,27 +116,6 @@ function getMenuItems() {
             <?php } // endforeach
         } // endif  
         ?>
-            <div class="collection withoutimg">
-                <a href="#">
-                    <div class="inner">
-                        <h3>NEWS</h3>
-                    </div>
-                </a>
-            </div>
-            <div class="collection withoutimg">
-                <a href="#">
-                    <div class="inner">
-                        <h3>CAREERS</h3>
-                    </div>
-                </a>
-            </div>
-            <div class="collection withoutimg">
-                <a href="#">
-                    <div class="inner">
-                        <h3>CONTACT US</h3>
-                    </div>
-                </a>
-            </div>
         </div><?php
         $html = ob_get_clean();
         echo $html;
@@ -285,13 +284,13 @@ class ACH_menu_walker extends Walker {
         } else if ($depth === 0 && $this->has_children == true) {
             // parent level with children menu, e.g. Who we are
             $item_output = $args->before;
-            $item_output .= '<h3>';
+            $item_output .= '<h3 '. ' '.$class_names.'>';
             $item_output .= $args->link_before . $title . $args->link_after;
             $item_output .= '</h3>';
             $item_output .= $args->after;
         } else {
             $item_output = $args->before;
-            $item_output .= '<a' . $attributes . '>';
+            $item_output .= '<a' . $attributes . ' '.$class_names.'>';
             $item_output .= $args->link_before . $title . $args->link_after;
             $item_output .= '</a>';
             $item_output .= $args->after;
@@ -399,4 +398,31 @@ if (function_exists('acf_add_options_page')) {
         'capability' => 'edit_posts',
         'redirect' => false
     ));
+}
+
+function my_login_logo() { ?>
+    <style type="text/css">
+        #login h1 a, .login h1 a {
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png);
+		height:157px;
+		width:281px;
+		background-size: 281px 157px;
+		background-repeat: no-repeat;
+        	padding-bottom: 30px;
+        }
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'my_login_logo' );
+
+
+add_filter('previous_post_link', 'prev_posts_link_attributes');
+function prev_posts_link_attributes($output) {
+    $injection = 'class="previous_project"';
+    return str_replace('<a href=', '<a '.$injection.' href=', $output);
+}
+
+add_filter('next_post_link', 'next_posts_link_attributes');
+function next_posts_link_attributes($output) {
+    $injection = 'class="next_project"';
+    return str_replace('<a href=', '<a '.$injection.' href=', $output);
 }
