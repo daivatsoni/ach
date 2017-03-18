@@ -70,81 +70,45 @@ get_header();
         </div>
     </div>
 
-    <div class="viewport vertical-slider section_4"> <a href="#" class="carousel-control next"><i class="icon-angle-up"></i></a> <a href="#" class="carousel-control prev"><i class="icon-angle-down"></i></a>
-        <div class="carousel">
+    <?php get_template_part( 'template-parts/verticle-slider' ); ?>
 
-            <div class="item " style="background-image:url(<?php echo esc_url(get_template_directory_uri()); ?>/img/carousel_slider_img1.jpg)"> 
-                <a href="#">
-                    <div class="item_des">
-                        <div class="item_title">
-                            <h3>RYDE HIGH SCHOOL</h3>
-                        </div>
-                    </div>
-                </a>
+    <?php
+    // DIAGONAL CUT PROJECT DISPLAY
+    $objDiagonalProjects = get_field("hp_prj_diagonal_cut");
+    if(!empty($objDiagonalProjects)) { 
+        $i=0;
+        foreach($objDiagonalProjects as $project) { 
+            $projectId = $project->ID;
+            $thumbImage = get_field("prj_diagonal_cut_image",$projectId);
+            $url = get_permalink($projectId);
+            $title = get_field("proj_hp_heading", $projectId);
+            $logoImage = get_field('proj_logo_image', $projectId);
+            
+            if($i < 1) {
+                // first slide
+                $mainClasses = "viewport w80 section_5 bg-cover";
+            } elseif($i == (count($objDiagonalProjects)-1) ) {
+                // Last slide
+                $mainClasses = "viewport w100 bg-cover section_6 slide-blank";
+            } else {
+                // Middle slides
+                $mainClasses = "viewport w80 bg-cover section_6";
+            }
+        ?>            
+        <div class="<?php echo $mainClasses; ?>" style="background-image: url(<?php echo esc_url($thumbImage['url']); ?>);background-position: center right;">
+            <div class="slider_caption_area">
+                <a href="<?php echo $url; ?>" class="slider_caption slidein"><?php echo $title; ?></a>
+                <?php if(!empty($logoImage)) { ?> 
+                <img src="<?php echo esc_url($logoImage['url']); ?>" width="236" height="100" alt="<?php echo $logoImage['alt']; ?>" class="zoo_logo" /> 
+                <?php } ?>
             </div>
-            <div class="item " style="background-image:url(<?php echo esc_url(get_template_directory_uri()); ?>/img/carousel_slider_img2.jpg)"> <a href="#">
-                    <div class="item_des">
-                        <div class="item_title">
-                            <h3>RYDE HIGH SCHOOL</h3>
-                        </div>
-                    </div>
-                </a> </div>
-            <div class="item " style="background-image:url(<?php echo esc_url(get_template_directory_uri()); ?>/img/carousel_slider_img3.jpg)"> <a href="#">
-                    <div class="item_des">
-                        <div class="item_title">
-                            <h3>RYDE HIGH SCHOOL</h3>
-                        </div>
-                    </div>
-                </a> </div>
-            <div class="item " style="background-image:url(<?php echo esc_url(get_template_directory_uri()); ?>/img/carousel_slider_img2.jpg)"> <a href="#">
-                    <div class="item_des">
-                        <div class="item_title">
-                            <h3>RYDE HIGH SCHOOL</h3>
-                        </div>
-                    </div>
-                </a> </div>
-            <div class="item " style="background-image:url(<?php echo esc_url(get_template_directory_uri()); ?>/img/carousel_slider_img3.jpg)"> <a href="#">
-                    <div class="item_des">
-                        <div class="item_title">
-                            <h3>RYDE HIGH SCHOOL</h3>
-                        </div>
-                    </div>
-                </a> </div>
-
-
         </div>
-    </div>
-    <!--test -->
+    <?php 
+        $i++;
+        } // endforeach
+    } // endif 
+    ?>
 
-
-
-    <div class="viewport w80 section_5 bg-cover" style="background-image: url(<?php echo esc_url(get_template_directory_uri()); ?>/img/slide-1.png);background-position: center right;">
-        <div class="slider_caption_area">
-            <a href="#" class="slider_caption slidein">NGALLU WAL - DOONSIDE<br />
-                ABORIGINAL MEDICAL CENTER</a>
-        </div>
-
-    </div>
-
-    <div class="viewport w80 bg-cover section_6" style="background-image: url(<?php echo esc_url(get_template_directory_uri()); ?>/img/slide-2.png); background-position: center left;">
-
-        <div class="slider_caption_area">
-            <a href="#" class="slider_caption slidein">TARONGA ZOO<br />
-                TREE KANGAROO EXHIBIT</a>
-            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/zoo_logo.png" width="236" height="100" alt="zoo_logo" class="zoo_logo" /> </div> 
-
-    </div>
-
-    <div class="viewport w100 bg-cover section_6 slide-blank" style="background-image: url(<?php echo esc_url(get_template_directory_uri()); ?>/img/slide-3.png);background-position: center left;">
-
-        <div class="slider_caption_area">
-            <a href="#" class="slider_caption slidein" style=" line-height:42px;">STANMORE PUBLIC SCHOOL</a>
-        </div>
-
-    </div>
-
-
-    <!--test -->
     <div class="viewport w50 section_7">
         <div id="tabs" class="tab_content">
             <ul class="tab_button_set">
@@ -258,70 +222,27 @@ get_header();
 
         </div>
     </div>
-
-    <div class="viewport w80 section_10 bg-cover" style="background-image: url(<?php echo esc_url(get_template_directory_uri()); ?>/img/school_img1.jpg);background-position: center right;">
-        <div class="slider_caption_area">
-            <a href="#" class="slider_caption slidein">RYDE HIGH SCHOOL</a>
-        </div>
-    </div>
-
-    <div class="viewport w80 section_10 bg-cover" style="background-image: url(<?php echo esc_url(get_template_directory_uri()); ?>/img/school_img2.jpg);background-position: center right;">
-        <div class="slider_caption_area">
-            <a href="#" class="slider_caption slidein">MAROUBRA HIGH SCHOOL</a>
-        </div>
-    </div>
-
-    <div class="viewport w80 section_10 bg-cover" style="background-image: url(<?php echo esc_url(get_template_directory_uri()); ?>/img/school_img3.jpg);background-position: center right;">
-        <div class="slider_caption_area">
-            <a href="#" class="slider_caption slidein">WOY WOY HIGH SCHOOL</a>
-        </div>
-    </div>
-
-    <div class="viewport vertical-slider section_4"> <a href="#" class="carousel-control next"><i class="icon-angle-up"></i></a> <a href="#" class="carousel-control prev"><i class="icon-angle-down"></i></a>
-        <div class="carousel">
-
-            <div class="item " style="background-image:url(<?php echo esc_url(get_template_directory_uri()); ?>/img/carousel_slider_img1.jpg)"> 
-                <a href="#">
-                    <div class="item_des">
-                        <div class="item_title">
-                            <h3>RYDE HIGH SCHOOL</h3>
-                        </div>
-                    </div>
-                </a>
+    
+    <?php
+    // NORMAL CUT PROJECT DISPLAY
+    $objNormalProjects = get_field("hp_prj_normal_cut");
+    if(!empty($objNormalProjects)) { 
+        foreach($objNormalProjects as $project) { 
+            $projectId = $project->ID;
+            $thumbImage = get_field("prj_diagonal_cut_image",$projectId);
+            $url = get_permalink($projectId);
+            $title = get_field("proj_hp_heading", $projectId);
+        ?>            
+        <div class="viewport w80 section_10 bg-cover" style="background-image: url(<?php echo esc_url($thumbImage['url']); ?>);background-position: center right;">
+            <div class="slider_caption_area">
+                <a href="<?php echo $url; ?>" class="slider_caption slidein"><?php echo $title; ?></a>
             </div>
-            <div class="item " style="background-image:url(<?php echo esc_url(get_template_directory_uri()); ?>/img/carousel_slider_img2.jpg)"> <a href="#">
-                    <div class="item_des">
-                        <div class="item_title">
-                            <h3>RYDE HIGH SCHOOL</h3>
-                        </div>
-                    </div>
-                </a> </div>
-            <div class="item " style="background-image:url(<?php echo esc_url(get_template_directory_uri()); ?>/img/carousel_slider_img3.jpg)"> <a href="#">
-                    <div class="item_des">
-                        <div class="item_title">
-                            <h3>RYDE HIGH SCHOOL</h3>
-                        </div>
-                    </div>
-                </a> </div>
-            <div class="item " style="background-image:url(<?php echo esc_url(get_template_directory_uri()); ?>/img/carousel_slider_img2.jpg)"> <a href="#">
-                    <div class="item_des">
-                        <div class="item_title">
-                            <h3>RYDE HIGH SCHOOL</h3>
-                        </div>
-                    </div>
-                </a> </div>
-            <div class="item " style="background-image:url(<?php echo esc_url(get_template_directory_uri()); ?>/img/carousel_slider_img3.jpg)"> <a href="#">
-                    <div class="item_des">
-                        <div class="item_title">
-                            <h3>RYDE HIGH SCHOOL</h3>
-                        </div>
-                    </div>
-                </a> </div>
-
-
         </div>
-    </div>
+        <?php 
+        } // endforeach 
+    } // endif ?>
 
+    <?php get_template_part( 'template-parts/verticle-slider' ); ?>
 
     <?php
     get_footer();
