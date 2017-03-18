@@ -183,44 +183,20 @@ get_header();
             <p>We are specialists in commercial construction and refurbishment in Sydney, Brisbane, Melbourne and surrounding regions, bringing deeper understanding to projects ranging from tens of thousands of dollars to tens of millions of dollars to billions of dollars.</p>
             <span class="separator"></span>
         </div>
+        
+        <?php if(get_field("hp_show_testimonials")) { ?>
         <div class="section9_col2 testmonial_slider_area">
 
-            <h3>TESTIMONIALS</h3>
-            <div class="owl-carousel owl-theme testmonial_slider">
-                <div class="item">
-                    <div class="project_name">PROJECT:
-                        <span>RYDE HIGH SCHOOL</span></div>
-                    <span class="client_name">Firstname Lastname</span>
-                    <span class="designation">Position here</span>
-
-                    <p>Whether we're working with hospitality clients, schools, retirement providers, multi-site operators, architects or investors, our approach enhances every project and makes it an impressive experience – for everyone.</p>
-
-                    <p>We are specialists in commercial construction and refurbishment in Sydney, Brisbane, Melbourne and surrounding regions, bringing deeper understanding to projects ranging from tens of thousands of dollars to tens of millions of dollars.</p>
-                </div>
-                <div class="item">
-                    <div class="project_name">PROJECT:
-                        <span>RYDE HIGH SCHOOL</span></div>
-                    <span class="client_name">Firstname Lastname</span>
-                    <span class="designation">Position here</span>
-
-                    <p>Whether we're working with hospitality clients, schools, retirement providers, multi-site operators, architects or investors, our approach enhances every project and makes it an impressive experience – for everyone.</p>
-
-                    <p>We are specialists in commercial construction and refurbishment in Sydney, Brisbane, Melbourne and surrounding regions, bringing deeper understanding to projects ranging from tens of thousands of dollars to tens of millions of dollars.</p>
-                </div>
-                <div class="item">
-                    <div class="project_name">PROJECT:
-                        <span>RYDE HIGH SCHOOL</span></div>
-                    <span class="client_name">Firstname Lastname</span>
-                    <span class="designation">Position here</span>
-
-                    <p>Whether we're working with hospitality clients, schools, retirement providers, multi-site operators, architects or investors, our approach enhances every project and makes it an impressive experience – for everyone.</p>
-
-                    <p>We are specialists in commercial construction and refurbishment in Sydney, Brisbane, Melbourne and surrounding regions, bringing deeper understanding to projects ranging from tens of thousands of dollars to tens of millions of dollars.</p>
-                </div>
-            </div>  
-
-
+            <h3><?php the_field("hp_tsm_heading") ?></h3>
+            <?php 
+            $arrTestimonials = get_field('hp_testimonials');
+            if(!empty($arrTestimonials)) 
+                echo get_testimonial_slider($arrTestimonials, -1);
+            else 
+                echo get_testimonial_slider();
+            ?>
         </div>
+        <?php } // endif ?>
     </div>
     
     <?php
