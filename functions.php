@@ -98,8 +98,7 @@ function getMenuItems() {
             'hide_empty' => 0,
                 ));
 
-        $html = ob_start();
-        ?><div id="menu">
+        $html = ob_start(); ?><div id="menu">
         <?php
         if (!empty($categories) && $categories != NULL) {
             foreach ($categories as $category) {

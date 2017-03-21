@@ -65,6 +65,9 @@
 		<?php wp_head(); ?>
     </head>
     <body class="collection homepage">
+    
+    
+    
         <?php
         if(!isset($_COOKIE["tutorial"])) :
         ?>
@@ -108,6 +111,7 @@
         <div class="progressbar">
             <div class="progress"></div>
         </div>
+        <div class="scroll_logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/menu_area_logo.png" class="menu_area_logo" height="80" width="140" alt="" /></a></div>
         
         <div class="menu-trigger"> <a href="#" class="menu-trigger-link"><span class="icon-reorder">&nbsp;</span></a> </div>
         

@@ -6240,10 +6240,9 @@ ul.current_positions_list{ list-style:none; padding:35px 0 0 0; margin:0;}
 ul.current_positions_list li{ width:100%; float:left; border-top:1px solid #0e1b28; padding:23px 0 28px;}
 ul.current_positions_list li h5{ padding:0 0 12px 0; font-size:16px; color:#000;}
 ul.current_positions_list li .positions_list_content{ width:100%; float:left; padding-left:166px; position:relative; font-size:14px; line-height:16px;}
-ul.current_positions_list li a.apply_button{ width:104px; height:26px; color:#fff; font-size:14px; line-height:25px;background:#d36229; border:1px solid #d36229; float:left; position:absolute; left:0; top:0; text-align:center; font-weight:bold;}
-ul.current_positions_list li a.apply_button:hover{ background:none; color:#d36229;}
+ul.current_positions_list li a.apply_button{ width:104px; height:26px; background:none; color:#d36229;font-size:14px; line-height:25px; border:1px solid #d36229; float:left; position:absolute; left:0; top:0; text-align:center; font-weight:bold;}
+ul.current_positions_list li a.apply_button:hover{color:#fff;background:#d36229;}
 ul.current_positions_list li a{ color:#d36229;}
-
 
 .taxonomy-description{ padding-top:40px;}
 .product_list{ padding:0; margin:0; list-style:none;}
@@ -6267,6 +6266,13 @@ transform: scale(1.05, 1.05);}
     min-height: 1px;
     padding-bottom: 20px;
     width: 100%;
+}
+.scroll_logo{ position: fixed; top:0; right:0; z-index:9999; padding:7px 18px 0 0;}
+.scroll_logo:after{ content:""; width:0px; height:0px;position:absolute; z-index:-9; right:0; top:0;
+border-right: 283px solid #fff;
+border-left: 110px solid transparent;
+border-bottom: 110px solid transparent;
+border-top: 45px solid #fff;
 }
 
 @media (min-width:2000px) {
