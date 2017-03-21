@@ -4605,6 +4605,8 @@ ul.bottomMenu li:first-child {
     width: 100%; font-family:"FuturaStd-Book"; font-weight:normal;
 }
 .menu nav ul > li > h3, .menu nav > ul > li > a{line-height: 30px;}
+.menu nav ul li.current_page_item a,
+.menu nav ul li a.current-menu-item,
 .menu nav ul li a:hover {
     color: #d36229;
     padding: 0;
@@ -6017,6 +6019,7 @@ li.noLineTop a {
 
 
 /*New CSS Add here*/
+.product_list li,
 .current_positions_close,
 a.register_button,
 .previous_project,
@@ -6095,9 +6098,10 @@ ul.tab_button_set li.ui-tabs-active a{ color:#d36229;font-family:"futurastd-bold
 .section_9{ background:#fff; color:#0e1b28; padding-top:130px; padding-right:80px;}
 .section_9 h2{ font-size:70px; font-family:"futurastd-bold"; line-height:75px;}
 .section_9 h4{ clear:both; line-height:22px; font-size:18px; color:#d36229; padding:22px 0 22px;}
-.section_9 .section9_col1{ width:55%; float:left; padding-right:45px;}
-.section_9 .section9_col2{ width:45%; float:left;padding-left:45px;}
+.section_9 .section9_col1{ width:62%; float:left; padding-right:45px;}
+.section_9 .section9_col2{ width:38%; float:left;padding-left:45px;}
 .separator{ width:120px; height:5px; float:left; background:#d36229; margin-top:30px;}
+.ach_express{ padding-left:80px;}
 
 .testmonial_slider{ width:100%; padding-top:82px;}
 .testmonial_slider_area h3{ font-size:28px; line-height:30px; color:#0e1b28; padding-bottom:15px;}
@@ -6163,14 +6167,14 @@ border-radius:3px;
 .rydehighsecholl_section2{ display:flex;}
 .workingwithach_title,
 .rydehighsecholl_title{font-family: futurastd-bold;padding-left:15%;display: flex;flex-direction: column;justify-content: center;min-height: 1px;}
-.workingwithach_section2 .workingwithach_title{ padding-left:20%;}
+.workingwithach_section2 .workingwithach_title{ padding-left:20%;padding-right:18%;}
 .workingwithach_section2 .workingwithach_title h2{ padding-bottom:45px;}
 .workingwithach_title h2,
 .rydehighsecholl_title h2{line-height:42px; font-size:48px; color:#fff; padding-bottom:15px;position:relative;}
 .rydehighsecholl_title h3{ line-height:36px; font-size:28px;color:#d36229; padding-bottom:25px; position:relative;}
 .workingwithach_title h2:after,
 .rydehighsecholl_title h3:after{ width:120px; height:5px; background:#d36229; content:""; left:0; bottom:0;position: absolute;}
-.footer.rydehighschool_footer{ padding:105px 160px 0 70px;}
+.footer.rydehighschool_footer{ padding:105px 150px 0 70px;}
 .footer.rydehighschool_footer h4{ line-height:20px;}
 .footer.rydehighschool_footer h4 span{ color:#fff;}
 .project_buttons{ width:100%; float:left; padding-top:30px;}
@@ -6180,7 +6184,7 @@ border-radius:3px;
 .previous_project:hover,
 .all_project:hover,
 .next_project:hover{ background:#c75e29;}
-.previous_project{ width:164px; margin-right:0;}
+.previous_project{ width:164px;}
 .rydehighschool_footer_bottom{ position:absolute; bottom:90px;}
 
 .workingwithach_section3.section_9 h2{ font-size:42px; font-family:"futurastd-bold"; line-height:43px; color:#d36229;text-transform: none;}
@@ -6240,6 +6244,37 @@ ul.current_positions_list li a.apply_button{ width:104px; height:26px; color:#ff
 ul.current_positions_list li a.apply_button:hover{ background:none; color:#d36229;}
 ul.current_positions_list li a{ color:#d36229;}
 
+
+.taxonomy-description{ padding-top:40px;}
+.product_list{ padding:0; margin:0; list-style:none;}
+.product_list a{ color:#0e1b28; display:inline-block;}
+.product_list a:hover h4{ color:#d36229;}
+.product_list a h4{ font-size:20px;}
+.product_list a{ font-size:14px; line-height:17px;}
+.product_list li{ padding:0 50px; float:left;}
+.product_list li img{ height:65vh;}
+.product_list li:hover{-moz-transform: scale(1.05, 1.05);
+-webkit-transform: scale(1.05, 1.05);
+-ms-transform: scale(1.05, 1.05);
+-o-transform: scale(1.05, 1.05);
+transform: scale(1.05, 1.05);}
+.product_section{display: flex; position:relative;}
+.product_area {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 1px;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+@media (min-width:2000px) {
+.section_6.slide-blank:after{min-width: 540px;}	
+.section_6{padding-right: 0.9%;}
+.section_5{padding-right: 0.9%;}
+body{ display:none;}
+}
 @media (max-height:740px) {
 
 }
@@ -6330,6 +6365,7 @@ ul.current_positions_list li .positions_list_content{ font-size:10px; line-heigh
 .workingwithach_section3 .contact_form ul li textarea{ height:42px;}
 .workingwithach_section3 .contact_form{ margin-top:-42px;}
 .workingwithach_section3 .contact_form ul li{ padding-top:4px;}
+.taxonomy-description{ padding-top:15px;}
 }
 @media (max-width:320px) {
 .section_3, .section_7, .section_9, .footer{ padding-top:50px;}

@@ -92,7 +92,7 @@ get_header();
                 $mainClasses = "viewport w100 bg-cover section_6 slide-blank";
             } else {
                 // Middle slides
-                $mainClasses = "viewport w80 bg-cover section_6";
+                $mainClasses = "viewport w100 bg-cover section_6";
             }
         ?>            
         <div class="<?php echo $mainClasses; ?>" style="background-image: url(<?php echo esc_url($thumbImage['url']); ?>);background-position: center right;">
@@ -109,7 +109,26 @@ get_header();
     } // endif 
     ?>
 
-    <div class="viewport w50 section_7">
+    <div class="viewport w50 section_9">
+    
+    <h2>The ACH Difference</h2>
+            <span class="separator"></span>
+            <h4>Whether we're working with hospitality clients, schools, retirement providers</h4>
+            <p>Whether we're working with hospitality clients, schools, retirement providers, multi-site operators, architects or investors, our approach enhances every project and makes it an impressive experience – for everyone.</p>
+
+            <p>We are specialists in commercial construction and refurbishment in Sydney, Brisbane, Melbourne and surrounding regions, bringing deeper understanding to projects ranging from tens of thousands of dollars to tens of millions of dollars to billions of dollars.</p>
+            <span class="separator"></span>
+        
+    </div>
+
+    <div class="viewport section_8"> 
+        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/slideing-img.jpg"  alt="slideing-img" class="slidein slideing-img" />
+    </div>
+
+    <div class="viewport w100 section_9">
+    
+        <div class="section9_col1">
+            
         <div id="tabs" class="tab_content">
             <ul class="tab_button_set">
                 <li><a href="#aboutus">About Us</a></li>
@@ -168,20 +187,7 @@ get_header();
             </div>        
 
         </div>
-    </div>
 
-    <div class="viewport section_8"> 
-        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/slideing-img.jpg"  alt="slideing-img" class="slidein slideing-img" />  </div>
-
-    <div class="viewport w60 section_9">
-        <div class="section9_col1">
-            <h2>The ACH Difference</h2>
-            <span class="separator"></span>
-            <h4>Whether we're working with hospitality clients, schools, retirement providers</h4>
-            <p>Whether we're working with hospitality clients, schools, retirement providers, multi-site operators, architects or investors, our approach enhances every project and makes it an impressive experience – for everyone.</p>
-
-            <p>We are specialists in commercial construction and refurbishment in Sydney, Brisbane, Melbourne and surrounding regions, bringing deeper understanding to projects ranging from tens of thousands of dollars to tens of millions of dollars to billions of dollars.</p>
-            <span class="separator"></span>
         </div>
         
         <?php if(get_field("hp_show_testimonials")) { ?>
@@ -217,7 +223,17 @@ get_header();
         <?php 
         } // endforeach 
     } // endif ?>
+	<div class="viewport w50 section_9 ach_express">
 
+    <h2>ACH Express</h2>
+            <span class="separator"></span>
+            <h4>Whether we're working with hospitality clients, schools, retirement providers</h4>
+            <p>Whether we're working with hospitality clients, schools, retirement providers, multi-site operators, architects or investors, our approach enhances every project and makes it an impressive experience – for everyone.</p>
+
+            <p>We are specialists in commercial construction and refurbishment in Sydney, Brisbane, Melbourne and surrounding regions, bringing deeper understanding to projects ranging from tens of thousands of dollars to tens of millions of dollars to billions of dollars.</p>
+            <span class="separator"></span>
+        
+    </div>
     <?php get_template_part( 'template-parts/verticle-slider' ); ?>
 
     <?php
