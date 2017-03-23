@@ -6227,7 +6227,11 @@ border-radius:3px;
 .workingwithach_section3 .contact_form ul li.file_upload span:first-child{ line-height:14px;}
 .workingwithach_section3 .contact_form ul li.project_experience span:first-child{ width:100%;}
 
+.workingwithach_section3.section_9{ padding-right:0;}
 .workingatach_section1.workingwithach_section3.section_9 h2{ padding-bottom:30px;}
+.achexpress_page.workingwithach_section3.section_9 h2{ padding-bottom:30px;}
+.achexpress_page.section_9 .section9_col1{ width:55%;}
+.achexpress_page.section_9 .section9_col2{ width:45%;}
 .workingatach_section1.section_9 .section9_col1{ padding-right:20px;}
 .workingatach_section1 a.register_button{ margin-top:45px;}
 .owl-carousel .owl-item img.career_profile_img{ position:absolute; top:0; right:0; width: auto;}
@@ -6274,6 +6278,11 @@ border-left: 110px solid transparent;
 border-bottom: 110px solid transparent;
 border-top: 45px solid #fff;
 }
+
+.collections .project-tiles .collection{width: calc(50% - 10px);}
+.collections .project-tiles{float: left;width: 50%;}
+.collections .category-desc{float: left;width: 50%; padding-left: 25px; padding-right:30px; color:#0e1b28;}
+.collections .category-desc h3{color:#0e1b28; padding-bottom:15px;}
 
 @media (min-width:2000px) {
 .section_6.slide-blank:after{min-width: 540px;}	
