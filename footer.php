@@ -16,6 +16,7 @@
             <?php if ($address = get_field("ach_address", "option")) : ?><div class="address_area"><?php echo $address; ?></div><?php endif; ?>
         </div>
         <div class="contact_form"><?php echo do_shortcode('[contact-form-7 id="15" title="Enquiry Form"]'); ?></div>
+        <p class="developed_by">Proudly Designed and Developed by Style House Creatives</p>
     </footer>
 
 </div>
