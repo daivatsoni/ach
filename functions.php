@@ -80,13 +80,6 @@ function getMenuItems() {
                         </div>
                     <?php } ?>
                 <?php } ?>
-                        <div class="collection withoutimg back-to-list">
-                            <a href="#">
-                                <div class="inner">
-                                    <h3>Back</h3>
-                                </div>
-                            </a>
-                        </div>
                 </div>
                 <div class="category-desc">
                     <?php 
