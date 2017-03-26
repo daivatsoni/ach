@@ -14,6 +14,7 @@ get_header();
     </div>
 
     <div class="viewport w30 bg-cover section_3">
+    <div class="box_middle">
         <div class="top25">
 
             <div class="white-orange-heading"><?php the_field("hp_sc2_white_heading") ?><br>
@@ -26,6 +27,7 @@ get_header();
                 <?php if($buttons = get_field("hp_sc2_buttons")){ ?><div class="btn"><?php foreach($buttons as $button) { ?><a href="#" class="<?php echo $button['class'] ?>"><?php echo $button['label'] ?></a> <?php } } ?></div>
             </div>
 
+        </div>
         </div>
     </div>
 
