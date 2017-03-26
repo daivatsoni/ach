@@ -37,7 +37,7 @@
             <?php } // endif ?>
             <?php if ($telephone = get_field("ach_telephone", "option")) : ?><span class="footer_phone"><label>Telephone</label><?php echo $telephone; ?> </span> <?php endif; ?> 
     <?php if ($email = get_field("ach_email", "option")) : ?><span class="footer_email"><label>Email</label><?php echo $email; ?></span> <?php endif; ?> 
-        <p class="developed_by">Proudly Designed and Developed by Style House Creatives</p>
+        <p class="developed_by"><?php the_field("credit_note","options"); ?></p>
         </div>
     </footer>
 

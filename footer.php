@@ -16,7 +16,7 @@
             <?php if ($address = get_field("ach_address", "option")) : ?><div class="address_area"><?php echo $address; ?></div><?php endif; ?>
         </div>
         <div class="contact_form"><?php echo do_shortcode('[contact-form-7 id="15" title="Enquiry Form"]'); ?></div>
-        <p class="developed_by">Proudly Designed and Developed by <a href="http://www.stylehousecreative.com" target="_blank">Style House Creative</a></p>
+        <p class="developed_by"><?php the_field("credit_note", "options"); ?></p>
     </footer>
 
 </div>
