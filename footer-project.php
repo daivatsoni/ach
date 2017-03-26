@@ -16,7 +16,8 @@
                     $termUrl = get_term_link($term_list[0]);
                 }
                 ?>
-                <?php if($termUrl) { ?><a class="all_project" href="<?php echo $termUrl; ?>">ALL PROJECT</a><?php } ?>
+                <?php /* if($termUrl) { ?><a class="all_project" href="<?php echo $termUrl; ?>">ALL PROJECT</a><?php } */ ?>
+                <a class="open-menu all_project" href="javascript:void(0);">ALL PROJECT</a>
             </div>
 
         </div>

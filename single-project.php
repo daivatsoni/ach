@@ -1,5 +1,5 @@
 <?php
-get_header();
+get_header('category');
 ?>
 <div id="container" class="wrapper main">
 <?php
@@ -36,7 +36,10 @@ get_header();
     } // endif gallery ?>
 <?php endwhile; ?>    
 
-    <?php get_template_part( 'template-parts/verticle-slider' ); ?>
+    <?php 
+    $term_list = wp_get_post_terms(get_the_ID(), 'project-category');
+    $categoryId = $term_list[0]->term_id;
+    include(locate_template( 'template-parts/verticle-slider.php' )); ?>
 
     <?php
     get_footer("project");

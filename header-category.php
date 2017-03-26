@@ -112,7 +112,16 @@
                 <div class="content"> <a href="#" class="menu-trigger-close"></a>
                     <div class="collections keep-ratio__11">
                         <div class="inner">
-                            <div id="ajax-menu" data='project' data-id='<?php echo get_queried_object()->term_id; ?>'></div>
+                            <?php 
+                            $categoryId = get_queried_object()->term_id;
+                            if(!$categoryId) {
+                                // find category id using product data
+                                global $post;
+                                $term_list = wp_get_post_terms($post->ID, 'project-category');
+                                $categoryId = $term_list[0]->term_id;
+                            }
+                            ?>
+                            <div id="ajax-menu" data-menu='project' data-id='<?php echo $categoryId; ?>'></div>
                         </div>
                     </div>
 

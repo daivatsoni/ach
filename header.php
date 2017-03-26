@@ -17,14 +17,14 @@
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.min.js"></script>
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/plugins.min.js"></script>
         <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-ui.js"></script>
-		<script src="<?php echo get_template_directory_uri(); ?>/js/owl.carousel.js"></script>
+        <script src="<?php echo get_template_directory_uri(); ?>/js/owl.carousel.js"></script>
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/functions.min.js"></script>
 		<script>
           $(function() {
             $( "#tabs" ).tabs();
           });
 		  
-		  $(document).ready(function() {
+            $(document).ready(function() {
               var owl = $('.owl-carousel');
               owl.owlCarousel({
                 margin: 0,
@@ -120,7 +120,7 @@
                 <div class="content"> <a href="#" class="menu-trigger-close"></a>
                     <div class="collections keep-ratio__11">
                         <div class="inner">
-                            <div id="ajax-menu" data='category'></div>
+                            <div id="ajax-menu" data-menu='category'></div>
                         </div>
                     </div>
 

@@ -51,6 +51,13 @@ function getMenuItems() {
             if (!empty($arrProjects) && $arrProjects != NULL) {
                 $html = ob_start();
                 ?><div id="menu"><div class="project-tiles">
+                        <div class="collection withoutimg back-to-list">
+                            <a href="#">
+                                <div class="inner">
+                                    <h3>Back</h3>
+                                </div>
+                            </a>
+                        </div>
                 <?php
                 foreach ($arrProjects as $project) {
                     $project_link = get_permalink($project->ID);
@@ -73,6 +80,13 @@ function getMenuItems() {
                         </div>
                     <?php } ?>
                 <?php } ?>
+                        <div class="collection withoutimg back-to-list">
+                            <a href="#">
+                                <div class="inner">
+                                    <h3>Back</h3>
+                                </div>
+                            </a>
+                        </div>
                 </div>
                 <div class="category-desc">
                     <?php 
@@ -105,7 +119,7 @@ function getMenuItems() {
                 $cat_link = get_term_link($category);
                 $cat_image = get_field('pcat_image', $category);
                 ?>
-                    <div class="collection">
+                    <div class="collection projects" data-id="<?php echo $category->term_id; ?>">
                         <a href="<?php echo $cat_link; ?>">
                             <div class="inner" style="background-image:url(<?php echo esc_url($cat_image['url']); ?>)">
                                 <h3><?php echo strtoupper($category->name); ?></h3>
@@ -113,6 +127,7 @@ function getMenuItems() {
                         </a>
                     </div>
             <?php } // endforeach
+            
         } // endif  
         ?>
         </div><?php
@@ -289,6 +304,7 @@ class ACH_menu_walker extends Walker {
             $item_output .= $args->after;
         } else {
             $item_output = $args->before;
+//            $item_output .= '<a' . $attributes . ' '.$class_names.'>';
             $item_output .= '<a' . $attributes . ' '.$class_names.'>';
             $item_output .= $args->link_before . $title . $args->link_after;
             $item_output .= '</a>';
@@ -424,4 +440,17 @@ add_filter('next_post_link', 'next_posts_link_attributes');
 function next_posts_link_attributes($output) {
     $injection = 'class="next_project"';
     return str_replace('<a href=', '<a '.$injection.' href=', $output);
+}
+
+add_filter("nav_menu_css_class", "remove_current_class");
+function remove_current_class($classes) {
+    // "current-menu-item", "current_page_item"
+    if($key = array_search("current-menu-item",$classes)) {
+        unset($classes[$key]);
+    }
+    if($key = array_search("current_page_item",$classes)) {
+        unset($classes[$key]);
+    }
+    return $classes;
+    
 }

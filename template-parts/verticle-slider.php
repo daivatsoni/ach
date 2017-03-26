@@ -5,7 +5,22 @@
  * and open the template in the editor.
  */
 
-$objProjects = get_field("featured_projects", "options");
+if(isset($categoryId)) {
+    $args = array(
+        'post_type' => 'project',
+        'status' => 'published',
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'project-category',
+                'field' => 'id',
+                'terms' => $categoryId,
+            ),
+        ),
+    );
+    $objProjects = get_posts($args);
+} else {
+    $objProjects = get_field("featured_projects", "options");
+}
 if(!empty($objProjects)) {
 
 ?>

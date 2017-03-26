@@ -2,47 +2,6 @@
 get_header();
 ?>
 <div id="container" class="wrapper main">
-    <script>
-
-        $(document).ready(function () {
-
-            // when headline is clicked video will start
-            $('#playvid, playvid a').click(function (e) {
-                e.preventDefault();
-                var myVideo = document.getElementById("video-background");
-
-                if (myVideo.paused) {
-                    myVideo.play();
-                } else {
-                    myVideo.pause();
-                }
-
-                $(this).fadeOut(1000);
-
-                $('#play, #pause').fadeIn();
-            });
-
-            // trigger for play and pause
-            $('#play').click(function () {
-                var myVideo = document.getElementById("video-background");
-                myVideo.play();
-            });
-
-            $('#pause').click(function () {
-                var myVideo = document.getElementById("video-background");
-                myVideo.pause();
-            });
-        });
-
-        $(window).on("load, resize", function () {
-            // hide video for mobile version
-            if ($(window).width() <= 1024) {
-                $('#embedVideo').hide();
-            } else {
-                $('#embedVideo').show();
-            }
-        });
-    </script>
     <div class="viewport w30 bg-cover" style="background-color:#fff;">
         <?php $arrLogo = get_field("logo","options"); ?>
         <div class="logo"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><img src="<?php echo $arrLogo['url'] ?>" alt="<?php echo $arrLogo['alt'] ?>" /></a></div>
@@ -64,7 +23,7 @@ get_header();
 
             <div class="section_des">
                 <?php the_field("hp_sc2_content") ?>
-                <?php if($buttons = get_field("hp_sc2_buttons")){ ?><div class="btn"><?php foreach($buttons as $button) { ?><a href="<?php echo $button['url'] ?>"><?php echo $button['label'] ?></a> <?php } } ?></div>
+                <?php if($buttons = get_field("hp_sc2_buttons")){ ?><div class="btn"><?php foreach($buttons as $button) { ?><a href="#" class="<?php echo $button['class'] ?>"><?php echo $button['label'] ?></a> <?php } } ?></div>
             </div>
 
         </div>
@@ -72,7 +31,7 @@ get_header();
 
     <?php get_template_part( 'template-parts/verticle-slider' ); ?>
 
-    <?php
+    <?php 
     // DIAGONAL CUT PROJECT DISPLAY
     $objDiagonalProjects = get_field("hp_prj_diagonal_cut");
     if(!empty($objDiagonalProjects)) { 
@@ -94,6 +53,7 @@ get_header();
                 // Middle slides
                 $mainClasses = "viewport w100 bg-cover section_6";
             }
+        
         ?>            
         <div class="<?php echo $mainClasses; ?>" style="background-image: url(<?php echo esc_url($thumbImage['url']); ?>);background-position: center right;">
             <div class="slider_caption_area">
@@ -107,87 +67,55 @@ get_header();
         $i++;
         } // endforeach
     } // endif 
+    
     ?>
 
-    <div class="viewport w50 section_9">
-    
-    <h2>The ACH Difference</h2>
-            <span class="separator"></span>
-            <h4>Whether we're working with hospitality clients, schools, retirement providers</h4>
-            <p>Whether we're working with hospitality clients, schools, retirement providers, multi-site operators, architects or investors, our approach enhances every project and makes it an impressive experience – for everyone.</p>
-
-            <p>We are specialists in commercial construction and refurbishment in Sydney, Brisbane, Melbourne and surrounding regions, bringing deeper understanding to projects ranging from tens of thousands of dollars to tens of millions of dollars to billions of dollars.</p>
-            <span class="separator"></span>
-        
+    <div id="ach_difference" class="viewport w50 section_9">
+        <h2><?php the_field("hp_ach_diff_heading"); ?></h2>
+        <span class="separator"></span>
+        <h4><?php the_field("hp_ach_diff_sub_heading"); ?></h4>
+        <?php the_field("hp_ach_diff_detail"); ?>
+        <span class="separator"></span>
     </div>
 
     <div class="viewport section_8"> 
         <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/slideing-img.jpg"  alt="slideing-img" class="slidein slideing-img" />
     </div>
 
-    <div class="viewport w100 section_9">
+    <div id="ourStory" class="viewport w100 section_9">
     
         <div class="section9_col1">
-            
-        <div id="tabs" class="tab_content">
-            <ul class="tab_button_set">
-                <li><a href="#aboutus">About Us</a></li>
-                <li><a href="#history">History</a></li>
-                <li><a href="#policies">Policies</a></li>
-                <li><a href="#accreditations">Accreditations</a></li>
-                <li><a href="#associations">Associations</a></li>
-            </ul>
-            <div id="aboutus">
-                <h2>OUR STORY</h2>          
-                <p>Whether we're working with hospitality clients, schools, retirement providers, multi-site operators, architects or investors, our approach enhances every project and makes it an impressive experience – for everyone.</p>
+            <div id="tabs" class="tab_content">
+                <ul class="tab_button_set">
+                    <li><a href="#aboutus"><?php the_field("hp_story_title"); ?></a></li>
+                    <li><a href="#history"><?php the_field("hp_history_title"); ?></a></li>
+                    <li><a href="#policies"><?php the_field("hp_policy_title"); ?></a></li>
+                    <li><a href="#accreditations"><?php the_field("hp_accredit_title"); ?></a></li>
+                    <li><a href="#associations"><?php the_field("hp_assoc_title"); ?></a></li>
+                </ul>
+                <div id="aboutus">
+                    <h2><?php the_field("hp_story_heading"); ?></h2>          
+                    <?php the_field("hp_story_detail"); ?>
+                </div>
+                <div id="history">
+                    <h2><?php the_field("hp_history_heading"); ?></h2>
+                    <?php the_field("hp_history_detail"); ?>
+                </div>
 
-                <p>We are specialists in commercial construction and refurbishment in Sydney, Brisbane, Melbourne and surrounding regions, bringing deeper understanding to projects ranging from tens of thousands of dollars to tens of millions of dollars.</p>
-
-                <p>Whether we're working with hospitality clients, schools, retirement providers, multi-site operators, architects or investors, our approach enhances every project and makes it an impressive experience – for everyone.</p>
-
-                <p>We are specialists in commercial construction and refurbishment in Sydney, Brisbane, Melbourne and surrounding regions, bringing deeper understanding to projects ranging from tens of thousands of dollars to tens of millions of dollars.</p>
+                <div id="policies">
+                    <h2><?php the_field("hp_policy_heading"); ?></h2>
+                    <?php the_field("hp_policy_detail"); ?>
+                </div>  
+                <div id="accreditations">
+                    <h2><?php the_field("hp_accredit_heading"); ?></h2>
+                    <?php the_field("hp_accredit_detail"); ?>
+                </div>  
+                <div id="associations">
+                    <h2><?php the_field("hp_assoc_heading"); ?></h2>
+                    <?php the_field("hp_assoc_detail"); ?>
+                </div>        
 
             </div>
-            <div id="history">
-                <h2>History</h2>
-
-            </div>
-
-            <div id="policies">
-                <h2>Policies</h2>
-
-            </div>  
-            <div id="accreditations">
-                <h2>Policies</h2>
-                <p>Whether we're working with hospitality clients, schools, retirement providers, multi-site operators, architects or investors, our approach enhances every project and makes it an impressive experience.</p>
-                <ul class="accreditations_img_list">
-                    <li><img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/accreditations_img.jpg" alt="" /></li>
-                    <li><img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/accreditations_img.jpg" alt="" /></li>
-                    <li><img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/accreditations_img.jpg" alt="" /></li>
-                </ul>
-
-            </div>  
-            <div id="associations">
-                <h2>Associations</h2>
-
-                <p>Whether we're working with hospitality clients, schools, retirement providers, multi-site operators, architects or investors, our approach enhances every project and makes it an impressive experience.</p>
-                <ul class="associations_gallery">
-                    <li><img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/associations_gallery_img.jpg" alt="" /></li>
-                    <li><img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/associations_gallery_img.jpg" alt="" /></li>
-                    <li><img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/associations_gallery_img.jpg" alt="" /></li>
-                    <li><img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/associations_gallery_img.jpg" alt="" /></li>
-                    <li><img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/associations_gallery_img.jpg" alt="" /></li>
-                    <li><img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/associations_gallery_img.jpg" alt="" /></li>
-                    <li><img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/associations_gallery_img.jpg" alt="" /></li>
-                    <li><img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/associations_gallery_img.jpg" alt="" /></li>
-                    <li><img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/associations_gallery_img.jpg" alt="" /></li>
-                </ul>
-
-
-            </div>        
-
-        </div>
-
         </div>
         
         <?php if(get_field("hp_show_testimonials")) { ?>
@@ -205,7 +133,7 @@ get_header();
         <?php } // endif ?>
     </div>
     
-    <?php
+    <?php 
     // NORMAL CUT PROJECT DISPLAY
     $objNormalProjects = get_field("hp_prj_normal_cut");
     if(!empty($objNormalProjects)) { 
@@ -222,20 +150,35 @@ get_header();
         </div>
         <?php 
         } // endforeach 
-    } // endif ?>
-	<div class="viewport w50 section_9 ach_express">
-
-    <h2>ACH Express</h2>
-            <span class="separator"></span>
-            <h4>Whether we're working with hospitality clients, schools, retirement providers</h4>
-            <p>Whether we're working with hospitality clients, schools, retirement providers, multi-site operators, architects or investors, our approach enhances every project and makes it an impressive experience – for everyone.</p>
-
-            <p>We are specialists in commercial construction and refurbishment in Sydney, Brisbane, Melbourne and surrounding regions, bringing deeper understanding to projects ranging from tens of thousands of dollars to tens of millions of dollars to billions of dollars.</p>
-            <span class="separator"></span>
-        
-    </div>
+    } // endif 
+    ?>
+     
+    
     <?php get_template_part( 'template-parts/verticle-slider' ); ?>
 
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var tabName = window.location.hash.substr(1);
+            console.log(tabName);
+            if(tabName == "contactus") {
+                console.log('cnt');
+                var leftPos = $("footer").offset().left;
+                console.log(leftPos);
+                $('html, body').animate({
+                    scrollLeft: (leftPos - 100)
+                },'slow');
+            }
+            if(tabName == "ach_difference") {
+                console.log('ach');
+                var leftPos = $("#ach_difference").offset().left;
+                console.log(leftPos);
+                $('html, body').animate({
+                    scrollLeft: (leftPos - 100)
+                },'slow');
+            }
+        });
+    </script>
+    
     <?php
     get_footer();
 

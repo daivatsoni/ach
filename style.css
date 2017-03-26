@@ -4504,7 +4504,7 @@ a {
     background-color: rgba(14, 27, 40, 0.8);
     background-position: center center;
     background-repeat: no-repeat;
-    -moz-background-size: cover;
+    /* -moz-background-size: cover; */
 	-webkit-background-size: cover;
 	-ms-background-size: cover;
 	-o-background-size: cover;
@@ -6070,7 +6070,7 @@ h3.subheading{ font-size:33px; line-height:40px; color:#fff; padding:25px 0 25px
 .slider_caption_area{display: flex;flex-direction: column;justify-content:flex-end;align-items:flex-end;width:100%;padding-bottom: 20px;min-height: 1px;}
 .slider_caption{ width:458px; height:65px; background:url(img/slider_caption.png) no-repeat top left; color:#fff; font-size:18px; line-height:21px; padding:15px 135px 15px 40px; float:right;}
 .section_6{ margin-left:-1.5%; position:relative; z-index:999;display:flex;padding-right:0.6%;}
-.section_6.slide-blank:after{ content:"";width:220px; position:absolute; right:-3px; top:0; min-width:220px; height:100%; z-index:999;background-image:url(img/slide-blank.png);background-position: center left;-moz-background-size:100% 100% !important;
+.section_6.slide-blank:after{ content:"";width:220px; position:absolute; right:-3px; top:0; min-width:220px; height:100%; z-index:999;background-image:url(img/slide-blank.png);background-position: center left; /* -moz-background-size:100% 100% !important; */
 -webkit-background-size:100% 100% !important;
 -o-background-size:100% 100% !important;
 -ms-background-size:100% 100% !important;
@@ -6134,16 +6134,16 @@ ul.tab_button_set li.ui-tabs-active a{ color:#d36229;font-family:"futurastd-bold
 
 
 .contact_form .frmHeading{ color:#d36229; font-size:20px; padding:20px 0 0; margin:0;}
-.contact_form{ clear:both; width:100%; float:left; font-size:14px; line-height:20ppx;}
+.contact_form{ clear:both; width:100%; float:left; font-size:14px; line-height:20px;}
 .footer input[type="text"], .footer input[type="email"], .footer input[type="password"],.footer input[type="tel"],.footer select,.footer input[type="number"]{ width:168px; height:20px; margin:0; border:0;
--moz-border-radius:3px;
+/* -moz-border-radius:3px; */
 -webkit-border-radius:3px;
 -ms-border-radius:3px;
 -o-border-radius:3px;
 border-radius:3px;
 }
 .contact_form ul li textarea{ margin-top:8px; width:272px; height:92px; border:0;
--moz-border-radius:3px;
+/* -moz-border-radius:3px; */
 -webkit-border-radius:3px;
 -ms-border-radius:3px;
 -o-border-radius:3px;
@@ -6198,16 +6198,16 @@ a.register_button:hover{ background:#c75e29;border:1px solid #c75e29; color:#fff
 
 
 .workingwithach_section3 .contact_form .frmHeading{ color:#0e1b28; font-size:20px; padding:20px 0 0; margin:0;}
-.workingwithach_section3 .contact_form{ clear:both; width:100%; float:left; font-size:14px; line-height:20ppx;}
+.workingwithach_section3 .contact_form{ clear:both; width:100%; float:left; font-size:14px; line-height:20px;}
 .workingwithach_section3 input[type="text"], .workingwithach_section3 input[type="email"], .workingwithach_section3 input[type="password"],.workingwithach_section3 input[type="tel"],.workingwithach_section3 select,.workingwithach_section3 input[type="number"]{ width:168px; height:23px; margin:0; border:1px solid #bebebe;
--moz-border-radius:3px;
+/* -moz-border-radius:3px; */
 -webkit-border-radius:3px;
 -ms-border-radius:3px;
 -o-border-radius:3px;
 border-radius:3px;
 }
 .workingwithach_section3 .contact_form ul li textarea{ margin-top:8px; width:272px; height:92px;border:1px solid #bebebe;
--moz-border-radius:3px;
+/* -moz-border-radius:3px; */
 -webkit-border-radius:3px;
 -ms-border-radius:3px;
 -o-border-radius:3px;
@@ -6303,7 +6303,7 @@ body{ display:none;}
 
 @media (max-width:1050px) {
 .bg-cover{background-size:100% 100%;
--moz-background-size:100% 100%;
+/* -moz-background-size:100% 100%; */
 -webkit-background-size:100% 100%;
 -ms-background-size:100% 100%;
 -o-background-size:100% 100%;
