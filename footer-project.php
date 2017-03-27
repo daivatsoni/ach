@@ -17,7 +17,7 @@
                 }
                 ?>
                 <?php /* if($termUrl) { ?><a class="all_project" href="<?php echo $termUrl; ?>">ALL PROJECT</a><?php } */ ?>
-                <a class="open-menu all_project" href="javascript:void(0);">ALL PROJECT</a>
+                <a class="open-menu all_project" href="javascript:void(0);">ALL PROJECTS</a>
             </div>
 
         </div>

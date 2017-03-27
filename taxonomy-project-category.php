@@ -13,47 +13,6 @@ get_header('category');
 ?>
 
 <div id="container" class="wrapper main">
-    <script>
-
-        $(document).ready(function () {
-
-    // when headline is clicked video will start
-            $('#playvid, playvid a').click(function (e) {
-                e.preventDefault();
-                var myVideo = document.getElementById("video-background");
-
-                if (myVideo.paused) {
-                    myVideo.play();
-                } else {
-                    myVideo.pause();
-                }
-
-                $(this).fadeOut(1000);
-
-                $('#play, #pause').fadeIn();
-            });
-
-    // trigger for play and pause
-            $('#play').click(function () {
-                var myVideo = document.getElementById("video-background");
-                myVideo.play();
-            });
-
-            $('#pause').click(function () {
-                var myVideo = document.getElementById("video-background");
-                myVideo.pause();
-            });
-        });
-
-        $(window).on("load, resize", function () {
-    // hide video for mobile version
-            if ($(window).width() <= 1024) {
-                $('#embedVideo').hide();
-            } else {
-                $('#embedVideo').show();
-            }
-        });
-    </script>
     <div class="viewport w30 bg-cover" style="background-color:#fff;">
         <div class="logo"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><img src="<?php echo get_template_directory_uri() . "/img/logo.png" ?>" alt="ACH Clifford" /></a></div>
     </div>
@@ -69,6 +28,44 @@ get_header('category');
     <div class="viewport product_section" style="background-color:#fff;">
         <div class="product_area">
             <ul class="product_list">
+                <?php 
+                $termId = get_queried_object()->term_id;
+                $args = array(
+                    'post_type' => 'project',
+                    'status' => 'published',
+                    'tax_query' => array(
+                        array(
+                            'taxonomy' => 'project-category',
+                            'field' => 'id',
+                            'terms' => $termId,
+                        ),
+                    ),
+                );
+                $arrProjects = get_posts($args);
+                if (!empty($arrProjects) && $arrProjects != NULL) { 
+                    foreach ($arrProjects as $project) {
+                        $project_link = get_permalink($project->ID);
+                        $midiumImg = get_field("prj_category_image", $project->ID);
+                        if($mediumImg) { ?>
+                        <li>
+                            <a href="<?php echo $project_link; ?>">
+                                <img src="<?php echo $mediumImg ?>" class="lazy loaded">
+                                <h4><?php echo $project->post_title ?></h4>
+                            </a>
+                        </li>
+                        <?php } else { ?>
+                        <li>
+                            <a href="<?php echo $project_link; ?>">
+                                <img src="http://placehold.it/484x640" class="lazy loaded">
+                                <h4><?php echo $project->post_title ?></h4>
+                            </a>
+                        </li>
+                        <?php } 
+                    }
+                }
+?>
+                
+<?php /*                
                 <li>
                     <a href="#">
                         <img src="<?php echo get_template_directory_uri() . "/img/product-1.jpg" ?>" class="lazy loaded">
@@ -76,69 +73,11 @@ get_header('category');
                         <span>tealblue / grey Silk<br> 
                             wool / silk </span>
                     </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="<?php echo get_template_directory_uri() . "/img/product-1.jpg" ?>" class="lazy loaded">
-                        <h4>Bidjar Highgate Enjoy</h4>
-                        <span>tealblue / grey Silk<br> 
-                            wool / silk </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="<?php echo get_template_directory_uri() . "/img/product-1.jpg" ?>" class="lazy loaded">
-                        <h4>Bidjar Highgate Enjoy</h4>
-                        <span>tealblue / grey Silk<br> 
-                            wool / silk </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="<?php echo get_template_directory_uri() . "/img/product-1.jpg" ?>" class="lazy loaded">
-                        <h4>Bidjar Highgate Enjoy</h4>
-                        <span>tealblue / grey Silk<br> 
-                            wool / silk </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="<?php echo get_template_directory_uri() . "/img/product-1.jpg" ?>" class="lazy loaded">
-                        <h4>Bidjar Highgate Enjoy</h4>
-                        <span>tealblue / grey Silk<br> 
-                            wool / silk </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="<?php echo get_template_directory_uri() . "/img/product-1.jpg" ?>" class="lazy loaded">
-                        <h4>Bidjar Highgate Enjoy</h4>
-                        <span>tealblue / grey Silk<br> 
-                            wool / silk </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="<?php echo get_template_directory_uri() . "/img/product-1.jpg" ?>" class="lazy loaded">
-                        <h4>Bidjar Highgate Enjoy</h4>
-                        <span>tealblue / grey Silk<br> 
-                            wool / silk </span>
-                    </a>
-                </li>
+                </li> */ ?>
             </ul>
         </div>
 
     </div>
-
-<?php /*
-    <div class="viewport w50 workingwithach_section4 bg-cover" style="background-image: url(<?php echo esc_url(get_template_directory_uri()) . "/img/workingwithach_img2.png" ?>);background-position: center right;">
-
-    </div>
-    <div class="viewport w100 workingwithach_section5 bg-cover" style="background-image: url(<?php echo esc_url(get_template_directory_uri()) . "/img/workingwithach_img3.jpg" ?>);background-position: center right;">
-
-    </div>
-
-*/ ?>
 
     <?php
     get_footer();

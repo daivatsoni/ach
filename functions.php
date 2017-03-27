@@ -102,7 +102,7 @@ function getMenuItems() {
         // get project categories thumb, title and URL
         $categories = get_terms('project-category', array(
             'orderby' => 'count',
-            'hide_empty' => 0,
+            'hide_empty' => 1,
                 ));
 
         $html = ob_start(); ?><div id="menu">
@@ -447,3 +447,10 @@ function remove_current_class($classes) {
     return $classes;
     
 }
+
+add_filter( 'get_the_archive_title', function ( $title ) {
+    if( is_tax() ) {
+        $title = single_cat_title( '', false );
+    }
+    return $title;
+});
