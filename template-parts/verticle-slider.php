@@ -9,6 +9,8 @@ if(isset($categoryId)) {
     $args = array(
         'post_type' => 'project',
         'status' => 'published',
+        'orderby'   => 'post_title',
+        'order'     => 'ASC',
         'tax_query' => array(
             array(
                 'taxonomy' => 'project-category',
