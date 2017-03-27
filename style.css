@@ -6286,9 +6286,7 @@ border-top: 45px solid #fff;
 .section_5{padding-right: 0.9%;}
 body{ display:none;}
 }
-@media (max-height:740px) {
 
-}
 /*
 @media screen and (max-width: 1234px) and (max-height: 740px) {
 	body{ display:none !important;}	
@@ -6352,7 +6350,7 @@ border-top: 32px solid #fff;
 .menu nav{padding-top:0 !important; padding-right:0 !important; width:31%; padding-left:10px!important;}
 }
 @media (max-width:670px) {
-.viewport.section_8{ min-width:250px;}
+.viewport.section_8{ min-width:250px;margin: 0 -2px;}
 body{ font-size:10px; line-height:12px;}
 .homepage-2 .topline{ font-size:24px; line-height:30px;}
 .section_3, .section_7, .section_9, .footer{ padding-top:10px;}
@@ -6417,6 +6415,10 @@ ul.current_positions_list li .positions_list_content{ font-size:10px; line-heigh
 background-size:100px 200px;
 }
 .viewport.vertical-slider{min-width: 280px;width: 280px;}
+
+}
+@media (max-height:640px) {
+.viewport.vertical-slider{min-width: 220px;width: 220px;}
 
 }
 @media (max-width:320px) {
