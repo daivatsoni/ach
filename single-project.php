@@ -29,7 +29,7 @@ get_header('category');
     if(!empty($projectGallery) && isset($projectGallery[1])) { 
         for($i=1; $i<count($projectGallery); $i++) { ?>
     
-        <div class="viewport w80 section_5 bg-cover" style="background-image: url(<?php echo $projectGallery[$i]['url'] ?>);background-position: center right;"></div>
+        <div class="viewport w100 section_5 bg-cover" style="background-image: url(<?php echo $projectGallery[$i]['url'] ?>);background-position: center right;"></div>
     
         <?php         
         }  // endfor
