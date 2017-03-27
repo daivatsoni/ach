@@ -1,5 +1,6 @@
 <?php
-get_header('category');
+//get_header('category');
+get_header();
 ?>
 <div id="container" class="wrapper main">
 <?php
