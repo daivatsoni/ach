@@ -57,7 +57,7 @@ get_header('category');
                         <li>
                             <a href="<?php echo $project_link; ?>">
                                 <img src="<?php echo $mediumImg['url'] ?>" class="lazy loaded">
-                                <h4><?php echo $$projectTitle ?></h4>
+                                <h4><?php echo $projectTitle ?></h4>
                             </a>
                         </li>
                         <?php } else { ?>
