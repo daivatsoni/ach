@@ -49,7 +49,7 @@
                     size: '10px',
                     height: '100%',
                     width: "66%",
-                    alwaysVisible: true
+                    alwaysVisible: false
                 });
             }; 
         });
@@ -60,15 +60,16 @@
         <![endif]-->
   
         <script>
-            (function (doc) {
-                var viewport = doc.getElementById('viewport');
-                if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/iPod/i)) {
-                    viewport.setAttribute("content", "initial-scale=0.4, user-scalable=yes");
-                } else if (navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/Android|Tablet/i)) {
-                    viewport.setAttribute("content", "initial-scale=0.65, user-scalable=yes");
-                }
-            }(document));
-
+            $(document).ready(function() {
+                (function (doc) {
+                    var viewport = doc.getElementById('viewport');
+                    if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/iPod/i)) {
+                        viewport.setAttribute("content", "initial-scale=0.4, user-scalable=yes");
+                    } else if (navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/Android|Tablet/i)) {
+                        viewport.setAttribute("content", "initial-scale=0.65, user-scalable=yes");
+                    }
+                }(document));
+            });
             var ajaxurl = "<?php echo admin_url('admin-ajax.php'); ?>";
         </script>
 		
