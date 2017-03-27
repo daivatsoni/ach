@@ -4420,7 +4420,8 @@ a {
 .collections {
     float: left;
     height: 100%;
-    max-width: 58%;
+    max-width: 63%;
+    width: 63%
 }
 @media screen and (min-width: 1234px) and (max-height: 799px) {
 .collections {
@@ -4511,7 +4512,7 @@ a {
 	background-size: cover;
     height: 0;
     overflow: hidden;
-    padding-top: 100%;
+    padding-top: 63%;
     width: 100%;
 }
 .collections .collection .inner h3,
@@ -4578,7 +4579,7 @@ ul.bottomMenu li:first-child {
     float: left;
     height: 100%;
     padding:0px 50px 0 0px !important;
-    width: 40%;
+    width: 25%;
 }
 .menu_logo{ width:100%;float:right; padding-bottom:35px; position:relative; margin-bottom:15px}
 .menu_logo:after{ width:120px; height:5px; background:#d36229; content:""; left:0; bottom:0;position: absolute;}
@@ -6281,9 +6282,10 @@ border-top: 45px solid #fff;
 }
 
 .collections .project-tiles .collection{width: calc(50% - 10px);}
-.collections .project-tiles{float: left;width: 50%;}
-.collections .category-desc{float: left;width: 50%; padding-left: 25px; padding-right:30px; color:#0e1b28;}
-.collections .category-desc h3{color:#0e1b28; padding-bottom:15px;}
+.collections .project-tiles{float: left;width: 66.66%;}
+.collections .category-desc{float: left;width: 33.33%; padding-left: 25px; padding-right:30px; color:#0e1b28;}
+.collections .category-desc h3{color:#0e1b28; padding-bottom:15px; font-family: 'FuturaStd-Bold'; font-size: 24pt;}
+.collections .category-desc p {border-top: solid 5px #d36229; padding-top: 40px;}
 .developed_by{ padding:0; margin:0; color:#9d9e9e; font-size:10px; line-height:12px; padding-top:20px; clear:both;}
 
 @media (min-width:2000px) {

@@ -90,7 +90,7 @@ function getMenuItems() {
                     $desc = $termObj->description;
                     ?>
                     <h3><?php echo $heading; ?></h3>
-                    <p class="desc"><?php echo $desc; ?></p>
+                    <p class="desc"><?php echo nl2br($desc); ?></p>
                 </div>
                 </div><?php
                 $html = ob_get_clean();
