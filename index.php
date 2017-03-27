@@ -57,7 +57,7 @@ get_header();
             }
         
         ?>            
-        <div class="<?php echo $mainClasses; ?>" style="background-image: url(<?php echo esc_url($thumbImage['url']); ?>);background-position: center right;">
+        <div class="<?php echo $mainClasses; ?>" style="background-image: url(<?php echo esc_url($thumbImage['url']); ?>);background-position: center left;">
             <div class="slider_caption_area">
                 <a href="<?php echo $url; ?>" class="slider_caption slidein"><?php echo $title; ?></a>
                 <?php if(!empty($logoImage)) { ?> 
