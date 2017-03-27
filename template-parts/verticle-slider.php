@@ -34,13 +34,16 @@ if(!empty($objProjects)) {
             $projectId = $project->ID;
             $thumbImage = get_field("proj_thumb_image",$projectId);
             $url = get_permalink($projectId);
-            $title = get_the_title($projectId);
+            $projectTitle = get_field("proj_hp_heading", $projectId);
+            if($projectTitle == "") {
+                $projectTitle = get_the_title($projectId);
+            }
         ?>
         <div class="item " style="background-image:url(<?php echo esc_url($thumbImage['url']); ?>)"> 
             <a href="<?php echo $url; ?>">
                 <div class="item_des">
                     <div class="item_title">
-                        <h3><?php echo $title; ?></h3>
+                        <h3><?php echo $projectTitle; ?></h3>
                     </div>
                 </div>
             </a>
