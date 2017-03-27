@@ -48,7 +48,7 @@
                 $(".slimscroll").slimScroll({
                     size: '10px',
                     height: '100%',
-                    width: "76.66%",
+                    width: "66%",
                     alwaysVisible: true
                 });
             }; 
