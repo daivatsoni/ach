@@ -32,6 +32,7 @@ get_header('category');
                 $termId = get_queried_object()->term_id;
                 $args = array(
                     'post_type' => 'project',
+                    'posts_per_page' => -1,
                     'status' => 'published',
                     'orderby'   => 'post_title',
                     'order'     => 'ASC',

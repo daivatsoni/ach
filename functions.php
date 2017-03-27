@@ -38,6 +38,7 @@ function getMenuItems() {
         if ($termId) {
             $args = array(
                 'post_type' => 'project',
+                'posts_per_page' => -1,
                 'status' => 'published',
                 'orderby'   => 'post_title',
                 'order'     => 'ASC',
