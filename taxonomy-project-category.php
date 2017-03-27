@@ -52,7 +52,7 @@ get_header('category');
                         if($mediumImg) { ?>
                         <li>
                             <a href="<?php echo $project_link; ?>">
-                                <img src="<?php echo $mediumImg ?>" class="lazy loaded">
+                                <img src="<?php echo $mediumImg['url'] ?>" class="lazy loaded">
                                 <h4><?php echo $project->post_title ?></h4>
                             </a>
                         </li>
