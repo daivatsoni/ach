@@ -4683,7 +4683,7 @@ ul.bottomMenu li:first-child {
 .mobile .menu-trigger::after {
     border-right: 2050px solid transparent;
     border-top: 2050px solid #0e1b28;
-    bottom: -2050px;
+    bottom: -2104px;
 }
 .menu-trigger > a {
     bottom: -1950px;
@@ -6317,6 +6317,7 @@ body{ display:none;}
 .section_7,
 .section_9,
 .footer{ padding-top:50px;}
+#ourStory.section_9.w100{ width:900px !important;}
 
 .section_9{ padding-left:66px;}
 .white-orange-heading,
@@ -6337,11 +6338,12 @@ border-top: 32px solid #fff;
 }
 .scroll_logo img.menu_area_logo{ width:85px; height:auto;}
 .scroll_logo{ padding-right:10px;}
+.menu_logo img{ max-width:100%;}
 }
 @media (max-width:770px) {
 .section_3{ padding-left:48px;}
 .section_3 .section_des .btn a{ width:170px}
-
+.collections{ height:auto;}
 }
 @media (max-width:670px) {
 .viewport.section_8{ min-width:250px;}
@@ -6394,13 +6396,21 @@ ul.current_positions_list li .positions_list_content{ font-size:10px; line-heigh
 .workingwithach_section3 .contact_form{ margin-top:-42px;}
 .workingwithach_section3 .contact_form ul li{ padding-top:4px;}
 .taxonomy-description{ padding-top:15px;}
-/*.menu-trigger{top:-1970px;}
-.mobile .menu-trigger > a{ bottom:-2112px; font-size:30px; padding-left:12px;}*/
+.menu-trigger{top:-1970px;}
+.mobile .menu-trigger > a{ bottom:-2034px; font-size:30px; padding-left:29px; height:69px; width:61px;}
 .logo{ width:200px; margin-top:-54px;}
 .logo img{ max-width:100%;}
 .section_3{display: flex;}
 .box_middle{display: flex;flex-direction: column;justify-content: center;min-height: 1px;}
 
+.menu-trigger{
+-moz-background-size:100px 200px;
+-webkit-background-size:100px 200px;
+-ms-background-size:100px 200px;
+-o-background-size:100px 200px;
+background-size:100px 200px;
+}
+.viewport.vertical-slider{min-width: 280px;width: 280px;}
 
 }
 @media (max-width:320px) {
@@ -6410,3 +6420,4 @@ ul.current_positions_list li .positions_list_content{ font-size:10px; line-heigh
 .workingatach_section1.workingwithach_section3.section_9{ padding-top:25px;}
 }
 
+.owl-carousel .owl-item{width:500px !important;}
