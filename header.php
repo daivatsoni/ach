@@ -62,9 +62,9 @@
                 (function (doc) {
                     var viewport = doc.getElementById('viewport');
                     if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/iPod/i)) {
-                        viewport.setAttribute("content", "initial-scale=0.4, user-scalable=yes");
+                        viewport.setAttribute("content", "initial-scale=1.0, user-scalable=yes");
                     } else if (navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/Android|Tablet/i)) {
-                        viewport.setAttribute("content", "initial-scale=0.65, user-scalable=yes");
+                        viewport.setAttribute("content", "initial-scale=1.0, user-scalable=yes");
                     }
                 }(document));
             });
