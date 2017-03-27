@@ -53,7 +53,7 @@ function getMenuItems() {
             $arrProjects = get_posts($args);
             if (!empty($arrProjects) && $arrProjects != NULL) {
                 $html = ob_start();
-                ?><div id="menu"><div class="project-tiles">
+                ?><div id="menu"><div class="project-tiles slimscroll">
                         <div class="collection withoutimg back-to-list">
                             <a href="#">
                                 <div class="inner">

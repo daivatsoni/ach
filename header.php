@@ -19,32 +19,41 @@
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/plugins.min.js"></script>
         <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-ui.js"></script>
         <script src="<?php echo get_template_directory_uri(); ?>/js/owl.carousel.js"></script>
+        <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.slimscroll.min.js"></script>
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/functions.min.js"></script>
-		<script>
-          $(function() {
+        <script>
+        $(function() {
             $( "#tabs" ).tabs();
-          });
+        });
 		  
-            $(document).ready(function() {
-              var owl = $('.owl-carousel');
-              owl.owlCarousel({
+        $(document).ready(function() {
+            var owl = $('.owl-carousel');
+            owl.owlCarousel({
                 margin: 0,
                 nav: true,
                 loop: true,
                 responsive: {
-                  0: {
-                    items: 1
-                  },
-                  600: {
-                    items: 1
-                  },
-                  1000: {
-                    items:1
-                  }
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 1
+                    },
+                    1000: {
+                        items:1
+                    }
                 }
-              })
-            })
-          </script>
+            });
+            slimScrollDiv = function() {
+                $(".slimscroll").slimScroll({
+                    size: '10px',
+                    height: '100%',
+                    width: "76.66%",
+                    alwaysVisible: true
+                });
+            }; 
+        });
+        </script>
         <!--[if IE]><![endif]-->
         <!--[if IE]>
           <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
