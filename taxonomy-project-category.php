@@ -48,19 +48,23 @@ get_header('category');
                 if (!empty($arrProjects) && $arrProjects != NULL) { 
                     foreach ($arrProjects as $project) {
                         $project_link = get_permalink($project->ID);
-                        $midiumImg = get_field("prj_category_image", $project->ID);
+                        $projectTitle = get_field("proj_hp_heading", $project->ID);
+                        if($projectTitle == "") {
+                            $projectTitle = $project->post_title;
+                        }
+                        $mediumImg = get_field("prj_category_image", $project->ID);
                         if($mediumImg) { ?>
                         <li>
                             <a href="<?php echo $project_link; ?>">
                                 <img src="<?php echo $mediumImg['url'] ?>" class="lazy loaded">
-                                <h4><?php echo $project->post_title ?></h4>
+                                <h4><?php echo $$projectTitle ?></h4>
                             </a>
                         </li>
                         <?php } else { ?>
                         <li>
                             <a href="<?php echo $project_link; ?>">
                                 <img src="http://placehold.it/484x640" class="lazy loaded">
-                                <h4><?php echo $project->post_title ?></h4>
+                                <h4><?php echo $projectTitle ?></h4>
                             </a>
                         </li>
                         <?php } 
