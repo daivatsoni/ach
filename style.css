@@ -4582,7 +4582,7 @@ ul.bottomMenu li:first-child {
     width: 25%;
 }
 .menu_logo{ width:100%;float:right; padding-bottom:35px; position:relative; margin-bottom:15px}
-.menu_logo:after{ width:120px; height:5px; background:#d36229; content:""; left:0; bottom:0;position: absolute;}
+/*.menu_logo:after{ width:120px; height:5px; background:#d36229; content:""; left:0; bottom:0;position: absolute;} */
 .menu_area_logo{ float:right;}
 .menu nav ul {
     border-top: 1px solid rgba(0, 0, 0, 0.3);
