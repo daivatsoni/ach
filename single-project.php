@@ -20,7 +20,13 @@ get_header();
     ?>
     <div class="viewport w60 bg-cover rydehighsecholl_section2" style="background-image:url(<?php echo $firstBG ?>); background-color: #0e1b28; background-position: center left;">
         <div class="rydehighsecholl_title slidein">
-            <h2><?php echo get_the_title(); ?></h2>
+            <?php
+                $projectTitle = get_field("proj_hp_heading");
+                if($projectTitle == "") {
+                    $projectTitle = get_the_title();
+                }
+            ?>
+            <h2><?php echo $projectTitle; ?></h2>
             <?php $term_list = wp_get_post_terms(get_the_ID(), 'project-category', array("fields" => "names")); ?>
             <h3><?php echo implode(",", $term_list); ?></h3>
         </div>
