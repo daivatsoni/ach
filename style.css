@@ -4347,7 +4347,7 @@ a {
     white-space: nowrap;
 }
 .menu {
-    height: 100%; overflow: auto;
+    height: 100%; overflow: hidden;
     transform: translateY(-200%);
     z-index: 10010;
 }
