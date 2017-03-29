@@ -119,9 +119,10 @@
                                 global $post;
                                 $term_list = wp_get_post_terms($post->ID, 'project-category');
                                 $categoryId = $term_list[0]->term_id;
+                                $catSlug = $term_list[0]->slug;
                             }
                             ?>
-                            <div id="ajax-menu" data-menu='project' data-id='<?php echo $categoryId; ?>'></div>
+                            <div id="ajax-menu" data-menu='project' data-id='<?php echo $categoryId; ?>' data-menuclass="<?php echo $catSlug; ?>"></div>
                         </div>
                     </div>
 

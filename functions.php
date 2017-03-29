@@ -54,13 +54,6 @@ function getMenuItems() {
             if (!empty($arrProjects) && $arrProjects != NULL) {
                 $html = ob_start();
                 ?><div id="menu"><div class="project-tiles slimscroll">
-                        <div class="collection withoutimg back-to-list">
-                            <a href="#">
-                                <div class="inner">
-                                    <h3>Back</h3>
-                                </div>
-                            </a>
-                        </div>
                 <?php
                 foreach ($arrProjects as $project) {
                     $project_link = get_permalink($project->ID);
@@ -84,14 +77,15 @@ function getMenuItems() {
                     <?php } ?>
                 <?php } ?>
                 </div>
-                <div class="category-desc">
-                    <?php 
-                    $termObj = get_term($termId, "project-category"); 
-                    $heading = $termObj->name;
-                    $desc = $termObj->description;
-                    ?>
+                <?php 
+                $termObj = get_term($termId, "project-category"); 
+                $heading = $termObj->name;
+                $desc = $termObj->description;
+                ?>
+                <div class="category-desc" data-menuclass="<?php echo $termObj->slug ?>">
                     <h3><?php echo $heading; ?></h3>
                     <p class="desc"><?php echo nl2br($desc); ?></p>
+                    <a href="javascript:void(0);" class="back-to-list">VIEW ALL CATEGORIES</a>
                 </div>
                 </div><?php
                 $html = ob_get_clean();
@@ -112,10 +106,11 @@ function getMenuItems() {
         <?php
         if (!empty($categories) && $categories != NULL) {
             foreach ($categories as $category) {
-                $cat_link = get_term_link($category);
+//                $cat_link = get_term_link($category);
+                $cat_link = "javascript:void(0);";
                 $cat_image = get_field('pcat_image', $category);
                 ?>
-                    <div class="collection projects" data-id="<?php echo $category->term_id; ?>">
+                    <div class="collection projects" data-id="<?php echo $category->term_id; ?>" data-menuclass="<?php echo $category->slug ?>">
                         <a href="<?php echo $cat_link; ?>">
                             <div class="inner" style="background-image:url(<?php echo esc_url($cat_image['url']); ?>)">
                                 <h3><?php echo strtoupper($category->name); ?></h3>
@@ -448,9 +443,22 @@ function remove_current_class($classes) {
         unset($classes[$key]);
     }
     return $classes;
-    
 }
 
+add_filter("nav_menu_link_attributes", "set_menu_data_attr", 10,2);
+function set_menu_data_attr($atts, $item) {
+    if(isset($item->object) && $item->object=="project-category") {
+        $termId = $item->object_id;
+        $termObj = get_term_by("term_id", $termId, "project-category");
+        $termSlug = $termObj->slug;
+        $atts['data-id']=$termId;
+        $atts['data-menuclass']=$termSlug;
+        $atts['href'] = "#";
+        $atts['onclick']= "loadMyProjects(this);";
+    }
+    
+    return $atts;
+}
 add_filter( 'get_the_archive_title', function ( $title ) {
     if( is_tax() ) {
         $title = single_cat_title( '', false );

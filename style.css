@@ -4542,7 +4542,14 @@ transition:0.4s ease-in-out;
 	-o-transform:translate(0,-50%);
 	transform:translate(0,-50%);
 }
+a.back-to-list{ background:none; color:#d36229;font-size:14px; line-height:25px; border:1px solid #d36229; float:left; text-align:center; font-weight:bold; padding: 5px 10px;margin-top:30px;}
+a.back-to-list:hover{color:#fff;background:#d36229;}
 
+a.back-close{ background:none; color:#d36229;font-size:14px; line-height:25px; border:1px solid #d36229; float:left; text-align:center; font-weight:bold; padding: 5px 10px;}
+a.back-close:hover{color:#fff;background:#d36229;}
+
+.menu-cat.active{color: #d36229;padding: 0;}
+.menu-cat.active::after{opacity: 1.0 !important;}
 
 .searchfield {
     position: relative;
