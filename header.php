@@ -17,7 +17,6 @@
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/plugins.min.js"></script>
         <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-ui.js"></script>
         <script src="<?php echo get_template_directory_uri(); ?>/js/owl.carousel.js"></script>
-        <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.slimscroll.min.js"></script>
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/functions.min.js"></script>
         <script>
         $(function() {
@@ -42,14 +41,6 @@
                     }
                 }
             });
-            slimScrollDiv = function() {
-                $(".slimscroll").slimScroll({
-                    size: '10px',
-                    height: '100%',
-                    width: "66%",
-                    alwaysVisible: false
-                });
-            }; 
         });
         </script>
         <!--[if IE]><![endif]-->
