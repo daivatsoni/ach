@@ -1,118 +1,82 @@
 <?php
-/*Template Name: WORKING AT ACH*/
+/* Template Name: WORKING AT ACH */
 get_header();
 ?>
 <div id="container" class="wrapper main">
-<script>
+    <div class="viewport w30 bg-cover" style="background-color:#fff;">
+        <div class="logo"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><img src="<?php echo get_template_directory_uri() . "/img/logo.png" ?>" alt="ACH Clifford" /></a></div>
+    </div>
+    <?php  
+    /* Start the Loop */
+    while ( have_posts() ) : the_post();
+    ?>
+    <div class="viewport w60 bg-cover workingwithach_section2" style="background-image:url(<?php the_field("waa_heading_background"); ?>); background-color: #0e1b28; background-position: center left;">
 
-$(document).ready(function () {
-
-// when headline is clicked video will start
-$('#playvid, playvid a').click(function (e) {
-	e.preventDefault();
-	var myVideo = document.getElementById("video-background");
-
-	if (myVideo.paused) {
-		myVideo.play();
-	} else {
-		myVideo.pause();
-	}
-
-	$(this).fadeOut(1000);
-
-	$('#play, #pause').fadeIn();
-});
-
-// trigger for play and pause
-$('#play').click(function () {
-	var myVideo = document.getElementById("video-background");
-	myVideo.play();
-});
-
-$('#pause').click(function () {
-	var myVideo = document.getElementById("video-background");
-	myVideo.pause();
-});
-});
-
-$(window).on("load, resize", function () {
-// hide video for mobile version
-if ($(window).width() <= 1024) {
-	$('#embedVideo').hide();
-} else {
-	$('#embedVideo').show();
-}
-});
-</script>
-<div class="viewport w30 bg-cover" style="background-color:#fff;">
-  <div class="logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri()."/img/logo.png" ?>" alt="ACH Clifford" /></a></div>
-</div>
-<div class="viewport w60 bg-cover workingwithach_section2" style="background-image:url(<?php echo get_template_directory_uri() . "/img/workingwithach_img1.jpg" ?>); background-color: #0e1b28; background-position: center left;">
-
-  <div class="workingwithach_title slidein">
-  <h2>WORKING AT ACH </h2>
-  </div>
-</div>
+        <div class="workingwithach_title slidein">
+            <h2><?php the_title(); ?></h2>
+        </div>
+    </div>
 
 
-<div class="viewport w50 workingwithach_section3 workingatach_section1 section_9" style="background-color:#fff;">
+    <div id="screen1" class="viewport w50 workingwithach_section3 workingatach_section1 section_9" style="background-color:#fff;">
+        <div class="section9_col1">
+            <h2><?php the_field("waa_scr1_heading"); ?></h2>
+            <h4><?php the_field("waa_scr1_subheading"); ?></h4>
+            <?php the_field("waa_scr1_content"); ?>
+            <a id="show-position" href="javascript:void(0);" class="register_button"><?php the_field("waa_button_text"); ?></a>
+        </div>
+        <div class="section9_col2 testmonial_slider_area">
 
-<div class="section9_col1">
-  <h2>OUR PHILOSOPHY</h2>
-  <h4>Whether we're working with hospitality clients, schools, retirement providers</h4>
-  <p>Whether we're working with hospitality clients, schools, retirement providers, multi-site operators, architects or investors, our approach enhances every project and makes it an impressive experience – for everyone.</p>
+            <div class="owl-carousel owl-theme testmonial_slider">
+                <?php 
+                $careerProfiles = get_field("waa_career_profiles");
+                if(!empty($careerProfiles)) {
+                    foreach ($careerProfiles as $profile) { ?>
+                <div class="item">
+                    <h3>CAREER <br />
+                        PROFILES</h3>
+                    <img src="<?php echo $profile['image']; ?>" class="career_profile_img" />
+                    <span class="client_name"><?php echo $profile['firstname']; ?><?php echo ($profile['lastname'])?" ".$profile['lastname']:""; ?></span>
+                    <span class="designation"><?php echo $profile['position']; ?></span>
+                    <?php echo $profile['description']; ?>
+                </div>
+                <?php
+                    }
+                }
+                ?>
+            </div>  
+        </div>
+    </div>
+    
+    <div id="screen2" class="viewport w50 workingwithach_section3 positions_section1 section_9" style="background-color:#fff;display:none;">
+        <h2><?php the_field("waa_cp_heading"); ?> <a id="close-position" href="javascript:void(0);" class="current_positions_close">CLOSE</a></h2>
+        <?php 
+        $currentPositions = get_field("waa_current_positions");
+        if(!empty($currentPositions)) {
+        ?>
+        <ul class="current_positions_list">
+            <?php 
+            foreach($currentPositions as $position) { ?>
+            <li>
+                <h5><?php echo $position["title"]; ?></h5>
+                <div class="positions_list_content"><a href="mailto:<?php echo $position["email_to"]; ?>?subject=<?php echo $position["email_subject"]; ?>" class="apply_button">APPLY</a><?php echo $position["job_description"]; ?><?php if(strlen(trim($position["more_detail"]))) { ?><a href="<?php echo $position["more_detail"]; ?>" target="_blank">View full job description</a><?php } ?></div>
+            </li>
+            <?php 
+            } ?>
+        </ul>
+        <?php
+        } ?>
+    </div>
+    
+    
+    <div class="viewport w50 workingwithach_section4 bg-cover" style="background-image: url(<?php the_field("waa_last_image1"); ?>);background-position: center left;">
 
-<p>We are specialists in commercial construction and refurbishment in Sydney, Brisbane, Melbourne and surrounding regions, bringing deeper understanding to projects ranging from tens of thousands of dollars to tens of millions of dollars to billions of dollars.</p>
-<a href="#" class="register_button">VIEW CURRENT POSITIONS</a>
-</div>
-<div class="section9_col2 testmonial_slider_area">
+    </div>
+    <div class="viewport w100 workingwithach_section5 bg-cover" style="background-image: url(<?php the_field("waa_last_image2"); ?>);background-position: center left;">
 
-<div class="owl-carousel owl-theme testmonial_slider">
-<div class="item">
-<h3>CAREER <br />
-PROFILES</h3>
-<img src="<?php echo get_template_directory_uri()."/img/career_profile_img.jpg" ?>" class="career_profile_img" />
-<span class="client_name">Firstname Lastname</span>
-<span class="designation">Position here</span>
+    </div>
 
-<p>Whether we're working with hospitality clients, schools, retirement providers, multi-site operators, architects or investors, our approach enhances every project and makes it an impressive experience – for everyone.</p>
-
-<p>We are specialists in commercial construction and refurbishment in Sydney, Brisbane, Melbourne and surrounding regions, bringing deeper understanding to projects ranging from tens of thousands of dollars to tens of millions of dollars.</p>
-            </div>
-            <div class="item">
-<h3>CAREER <br />
-PROFILES</h3>
-<img src="<?php echo get_template_directory_uri()."/img/career_profile_img.jpg" ?>" class="career_profile_img" />
-<span class="client_name">Firstname Lastname</span>
-<span class="designation">Position here</span>
-
-<p>Whether we're working with hospitality clients, schools, retirement providers, multi-site operators, architects or investors, our approach enhances every project and makes it an impressive experience – for everyone.</p>
-
-<p>We are specialists in commercial construction and refurbishment in Sydney, Brisbane, Melbourne and surrounding regions, bringing deeper understanding to projects ranging from tens of thousands of dollars to tens of millions of dollars.</p>
-            </div>
-            <div class="item">
-<h3>CAREER <br />
-PROFILES</h3>
-<img src="<?php echo get_template_directory_uri()."/img/career_profile_img.jpg" ?>" class="career_profile_img" />
-<span class="client_name">Firstname Lastname</span>
-<span class="designation">Position here</span>
-
-<p>Whether we're working with hospitality clients, schools, retirement providers, multi-site operators, architects or investors, our approach enhances every project and makes it an impressive experience – for everyone.</p>
-
-<p>We are specialists in commercial construction and refurbishment in Sydney, Brisbane, Melbourne and surrounding regions, bringing deeper understanding to projects ranging from tens of thousands of dollars to tens of millions of dollars.</p>
-            </div>
-          </div>  
-
-
-</div>
-
-</div>
-<div class="viewport w50 workingwithach_section4 bg-cover" style="background-image: url(<?php echo esc_url( get_template_directory_uri() )."/img/workingwithach_img2.png"?>);background-position: center right;">
-
-</div>
-<div class="viewport w100 workingwithach_section5 bg-cover" style="background-image: url(<?php echo esc_url( get_template_directory_uri() )."/img/workingwithach_img3.jpg"?>);background-position: center right;">
-
-</div>
-
-<?php get_footer();
-                                                                                                                                                                                        
+    <?php
+    endwhile;
+    
+    get_footer();
