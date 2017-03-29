@@ -6281,7 +6281,7 @@ border-top: 45px solid #fff;
 }
 
 .collections .project-tiles .collection{width: calc(50% - 10px);}
-.collections .project-tiles{float: left; width:66% !important; overflow:auto; height:100%;}
+.collections .project-tiles{float: left; width:100% !important; overflow:auto; height:100%;}
 .slimScrollDiv{ float:left;}
 .collections .category-desc{float: left;width: 33.33%; padding-left: 25px; padding-right:30px; color:#0e1b28;}
 .collections .category-desc h3{color:#0e1b28; padding-bottom:15px; font-family: 'FuturaStd-Bold'; font-size: 24pt;}
