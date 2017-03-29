@@ -28,6 +28,7 @@
                 margin: 0,
                 nav: true,
                 loop: true,
+				items: 1
                 responsive: {
                   0: {
                     items: 1

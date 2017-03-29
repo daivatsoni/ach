@@ -80,7 +80,7 @@ get_header();
         <span class="separator"></span>
     </div>
 
-    <div class="viewport section_8"> 
+    <div class="viewport section_8" style=" background:#fff;"> 
         <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/slideing-img.jpg"  alt="slideing-img" class="slidein slideing-img" />
     </div>
 
