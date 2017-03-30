@@ -86,40 +86,58 @@ get_header();
 
     <div id="ourStory" class="viewport w100 section_9">
     
+        <?php 
+        $showStory = get_field("hp_story_show");
+        $showHistory = get_field("hp_history_show");
+        $showPolicy = get_field("hp_policy_show");
+        $showAccredit = get_field("hp_accredit_show");
+        $showAssoc = get_field("hp_assoc_show");
+        if($showStory || $showHistory || $showPolicy || $showAccredit || $showAssoc) {
+        ?>
         <div class="section9_col1">
             <div id="tabs" class="tab_content">
                 <ul class="tab_button_set">
-                    <li><a href="#aboutus"><?php the_field("hp_story_title"); ?></a></li>
-                    <li><a href="#history"><?php the_field("hp_history_title"); ?></a></li>
-                    <li><a href="#policies"><?php the_field("hp_policy_title"); ?></a></li>
-                    <li><a href="#accreditations"><?php the_field("hp_accredit_title"); ?></a></li>
-                    <li><a href="#associations"><?php the_field("hp_assoc_title"); ?></a></li>
+                    <?php if($showStory) { ?><li><a href="#aboutus"><?php the_field("hp_story_title"); ?></a></li> <?php } ?>
+                    <?php if($showHistory) { ?><li><a href="#history"><?php the_field("hp_history_title"); ?></a></li><?php } ?>
+                    <?php if($showPolicy) { ?><li><a href="#policies"><?php the_field("hp_policy_title"); ?></a></li><?php } ?>
+                    <?php if($showAccredit) { ?><li><a href="#accreditations"><?php the_field("hp_accredit_title"); ?></a></li><?php } ?>
+                    <?php if($showAssoc) { ?><li><a href="#associations"><?php the_field("hp_assoc_title"); ?></a></li><?php } ?>
                 </ul>
+                <?php if($showStory) { ?>
                 <div id="aboutus">
                     <h2><?php the_field("hp_story_heading"); ?></h2>          
                     <?php the_field("hp_story_detail"); ?>
                 </div>
+                <?php } ?>
+                <?php if($showHistory) { ?>
                 <div id="history">
                     <h2><?php the_field("hp_history_heading"); ?></h2>
                     <?php the_field("hp_history_detail"); ?>
                 </div>
-
+                <?php } ?>
+                <?php if($showPolicy) { ?>
                 <div id="policies">
                     <h2><?php the_field("hp_policy_heading"); ?></h2>
                     <?php the_field("hp_policy_detail"); ?>
                 </div>  
+                <?php } ?>
+                <?php if($showAccredit) { ?>
                 <div id="accreditations">
                     <h2><?php the_field("hp_accredit_heading"); ?></h2>
                     <?php the_field("hp_accredit_detail"); ?>
                 </div>  
+                <?php } ?>
+                <?php if($showAssoc) { ?>
                 <div id="associations">
                     <h2><?php the_field("hp_assoc_heading"); ?></h2>
                     <?php the_field("hp_assoc_detail"); ?>
-                </div>        
+                </div>    
+                <?php } ?>
 
             </div>
         </div>
-        
+        <?php }
+        ?>
         <?php if(get_field("hp_show_testimonials")) { ?>
         <div class="section9_col2 testmonial_slider_area">
 
