@@ -27,6 +27,53 @@ get_header();
         </div>
         <div class="section9_col2 testmonial_slider_area">
 
+            <?php
+            $htmlInputRadio = "";
+            $htmlLi = "";
+            $htmlLabel = "";
+            $i=1;
+            $careerProfiles = get_field("waa_career_profiles");
+            if(!empty($careerProfiles)) {
+                foreach ($careerProfiles as $profile) {
+                    if($i === 1) {
+                        $htmlInputRadio .= '<input type="radio" name="slides" id="slides_'.$i.'" checked />';
+                    } else if($i === count($careerProfiles)) {
+                        $htmlInputRadio .= '<input type="radio" name="slides" id="slides_N" />';
+                    } else {
+                        $htmlInputRadio .= '<input type="radio" name="slides" id="slides_'.$i.'" />';
+                    }
+                    
+                $htmlLi .='<li>
+                        <div class="item">
+                        <h3>CAREER <br />
+                            PROFILES</h3>
+                        <img src="'.$profile['image'].'" class="career_profile_img" />
+                        <span class="client_name">'.$profile['firstname'].' '.$profile['lastname'].'</span>
+                        <span class="designation">'.$profile['position'].'</span>
+                        '.$profile['description'];
+                        $htmlLi .= '</div></li>';
+                        
+                if($i === count($careerProfiles)) {
+                    $htmlLabel .= '<label for="slides_N"></label>';
+                } else {
+                    $htmlLabel .= '<label for="slides_'.$i.'"></label>';
+                }
+                $i++;
+            } ?>
+            <div class="csslider testmonial_slider">
+                <?php echo $htmlInputRadio; ?>
+                <ul>
+                    <?php echo $htmlLi; ?>
+                </ul>
+
+                <div class="arrows">
+                    <?php echo $htmlLabel; ?>
+                </div>
+            </div>
+            <?php } ?>
+
+
+<?php /*
             <div class="owl-carousel owl-theme testmonial_slider">
                 <?php 
                 $careerProfiles = get_field("waa_career_profiles");
@@ -44,7 +91,8 @@ get_header();
                     }
                 }
                 ?>
-            </div>  
+            </div>
+      */  ?>
         </div>
     </div>
     

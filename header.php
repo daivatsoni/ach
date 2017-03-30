@@ -11,73 +11,42 @@
 
         
         <link property="stylesheet" rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
-        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/owl.carousel.css">
 
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.min.js"></script>
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/plugins.min.js"></script>
         <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-ui.js"></script>
-        <script src="<?php echo get_template_directory_uri(); ?>/js/owl.carousel.js"></script>
         <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.slimscroll.min.js"></script>
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/functions.min.js"></script>
         <script>
-        $(function() {
-            $( "#tabs" ).tabs();
-        });
-		  
-        $(document).ready(function() {
-            var owl = $('.owl-carousel');
-            owl.owlCarousel({
-                margin: 0,
-                nav: true,
-                loop: true,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    600: {
-                        items: 1
-                    },
-                    1000: {
-                        items:1
-                    }
-                }
-            });
-            slimScrollDiv = function() {
-                $(".slimscroll").slimScroll({
-                    size: '10px',
-                    height: '100%',
-                    width: "66%",
-                    alwaysVisible: false
-                });
-            }; 
-        });
-        </script>
-        <!--[if IE]><![endif]-->
-        <!--[if IE]>
-          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-  
-        <script>
             $(document).ready(function() {
+                $( "#tabs" ).tabs();
+                slimScrollDiv = function() {
+                    $(".slimscroll").slimScroll({
+                        size: '10px',
+                        height: '100%',
+                        width: "66%",
+                        alwaysVisible: false
+                    });
+                }; 
                 (function (doc) {
                     var viewport = doc.getElementById('viewport');
                     if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/iPod/i)) {
-//                        viewport.setAttribute("content", "initial-scale=0.4, user-scalable=yes");
-                        viewport.setAttribute("content", "width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no");
+                        viewport.setAttribute("content", "initial-scale=0.4, user-scalable=yes");
                     } else if (navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/Android|Tablet/i)) {
-                        viewport.setAttribute("content", "width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no");
+                        viewport.setAttribute("content", "initial-scale=0.65, user-scalable=yes");
                     }
                 }(document));
             });
             var ajaxurl = "<?php echo admin_url('admin-ajax.php'); ?>";
         </script>
-		
-		<?php wp_head(); ?>
+        <!--[if IE]><![endif]-->
+        <!--[if IE]>
+          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <?php wp_head(); ?>
     </head>
     <body class="collection homepage">
-    
-    
-    
         <?php
         if(!isset($_COOKIE["tutorial"])) :
         ?>
