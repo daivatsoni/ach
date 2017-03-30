@@ -26,6 +26,7 @@ get_header();
                 <?php the_field("wwa_scr1_content"); ?>
                 <a id="show-form" href="javascript:void(0);" class="register_button"><?php the_field("wwa_button_title"); ?></a>
             </div>
+            
             <div id="wwa-testimonials" class="section9_col2 testmonial_slider_area">
 
                 <h3>TESTIMONIALS</h3>
