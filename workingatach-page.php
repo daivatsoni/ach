@@ -18,7 +18,7 @@ get_header();
     </div>
 
 
-    <div id="screen1" class="viewport w50 workingwithach_section3 workingatach_section1 section_9" style="background-color:#fff;">
+    <div id="screen1" class="viewport w80 workingwithach_section3 workingatach_section1 section_9" style="background-color:#fff;">
         <div class="section9_col1">
             <h2><?php the_field("waa_scr1_heading"); ?></h2>
             <h4><?php the_field("waa_scr1_subheading"); ?></h4>
@@ -48,7 +48,7 @@ get_header();
         </div>
     </div>
     
-    <div id="screen2" class="viewport w50 workingwithach_section3 positions_section1 section_9" style="background-color:#fff;display:none;">
+    <div id="screen2" class="viewport w80 workingwithach_section3 positions_section1 section_9" style="background-color:#fff;display:none;">
         <h2><?php the_field("waa_cp_heading"); ?> <a id="close-position" href="javascript:void(0);" class="current_positions_close">CLOSE</a></h2>
         <?php 
         $currentPositions = get_field("waa_current_positions");

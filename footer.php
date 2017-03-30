@@ -1,4 +1,4 @@
-    <footer class="footer">
+    <footer id="footer" class="footer">
         <div class="inner">
             <h4><?php the_field("ach_company_name", "option"); ?></h4>
             <?php $socialMedia = get_field("social_media", "option");
