@@ -1,5 +1,5 @@
-    <footer id="footer" class="footer viewport w50">
-        <div class="inner footer_left">
+    <footer id="footer" class="footer viewport">
+        <div class="footer_left">
             <h4><?php the_field("ach_company_name", "option"); ?></h4>
             <?php $socialMedia = get_field("social_media", "option");
             if (!empty($socialMedia)) {
@@ -15,11 +15,11 @@
             <?php if ($email = get_field("ach_email", "option")) : ?><span class="footer_email"><label>Email</label> <?php echo $email; ?></span> <?php endif; ?>
             <?php if ($address = get_field("ach_address", "option")) : ?><div class="address_area"><?php echo $address; ?></div><?php endif; ?>
         </div>
-        <div class="contact_form"><?php echo do_shortcode('[contact-form-7 id="15" title="Enquiry Form"]'); ?></div>
+        <div id="contactus" class="contact_form"><?php echo do_shortcode('[contact-form-7 id="15" title="Enquiry Form"]'); ?></div>
         <p class="developed_by"><?php the_field("credit_note", "options"); ?></p>
     </footer>
 
 </div>
 
-<?php wp_footer(); ?>
+<?php // wp_footer(); ?>
 </body></html>

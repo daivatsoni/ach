@@ -6120,8 +6120,8 @@ ul.tab_button_set li.ui-tabs-active a{ color:#d36229;font-family:"futurastd-bold
 .section_10 .slider_caption_area{display: flex;flex-direction: column;justify-content:flex-end;align-items:flex-end;width:100%;padding-bottom: 30px;min-height: 1px;}
 .section_10 .slider_caption{ width:358px; height:65px; background:url(img/caption_bg.png) no-repeat top left; color:#fff; font-size:18px; line-height:21px; padding:15px 35px 15px 40px; float:right; line-height:42px;}
 
-.footer.viewport.w50{ width:690px!important;}
-.footer{ width:690px; float:left; padding:130px 0px 0 70px; background:#0e1b28; height:100%; font-size:16px; line-height:20px;}
+
+.footer{ width:455px; float:left; padding:130px 0px 0 70px; background:#0e1b28; height:100%; font-size:16px; line-height:20px;}
 .footer h4{color:#d36229;font-family:"futurastd-bold"; font-size:16px; padding-bottom:10px;}
 .footer_social{ list-style:none; padding:0 0 15px; margin:0 -10px;display: inline-block;}
 .footer_social li{ padding:0 10px; float:left;}
@@ -6143,6 +6143,7 @@ ul.tab_button_set li.ui-tabs-active a{ color:#d36229;font-family:"futurastd-bold
 -ms-border-radius:3px;
 -o-border-radius:3px;
 border-radius:3px;
+padding:0;
 }
 .contact_form ul li textarea{ margin-top:8px; width:302px; height:92px; border:0;
 /* -moz-border-radius:3px; */
@@ -6158,7 +6159,7 @@ border-radius:3px;
 .contact_form ul li span.lblRequired{ color:#9d9e9e;}
 .contact_form ul li input[type="submit"]{ margin-right:1px;float:right;width:132px;height:32px;line-height:32px;border:1px solid #c75e29; color:#fff; font-size:14px;background:none;}
 .contact_form ul li input[type="submit"]:hover{ background:#c75e29; color:#fff;}
-.footer_left{ width:305px; padding-right:40px; float:left;}
+.footer_left{ width:350px; padding-right:40px; float:left;}
 .footer .contact_form{ width:305px; float:left;}
 
 .menu nav ul.social_icons{ border:0; padding-top:20px;}
@@ -6178,7 +6179,7 @@ border-radius:3px;
 .rydehighsecholl_title h3{ line-height:36px; font-size:28px;color:#d36229; padding-bottom:25px; position:relative;}
 .workingwithach_title h2:after,
 .rydehighsecholl_title h3:after{ width:120px; height:5px; background:#d36229; content:""; left:0; bottom:0;position: absolute;}
-.footer.rydehighschool_footer{ padding:105px 150px 0 70px;}
+.footer.rydehighschool_footer{ padding:105px 0px 0 70px;}
 .footer.rydehighschool_footer h4{ line-height:20px;}
 .footer.rydehighschool_footer h4 span{ color:#fff;}
 .project_buttons{ width:100%; float:left; padding-top:30px;}
@@ -6291,7 +6292,7 @@ border-top: 45px solid #fff;
 .collections .category-desc{float: left;width: 33.33%; padding-left: 25px; padding-right:30px; color:#0e1b28;}
 .collections .category-desc h3{color:#0e1b28; padding-bottom:15px; font-family: 'FuturaStd-Bold'; font-size: 24pt;}
 .collections .category-desc p {border-top: solid 5px #d36229; padding-top: 40px;}
-.developed_by{ padding:0; margin:0; color:#9d9e9e; font-size:10px; line-height:12px; padding-top:20px; clear:both;}
+.developed_by{ padding:0; margin:0; color:#9d9e9e; font-size:10px; line-height:12px; padding-top:20px; clear:both; width:305px;}
 
 @media (min-width:2000px) {
 .section_6.slide-blank:after{min-width: 540px;}	
@@ -6343,6 +6344,10 @@ border-top: 32px solid #fff;
 .scroll_logo img.menu_area_logo{ width:85px; height:auto;}
 .scroll_logo{ padding-right:10px;}
 .menu_logo img{ max-width:100%;}
+
+.footer{ width:800px;}
+.rydehighschool_footer_bottom{ bottom:150px;}
+
 }
 @media only screen and (max-width: 1024px) {
 .collections .collection .inner h3 {
@@ -6396,12 +6401,12 @@ p{ margin-bottom:10px;}
 .footer.rydehighschool_footer,
 .footer{ font-size:10px; line-height:12px;width:440px; padding-right:86px;}
 .footer.rydehighschool_footer{padding: 10px 60px 0 70px;}
-.footer .contact_form{ display:none;}
+
 
 .workingatach_section1.workingwithach_section3 .testmonial_slider_area h3 br,
 .owl-carousel .owl-item img.career_profile_img,
-.rydehighschool_footer_bottom,
 .menu_logo{ display:none;}
+
 
 ul.current_positions_list{ padding-top:5px;}
 ul.current_positions_list li{ padding:10px 0;}
@@ -6437,7 +6442,7 @@ ul.current_positions_list li .positions_list_content{ font-size:10px; line-heigh
 }
 @media (max-width:320px) {
 .section_3, .section_7, .section_9, .footer{ padding-top:50px;}
-.rydehighschool_footer_bottom{ display:block;}
+
 .workingwithach_section3.section_9,
 .workingatach_section1.workingwithach_section3.section_9{ padding-top:25px;}
 }
@@ -6672,3 +6677,12 @@ CSS SLIDER
 }
 /*#region MODULES */
 /*#endregion */
+
+div.wpcf7-response-output {
+    margin: 3em 0.5em 1em !important;
+}
+@media screen and (max-height: 960px) {
+    .footer{ width:767px;}
+    .footer.rydehighschool_footer{ width:305px;}
+    .rydehighschool_footer_bottom{ bottom:150px;}
+}

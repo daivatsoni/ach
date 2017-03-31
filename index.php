@@ -161,7 +161,7 @@ get_header();
             $projectId = $project->ID;
             $thumbImage = get_field("prj_diagonal_cut_image",$projectId);
             $url = get_permalink($projectId);
-            $title = get_field("proj_hp_heading", $projectId);
+            $title = strip_tags(get_field("proj_hp_heading", $projectId));
         ?>            
         <div class="viewport w80 section_10 bg-cover" style="background-image: url(<?php echo esc_url($thumbImage['url']); ?>);background-position: center right;">
             <div class="slider_caption_area">
@@ -178,24 +178,23 @@ get_header();
 
     <script type="text/javascript">
         $(document).ready(function() {
-            var tabName = window.location.hash.substr(1);
-            console.log(tabName);
-            if(tabName == "contactus") {
-                console.log('cnt');
-                var leftPos = $("footer").offset().left;
-                console.log(leftPos);
-                $('html, body').animate({
-                    scrollLeft: (leftPos - 100)
-                },'slow');
-            }
-            if(tabName == "ach_difference") {
-                console.log('ach');
-                var leftPos = $("#ach_difference").offset().left;
-                console.log(leftPos);
-                $('html, body').animate({
-                    scrollLeft: (leftPos - 100)
-                },'slow');
-            }
+            changeSection = function() {
+                var tabName = window.location.hash.substr(1);
+                if(tabName == "contactus") {
+                    var leftPos = $("#footer").offset().left;
+                    console.log(leftPos);
+                    $('html, body').animate({
+                        scrollLeft: (leftPos - 100)
+                    },'slow');
+                }
+                if(tabName == "ach_difference") {
+                    var leftPos = $("#ach_difference").offset().left;
+                    $('html, body').animate({
+                        scrollLeft: (leftPos - 100)
+                    },'slow');
+                }
+            };
+            setTimeout(changeSection, 1000);
         });
     </script>
     

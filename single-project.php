@@ -28,7 +28,7 @@ get_header();
             ?>
             <h2><?php echo $projectTitle; ?></h2>
             <?php $term_list = wp_get_post_terms(get_the_ID(), 'project-category', array("fields" => "names")); ?>
-            <h3><?php echo implode(",", $term_list); ?></h3>
+            <h3><?php echo implode(", ", $term_list); ?></h3>
         </div>
     </div>
 

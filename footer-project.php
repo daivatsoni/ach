@@ -1,11 +1,12 @@
-    <footer class="footer rydehighschool_footer">
+    <footer class="footer rydehighschool_footer viewport">
         <?php
             /* Start the Loop */
             while ( have_posts() ) : the_post();
         ?>
 
         <div class="rydehighschool_footer_top">
-            <h4><span>VIEW MORE</span><br />EDUCATION PROJECTS</h4>
+            <?php $term_list = wp_get_post_terms(get_the_ID(), 'project-category', array("fields" => "names")); ?>
+            <h4><span>VIEW MORE</span><br /><?php echo implode(", ", $term_list); ?> PROJECTS</h4>
             <div class="project_buttons">
                 <?php next_post_link( '%link', 'NEXT PROJECT', TRUE, ' ', 'project-category' ); ?>
                 <?php previous_post_link( '%link', 'PREVIOUS PROJECT', TRUE, ' ', 'project-category' ); ?>
