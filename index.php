@@ -76,8 +76,10 @@ get_header();
         <h2><?php the_field("hp_ach_diff_heading"); ?></h2>
         <span class="separator"></span>
         <h4><?php the_field("hp_ach_diff_sub_heading"); ?></h4>
-        <?php the_field("hp_ach_diff_detail"); ?>
-        <span class="separator"></span>
+        <div class="scrollable_content">
+            <?php the_field("hp_ach_diff_detail"); ?>
+        </div>
+        <?php /* <span class="separator"></span> */ ?>
     </div>
 
     <div class="viewport section_8" style=" background:#fff;"> 
@@ -105,14 +107,18 @@ get_header();
                 </ul>
                 <?php if($showStory) { ?>
                 <div id="aboutus">
-                    <h2><?php the_field("hp_story_heading"); ?></h2>          
+                    <h2><?php the_field("hp_story_heading"); ?></h2> 
+                    <div class="scrollable_content">
                     <?php the_field("hp_story_detail"); ?>
+                    </div>
                 </div>
                 <?php } ?>
                 <?php if($showHistory) { ?>
                 <div id="history">
                     <h2><?php the_field("hp_history_heading"); ?></h2>
+                    <div class="scrollable_content">
                     <?php the_field("hp_history_detail"); ?>
+                    </div>
                 </div>
                 <?php } ?>
                 <?php if($showPolicy) { ?>
@@ -131,21 +137,29 @@ get_header();
                             <?php if($isQuality) { ?><li><a href="#quality">Quality</a></li><?php } ?>
                         </ul>
                         <div id="intro">
+                            <div class="scrollable_content">
                             <?php the_field("hp_policy_detail"); ?>
+                            </div>
                         </div>
                         <?php if($isWhs) { ?>
                         <div id="whs">
+                            <div class="scrollable_content">
                             <?php the_field("hp_story_detail"); ?>
+                            </div>
                         </div>
                         <?php } ?>
                         <?php if($isEnvironment) { ?>
                         <div id="environment">
+                            <div class="scrollable_content">
                             <?php the_field("hp_policy_environment_content"); ?>
+                            </div>
                         </div>
                         <?php } ?>
                         <?php if($isQuality) { ?>
                         <div id="quality">
+                            <div class="scrollable_content">
                             <?php the_field("hp_policy_quality_content"); ?>
+                            </div>
                         </div>
                         <?php } ?>
                     </div>
@@ -158,13 +172,17 @@ get_header();
                 <?php if($showAccredit) { ?>
                 <div id="accreditations">
                     <h2><?php the_field("hp_accredit_heading"); ?></h2>
+                    <div  class="scrollable_content">
                     <?php the_field("hp_accredit_detail"); ?>
+                    </div>
                 </div>  
                 <?php } ?>
                 <?php if($showAssoc) { ?>
                 <div id="associations">
                     <h2><?php the_field("hp_assoc_heading"); ?></h2>
+                    <div class="scrollable_content">
                     <?php the_field("hp_assoc_detail"); ?>
+                    </div>
                 </div>    
                 <?php } ?>
 

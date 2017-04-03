@@ -30,7 +30,6 @@
                     });
                 }; 
 				
-				
                 (function (doc) {
                     var viewport = doc.getElementById('viewport');
                     if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/iPod/i)) {
