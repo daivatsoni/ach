@@ -86,7 +86,7 @@ get_header();
         <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/slideing-img.jpg"  alt="slideing-img" class="slidein slideing-img" />
     </div>
 
-    <div id="ourStory" class="viewport w100 section_9">
+    <div id="ourStory" class="viewport w80 section_9">
     
         <?php 
         $showStory = get_field("hp_story_show");
