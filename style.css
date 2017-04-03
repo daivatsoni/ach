@@ -6555,11 +6555,7 @@ CSS SLIDER
 div.wpcf7-response-output {
     margin: 3em 0.5em 1em !important;
 }
-@media screen and (max-height: 960px) {
-    .footer{ width:767px;}
-    .footer.rydehighschool_footer{ width:305px;}
-    .rydehighschool_footer_bottom{ bottom:150px;}
-}
+
 
 @media (min-width:2000px) {
 .section_6.slide-blank:after{min-width: 540px;}	
@@ -6642,6 +6638,12 @@ background-size:100px 200px;
 .collections .category-desc{ padding:0 10px;}
 .menu nav{padding-top:0 !important; padding-right:0 !important; width:31%; padding-left:10px!important;}
 }
+@media screen and (max-height: 900px) {
+    .footer{ width:767px;}
+    .footer.rydehighschool_footer{ width:305px;}
+    .rydehighschool_footer_bottom{ bottom:150px;}
+}
+
 @media (max-width:670px) {
 .viewport.section_8{ min-width:250px;margin: 0 -2px;}
 .csslider > .arrows label{padding:6px;}
