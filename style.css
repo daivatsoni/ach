@@ -6093,6 +6093,9 @@ ul.tab_button_set li.ui-tabs-active a{ color:#d36229;font-family:"futurastd-bold
 .accreditations_img_list{ list-style:none; padding:0; margin:0 -30px;}
 .accreditations_img_list li{ padding:30px; float:left; line-height:0; width:20%;}
 
+#tabs2 ul.tab_button_set{ position:absolute; left:0;top: 0px; padding:16px 0 0 0; margin:0; border-top:5px solid #d36229; list-style:none;}
+
+
 .section_8{ background:#fff;}
 .slideing-img{ height:100%;}
 

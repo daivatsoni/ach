@@ -118,7 +118,41 @@ get_header();
                 <?php if($showPolicy) { ?>
                 <div id="policies">
                     <h2><?php the_field("hp_policy_heading"); ?></h2>
-                    <?php the_field("hp_policy_detail"); ?>
+                    <?php 
+                    $isWhs = get_field("hp_policy_show_whs");
+                    $isEnvironment = get_field("hp_policy_show_environment");
+                    $isQuality = get_field("hp_policy_show_quality");
+                    if($isWhs || $isEnvironment || $isQuality) { ?>
+                    <div id="tabs2" class="tabs tab_content">
+                        <ul class="tab_button_set">
+                            <li><a href="#intro">Overview</a></li>
+                            <?php if($isWhs) { ?><li><a href="#whs">WHS</a></li> <?php } ?>
+                            <?php if($isEnvironment) { ?><li><a href="#environment">Environment</a></li><?php } ?>
+                            <?php if($isQuality) { ?><li><a href="#quality">Quality</a></li><?php } ?>
+                        </ul>
+                        <div id="intro">
+                            <?php the_field("hp_policy_detail"); ?>
+                        </div>
+                        <?php if($isWhs) { ?>
+                        <div id="whs">
+                            <?php the_field("hp_story_detail"); ?>
+                        </div>
+                        <?php } ?>
+                        <?php if($isEnvironment) { ?>
+                        <div id="environment">
+                            <?php the_field("hp_policy_environment_content"); ?>
+                        </div>
+                        <?php } ?>
+                        <?php if($isQuality) { ?>
+                        <div id="quality">
+                            <?php the_field("hp_policy_quality_content"); ?>
+                        </div>
+                        <?php } ?>
+                    </div>
+                    <?php } else { 
+                        the_field("hp_policy_detail");
+                    } ?>
+                    
                 </div>  
                 <?php } ?>
                 <?php if($showAccredit) { ?>

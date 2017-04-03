@@ -20,6 +20,7 @@
         <script>
             $(document).ready(function() {
                 $( "#tabs" ).tabs();
+                $( "#tabs2" ).tabs();
                 slimScrollDiv = function() {
                     $(".slimscroll").slimScroll({
                         size: '10px',
