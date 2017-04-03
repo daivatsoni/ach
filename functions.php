@@ -221,9 +221,12 @@ class ACH_menu_walker extends Walker {
         if ($depth === 0 && $this->has_children == false) {
             // parent level with no children, e.g. HOME
             $output .= $indent . '<li' . $id . $class_names . '>';
-        } else if ($depth === 0 && $this->has_children == true) {
+        } else if ($depth===0 && $this->has_children == true) {
             // parent level with children menu, e.g. Who we are
-            $output .= $indent . '<li><div class="accordion">';
+            $output .= $indent . '<li><div id="accordion_'.$depth.'" class="accordion">';
+        } else if ($this->has_children == true) {
+            // parent level with children menu, e.g. Who we are
+            $output .= $indent . '<div id="accordion_'.$depth.'" class="accordion">';
         } else {
             $output .= $indent . '';
         }
@@ -286,7 +289,14 @@ class ACH_menu_walker extends Walker {
             $item_output .= $args->link_before . $title . $args->link_after;
             $item_output .= '</a>';
             $item_output .= $args->after;
-        } else if ($depth === 0 && $this->has_children == true) {
+        } else if ($depth===0 && $this->has_children == true) {
+            // parent level with children menu, e.g. Who we are
+            $item_output = $args->before;
+            $item_output .= '<h3 '. ' '.$class_names.'>';
+            $item_output .= $args->link_before . $title . $args->link_after;
+            $item_output .= '</h3>';
+            $item_output .= $args->after;
+        } else if ($this->has_children == true) {
             // parent level with children menu, e.g. Who we are
             $item_output = $args->before;
             $item_output .= '<h3 '. ' '.$class_names.'>';
@@ -336,6 +346,9 @@ class ACH_menu_walker extends Walker {
         } else if ($depth === 0 && $is_parent) {
             // parent level with children menu, e.g. Who we are
             $output .= "</div></li>{$n}";
+        } else if ($is_parent) {
+            // parent level with children menu, e.g. Who we are
+            $output .= "</div>{$n}";
         } else {
             $output .= "{$n}";
         }

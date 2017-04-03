@@ -128,36 +128,31 @@ get_header();
                     $isWhs = get_field("hp_policy_show_whs");
                     $isEnvironment = get_field("hp_policy_show_environment");
                     $isQuality = get_field("hp_policy_show_quality");
-                    if($isWhs || $isEnvironment || $isQuality) { ?>
+                    if($isWhs || $isEnvironment || $isQuality) {
+                    the_field("hp_policy_detail"); ?>
                     <div id="tabs2" class="tabs tab_content">
-                        <ul class="tab_button_set">
-                            <li><a href="#intro">Overview</a></li>
+                        <ul class="inner_tab_button_set">
                             <?php if($isWhs) { ?><li><a href="#whs">WHS</a></li> <?php } ?>
                             <?php if($isEnvironment) { ?><li><a href="#environment">Environment</a></li><?php } ?>
                             <?php if($isQuality) { ?><li><a href="#quality">Quality</a></li><?php } ?>
                         </ul>
-                        <div id="intro">
-                            <div class="scrollable_content">
-                            <?php the_field("hp_policy_detail"); ?>
-                            </div>
-                        </div>
                         <?php if($isWhs) { ?>
                         <div id="whs">
-                            <div class="scrollable_content">
+                            <div class="scrollable_policy_content">
                             <?php the_field("hp_story_detail"); ?>
                             </div>
                         </div>
                         <?php } ?>
                         <?php if($isEnvironment) { ?>
                         <div id="environment">
-                            <div class="scrollable_content">
+                            <div class="scrollable_policy_content">
                             <?php the_field("hp_policy_environment_content"); ?>
                             </div>
                         </div>
                         <?php } ?>
                         <?php if($isQuality) { ?>
                         <div id="quality">
-                            <div class="scrollable_content">
+                            <div class="scrollable_policy_content">
                             <?php the_field("hp_policy_quality_content"); ?>
                             </div>
                         </div>

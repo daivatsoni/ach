@@ -6094,8 +6094,29 @@ ul.tab_button_set li.ui-tabs-active a{ color:#d36229;font-family:"futurastd-bold
 .accreditations_img_list{ list-style:none; padding:0; margin:0 -30px;}
 .accreditations_img_list li{ padding:30px; float:left; line-height:0; width:20%;}
 
-#tabs2 ul.tab_button_set{ position:absolute; left:0;top: 0px; padding:16px 0 0 0; margin:0; border-top:5px solid #d36229; list-style:none;}
-
+#tabs2 { padding: 0px; 
+    background: none; 
+    border-width: 0px; } 
+#tabs2 .ui-tabs-nav { padding-left: 0px; 
+    background: transparent; 
+    border-width: 0px 0px 1px 0px; 
+    -moz-border-radius: 0px; 
+    -webkit-border-radius: 0px; 
+    border-radius: 0px; 
+    border-bottom: 1px solid #0e1b28;
+    height: 30px;
+    margin: 0;    
+} 
+#tabs2 .ui-helper-clearfix::before, .ui-helper-clearfix::after {
+    content: "";
+    display: table;
+}
+#tabs2 .ui-helper-clearfix::after {
+    clear: both;
+}
+#tabs2 .ui-tabs-panel {background: transparent;}
+#tabs2.ui-tabs .ui-tabs-nav li {border-bottom: 0 none !important;float: left;list-style: outside none none;margin: 0 0.2em 1px 0;padding: 0;position: relative;top: 1px;white-space: nowrap;}
+#tabs2.ui-tabs .ui-tabs-nav li a {color:#0e1b28;}
 
 .section_8{ background:#fff;}
 .slideing-img{ height:100%;}
