@@ -20,11 +20,13 @@ get_header();
             <div class="white-orange-heading"><?php the_field("hp_sc2_white_heading") ?><br>
                 <span><?php the_field("hp_sc2_orange_heading") ?></span>
             </div>
-            <h3 class="subheading"><?php the_field("hp_sc2_subtitle") ?></h3>
+            <div class="scrollable_content_50yrs">
+                <h3 class="subheading"><?php the_field("hp_sc2_subtitle") ?></h3>
 
-            <div class="section_des">
-                <?php the_field("hp_sc2_content") ?>
-                <?php if($buttons = get_field("hp_sc2_buttons")){ ?><div class="btn"><?php foreach($buttons as $button) { ?><a href="#" class="<?php echo $button['class'] ?>"><?php echo $button['label'] ?></a> <?php } } ?></div>
+                <div class="section_des">
+                    <?php the_field("hp_sc2_content") ?>
+                    <?php if($buttons = get_field("hp_sc2_buttons")){ ?><div class="btn"><?php foreach($buttons as $button) { ?><a href="#" class="<?php echo $button['class'] ?>"><?php echo $button['label'] ?></a> <?php } } ?></div>
+                </div>
             </div>
 
         </div>
@@ -75,8 +77,8 @@ get_header();
     <div id="ach_difference" class="viewport w50 section_9">
         <h2><?php the_field("hp_ach_diff_heading"); ?></h2>
         <span class="separator"></span>
-        <h4><?php the_field("hp_ach_diff_sub_heading"); ?></h4>
         <div class="scrollable_content">
+            <h4><?php the_field("hp_ach_diff_sub_heading"); ?></h4>
             <?php the_field("hp_ach_diff_detail"); ?>
         </div>
         <?php /* <span class="separator"></span> */ ?>
