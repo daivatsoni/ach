@@ -128,35 +128,37 @@ get_header();
                     $isWhs = get_field("hp_policy_show_whs");
                     $isEnvironment = get_field("hp_policy_show_environment");
                     $isQuality = get_field("hp_policy_show_quality");
-                    if($isWhs || $isEnvironment || $isQuality) {
-                    the_field("hp_policy_detail"); ?>
-                    <div id="tabs2" class="tabs tab_content">
-                        <ul class="inner_tab_button_set">
-                            <?php if($isWhs) { ?><li><a href="#whs">WHS</a></li> <?php } ?>
-                            <?php if($isEnvironment) { ?><li><a href="#environment">Environment</a></li><?php } ?>
-                            <?php if($isQuality) { ?><li><a href="#quality">Quality</a></li><?php } ?>
-                        </ul>
-                        <?php if($isWhs) { ?>
-                        <div id="whs">
-                            <div class="scrollable_policy_content">
-                            <?php the_field("hp_story_detail"); ?>
+                    if($isWhs || $isEnvironment || $isQuality) { ?>
+                    <div class="scrollable_content">
+                        <?php the_field("hp_policy_detail"); ?>
+                        <div id="tabs2" class="tabs tab_content">
+                            <ul class="inner_tab_button_set">
+                                <?php if($isWhs) { ?><li><a href="#whs">WHS</a></li> <?php } ?>
+                                <?php if($isEnvironment) { ?><li><a href="#environment">Environment</a></li><?php } ?>
+                                <?php if($isQuality) { ?><li><a href="#quality">Quality</a></li><?php } ?>
+                            </ul>
+                            <?php if($isWhs) { ?>
+                            <div id="whs">
+
+                                <?php the_field("hp_policy_whs_content"); ?>
+
                             </div>
-                        </div>
-                        <?php } ?>
-                        <?php if($isEnvironment) { ?>
-                        <div id="environment">
-                            <div class="scrollable_policy_content">
-                            <?php the_field("hp_policy_environment_content"); ?>
+                            <?php } ?>
+                            <?php if($isEnvironment) { ?>
+                            <div id="environment">
+
+                                <?php the_field("hp_policy_environment_content"); ?>
+
                             </div>
-                        </div>
-                        <?php } ?>
-                        <?php if($isQuality) { ?>
-                        <div id="quality">
-                            <div class="scrollable_policy_content">
-                            <?php the_field("hp_policy_quality_content"); ?>
+                            <?php } ?>
+                            <?php if($isQuality) { ?>
+                            <div id="quality">
+
+                                <?php the_field("hp_policy_quality_content"); ?>
+
                             </div>
+                            <?php } ?>
                         </div>
-                        <?php } ?>
                     </div>
                     <?php } else { 
                         the_field("hp_policy_detail");
