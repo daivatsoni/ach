@@ -6583,8 +6583,10 @@ body{ display:none;}
 	
 	
 }*/
-
-
+@media (max-width:1300px) {
+.collections .category-desc h3{ font-size:14px; line-height:16px}
+.menu_logo .menu_area_logo{ width:130px;}
+}
 @media (max-width:1050px) {
 .bg-cover{background-size:100% 100%;
 /* -moz-background-size:100% 100%; */
@@ -6658,6 +6660,7 @@ background-size:100px 200px;
 }
 
 @media (max-width:670px) {
+.collections .category-desc h3{ font-size:7pt;}
 .viewport.section_8{ min-width:250px;margin: 0 -2px;}
 .csslider > .arrows label{padding:6px;}
 .csslider > ul > li, 
