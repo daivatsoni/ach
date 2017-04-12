@@ -214,7 +214,7 @@ get_header();
             $url = get_permalink($projectId);
             $title = strip_tags(get_field("proj_hp_heading", $projectId));
         ?>            
-        <div class="viewport w80 section_10 bg-cover" style="background-image: url(<?php echo esc_url($thumbImage['url']); ?>);background-position: center right;">
+        <div class="viewport w80 section_10 bg-cover <?php echo $project->post_name;?>" style="background-image: url(<?php echo esc_url($thumbImage['url']); ?>);background-position: center right;">
             <div class="slider_caption_area">
                 <a href="<?php echo $url; ?>" class="slider_caption slidein"><?php echo $title; ?></a>
             </div>
