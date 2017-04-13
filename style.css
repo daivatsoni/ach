@@ -6046,7 +6046,7 @@ transition:0.4s ease-in-out;
 }
 
 h3.subheading{font-family: FuturaStd-Book;}
-.section_3{ width:570px; padding:130px 55px 65px 10px; background:#0e1b28;}
+.section_3{ width:570px; padding:130px 55px 0 10px; background:#0e1b28;}
 h3.subheading{ font-size:33px; line-height:40px; color:#fff; padding:25px 0 25px;text-transform:inherit;}
 .section_3 p{ font-size:18px; line-height:22px;}
 .section_3 .section_des .btn a{ width:184px; height:44px; border:1px solid #d36229; line-height:44px; font-size:20px; text-align:center; float:left; text-transform:initial;}
@@ -6075,7 +6075,8 @@ h3.subheading{ font-size:33px; line-height:40px; color:#fff; padding:25px 0 25px
 
 .section_5{display:flex;padding-right:0.6%;}
 .slider_caption_area{display: flex;flex-direction: column;justify-content:flex-end;align-items:flex-end;width:100%;padding-bottom: 30px;min-height: 1px;}
-.slider_caption{ width:458px; height:65px; background:url(img/slider_caption.png) no-repeat top left; color:#fff; font-size:18px; line-height:21px; padding:15px 135px 15px 40px; float:right;}
+.section_5 .slider_caption{line-height:22px; padding-top:10px;}
+.slider_caption{ width:458px; height:65px; background:url(img/slider_caption.png) no-repeat top left; color:#fff; font-size:18px; line-height:34px; padding:15px 135px 15px 40px; float:right;}
 .section_6{ margin-left:-1.5%; position:relative; z-index:999;display:flex;padding-right:0.6%;}
 .section_6.slide-blank:after{ content:"";width:220px; position:absolute; right:-3px; top:0; min-width:220px; height:100%; z-index:999;background-image:url(img/slide-blank.png);background-position: center left; /* -moz-background-size:100% 100% !important; */
 -webkit-background-size:100% 100% !important;
@@ -6133,7 +6134,7 @@ border-radius:6px 6px 0 0;}
 .section_8{ background:#fff;}
 .slideing-img{ height:100%;}
 
-.section_9{ background:#fff; color:#0e1b28; padding-top:130px; padding-right:80px;}
+.section_9{ background:#fff; color:#0e1b28; padding-top:130px; padding-right:65px;}
 .section_9 h2{ font-size:70px; font-family:"futurastd-bold"; line-height:75px;}
 .section_9 h4{ clear:both; line-height:22px; font-size:18px; color:#d36229; padding:22px 0 22px;}
 .section_9 .section9_col1{ width:70%; float:left; padding-right:45px;}
@@ -6155,7 +6156,7 @@ border-radius:6px 6px 0 0;}
 
 .section_10{display:flex;}
 .section_10 .slider_caption_area{display: flex;flex-direction: column;justify-content:flex-end;align-items:flex-end;width:100%;padding-bottom: 30px;min-height: 1px;}
-.section_10 .slider_caption{ width:358px; height:65px; background:url(img/caption_bg.png) no-repeat top left; color:#fff; font-size:18px; line-height:21px; padding:15px 35px 15px 40px; float:right; line-height:42px;}
+.section_10 .slider_caption{ width:358px; height:65px; background:url(img/caption_bg.png) no-repeat top left; color:#fff; font-size:18px;padding:15px 35px 15px 40px; float:right; line-height:37px;}
 .section_10.ngallu-wall-aboriginal-child-medical-centre .slider_caption{ padding-top:12px; line-height:22px;}
 
 
@@ -6735,3 +6736,36 @@ ul.current_positions_list li .positions_list_content{ font-size:10px; line-heigh
 .workingatach_section1.workingwithach_section3.section_9{ padding-top:25px;}
 }
 .section_9 #policies h4{ padding:0 0 22px;}
+
+/*13-04-2017*/
+@media screen and (max-height: 902px) {
+
+body{ font-size:14px; line-height:18px;}
+.footer{padding: 130px 112px 0;width: 455px;}
+.footer{ font-size:12px; line-height:14px; padding-top:86px;}
+.footer_social li:first-child{ font-size:16px;}
+.scroll_logo:after{
+border-right:144px solid #fff;
+border-left:48px solid transparent;
+border-bottom:94px solid transparent;
+border-top: 32px solid #fff;
+}
+.scroll_logo img.menu_area_logo{ width:85px; height:auto;}
+.scroll_logo{ padding-right:10px;}
+.menu_logo img{ max-width:100%;}
+
+.white-orange-heading,
+.white-orange-heading > span,
+.section_9 h2{ font-size:50px; line-height:56px;}
+
+h3.subheading{ font-size:20px; line-height:25px;}
+.section_3 p{font-size:14px; line-height:18px;}
+.section_3 .section_des .btn a{ width:120px; font-size:15px; line-height:34px;height:34px;}
+.section_9,
+.section_3{ padding-top:96px;}
+.tab_content{ padding-left:155px;}
+.tab_content h2{ margin-left:-155px}
+.section_9 .section9_col1{ padding-right:15px;}
+ul.tab_button_set li{ font-size:16px; line-height:20px;}
+.developed_by{ padding-top:10px;}
+}
