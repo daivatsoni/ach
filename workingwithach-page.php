@@ -18,7 +18,7 @@ get_header();
         </div>
 
 
-        <div class="viewport w50 workingwithach_section3 section_9" style="background-color:#fff;">
+        <div class="viewport w80 workingwithach_section3 section_9" style="background-color:#fff;">
 
             <div class="section9_col1">
                 <h2><?php the_field("wwa_scr1_heading"); ?></h2>
