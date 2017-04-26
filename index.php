@@ -8,11 +8,11 @@ get_header();
     </div>
 
     <div class="viewport w80 bg-cover homepage-2" style="background-image:url(<?php the_field("hp_1st_slide_background_image") ?>); background-color: #0e1b28; background-position: center right;">
-    <div class="viewport w70 slidein"><div class="homepage-2-overlay"></div>
+    <!--<div class="viewport w70 slidein"><div class="homepage-2-overlay"></div></div>-->
         <?php /* <div class="topline slidein"><img src="http://cdn.jan-kath.com/dist/img/homepage/slide_02-text.png" alt="slide" /></div> */ ?>
         <div class="topline slidein"><?php the_field("hp_quotation"); ?></div>
         <?php /* <div class="collection-link slidein"><a class="arrow" href="/collection/erased_heritage/">View Collection</a></div> */ ?>
-        </div>
+        
     </div>
 
     <div class="viewport w30 bg-cover section_3">
