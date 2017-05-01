@@ -30,8 +30,10 @@ get_header();
         <div class="section9_col1">
             <h2><?php the_field("waa_scr1_heading"); ?></h2>
             <h4><?php the_field("waa_scr1_subheading"); ?></h4>
-            <?php the_field("waa_scr1_content"); ?>
-            <a id="show-position" href="javascript:void(0);" class="register_button"><?php the_field("waa_button_text"); ?></a>
+            <div class="scrollable_content">
+                <?php the_field("waa_scr1_content"); ?>
+                <a id="show-position" href="javascript:void(0);" class="register_button"><?php the_field("waa_button_text"); ?></a>
+            </div>
         </div>
         <div class="section9_col2 testmonial_slider_area">
 
@@ -54,9 +56,11 @@ get_header();
                 $htmlLi .='<li>
                         <div class="item">
                         <h3>CAREER <br />
-                            PROFILES</h3>
-                        <img src="'.$profile['image'].'" class="career_profile_img" />
-                        <span class="client_name">'.$profile['firstname'].' '.$profile['lastname'].'</span>
+                            PROFILES</h3>';
+                if($profile['image']!="") {
+                    $htmlLi .= '<img src="'.$profile['image'].'" class="career_profile_img" />';
+                }
+                $htmlLi .= '<span class="client_name">'.$profile['firstname'].' '.$profile['lastname'].'</span>
                         <span class="designation">'.$profile['position'].'</span>
                         '.$profile['description'];
                         $htmlLi .= '</div></li>';

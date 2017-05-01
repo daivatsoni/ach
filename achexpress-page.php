@@ -18,13 +18,15 @@ get_header();
         </div>
     </div>
 
-    <div class="viewport w50 workingwithach_section3 section_9 achexpress_page" style="background-color:#fff;">
+    <div class="viewport w100 workingwithach_section3 section_9" style="background-color:#fff;">
 
         <div class="section9_col1">
             <h2><?php the_field("exp_heading"); ?></h2>
             <h4><?php the_field("exp_subheading"); ?></h4>
-            <?php the_field("exp_description"); ?>
-            <a id="show-form" href="javascript:void(0);" class="register_button"><?php the_field("exp_button_label"); ?></a>
+            <div class="scrollable_content">
+                <?php the_field("exp_description"); ?>
+                <a id="show-form" href="javascript:void(0);" class="register_button"><?php the_field("exp_button_label"); ?></a>
+            </div>
         </div>
         <div id="wwa-testimonials" class="section9_col2 testmonial_slider_area">
             <h3>TESTIMONIALS</h3>

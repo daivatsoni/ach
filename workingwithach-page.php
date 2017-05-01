@@ -18,13 +18,15 @@ get_header();
         </div>
 
 
-        <div class="viewport w80 workingwithach_section3 section_9" style="background-color:#fff;">
+        <div class="viewport w100 workingwithach_section3 section_9" style="background-color:#fff;">
 
             <div class="section9_col1">
                 <h2><?php the_field("wwa_scr1_heading"); ?></h2>
                 <h4><?php the_field("wwa_scr1_subheading"); ?></h4>
-                <?php the_field("wwa_scr1_content"); ?>
-                <a id="show-form" href="javascript:void(0);" class="register_button"><?php the_field("wwa_button_title"); ?></a>
+                <div class="scrollable_content">
+                    <?php the_field("wwa_scr1_content"); ?>
+                    <a id="show-form" href="javascript:void(0);" class="register_button"><?php the_field("wwa_button_title"); ?></a>
+                </div>
             </div>
             
             <div id="wwa-testimonials" class="section9_col2 testmonial_slider_area">

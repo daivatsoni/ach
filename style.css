@@ -10576,6 +10576,10 @@ p{
 
 }
 
+.scrollable_content p, .scrollable_content_50yrs p, .scrollable_policy_content p {
+    margin: 0 0 14px !important;
+}
+
 .infotext {
 
     display: table;
@@ -12286,7 +12290,7 @@ border-radius:6px 6px 0 0;}
 
 
 
-.testmonial_slider{ width:100%; padding-top:82px;}
+.testmonial_slider{ width:100%; padding-top:60px;}
 
 .testmonial_slider_area h3{ font-size:28px; line-height:30px; color:#0e1b28; padding-bottom:15px;}
 
@@ -12330,7 +12334,7 @@ border-radius:6px 6px 0 0;}
 
 .footer_social li{ padding:0 10px; float:left;}
 
-.footer_social li:first-child{ padding-right:20px;}
+.footer_social li:first-child{ width:105px;/*padding-right:20px;*/}
 
 
 
@@ -12340,7 +12344,7 @@ border-radius:6px 6px 0 0;}
 
 .footer_email label,
 
-.footer_phone label{ width:108px; display:inline-block;}
+.footer_phone label{ width:105px; display:inline-block;}
 
 .footer .address_area{ width:100%; float:left;padding-top:12px;}
 
@@ -12664,7 +12668,7 @@ border-top: 45px solid #fff;
 
 .collections .category-desc p {border-top: solid 5px #d36229; padding-top: 40px;}
 
-.developed_by{ padding:0; margin:0; color:#9d9e9e; font-size:10px; line-height:12px; padding-top:20px; clear:both; width:305px;position: absolute; bottom:30px;}
+.developed_by{ padding:0; margin:0; color:#9d9e9e; font-size:12px; line-height:14px; padding-top:20px; clear:both; width:305px;position: absolute; bottom:30px;}
 
 
 
@@ -13482,7 +13486,7 @@ body{ font-size:16px; line-height:19px;}
 
 .footer{padding: 130px 112px 0;width: 455px;}
 
-.footer{ font-size:12px; line-height:14px; padding-top:86px;}
+.footer{ font-size:14px; line-height:16px; padding-top:64px;}
 
 .scroll_logo:after{
 
