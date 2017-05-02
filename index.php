@@ -51,7 +51,7 @@ get_header();
             
             if($i < 1) {
                 // first slide
-                $mainClasses = "viewport w80 section_5 bg-cover";
+                $mainClasses = "viewport w100 section_5 bg-cover";
             } elseif($i == (count($objDiagonalProjects)-1) ) {
                 // Last slide
                 $mainClasses = "viewport w100 bg-cover section_6 slide-blank";

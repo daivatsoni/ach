@@ -36,8 +36,8 @@
                 <?php } // endforeach   ?>
                 </ul>
             <?php } // endif ?>
-            <?php if ($telephone = get_field("ach_telephone", "option")) : ?><span class="footer_phone"><label>Telephone</label><?php echo trim($telephone); ?></span><?php endif; ?> 
-    <?php if ($email = get_field("ach_email", "option")) : ?><span class="footer_email"><label>Email</label><?php echo trim($email); ?></span><?php endif; ?> 
+            <?php if ($telephone = get_field("ach_telephone", "option")) : ?><span class="footer_phone"><label>Telephone</label><a href="tel:<?php echo trim($telephone); ?>"><?php echo trim($telephone); ?></a></span><?php endif; ?> 
+    <?php if ($email = get_field("ach_email", "option")) : ?><span class="footer_email"><label>Email</label><a href="mailto:<?php echo trim($email); ?>"><?php echo trim($email); ?></a></span><?php endif; ?> 
         <p class="developed_by"><?php the_field("credit_note","options"); ?></p>
         </div>
     </footer>
